@@ -1,0 +1,3267 @@
+
+local ScreenGui = Instance.new("ScreenGui")
+local main = Instance.new("Frame")
+local label = Instance.new("TextLabel")
+local CR = Instance.new("TextButton")
+local Illusionist = Instance.new("TextButton")
+local Fly = Instance.new("TextButton")
+local AutoPickup = Instance.new("TextButton")
+local Snap = Instance.new("TextButton")
+local Soulsnap = Instance.new("TextButton")
+local Meat = Instance.new("TextButton")
+local BloodChalice = Instance.new("TextButton")
+local Collector = Instance.new("TextButton")
+local SanctumObelisk = Instance.new("TextButton")
+local dyepacket = Instance.new("TextButton")
+local engineer = Instance.new("TextButton")
+local banker = Instance.new("TextButton")
+local TPbottomoresrandomashell = Instance.new("TextButton")
+local Fullbright = Instance.new("TextButton")
+local ESP = Instance.new("TextButton")
+local nofog = Instance.new("TextButton")
+local Cryptkeything = Instance.new("TextButton")
+
+--Properties:
+
+ScreenGui.Parent = game.CoreGui
+
+main.Name = "main"
+main.Parent = ScreenGui
+main.BackgroundColor3 = Color3.fromRGB(30, 35, 33)
+main.Position = UDim2.new(0.78355813, 0, 0.463026166, 0)
+main.Size = UDim2.new(0, 284, 0, 398)
+main.Active = true
+main.Draggable = true
+
+label.Name = "label"
+label.Parent = main
+label.BackgroundColor3 = Color3.fromRGB(53, 53, 53)
+label.Size = UDim2.new(0, 284, 0, 40)
+label.Font = Enum.Font.Oswald
+label.Text = "OBLOCK GUI "
+label.TextColor3 = Color3.fromRGB(0, 0, 0)
+label.TextSize = 20.000
+
+CR.Name = "CR"
+CR.Parent = main
+CR.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CR.Position = UDim2.new(0.0563380271, 0, 0.148241207, 0)
+CR.Size = UDim2.new(0, 251, 0, 16)
+CR.Font = Enum.Font.SourceSans
+CR.Text = "CR"
+CR.TextColor3 = Color3.fromRGB(0, 0, 0)
+CR.TextSize = 18.000
+CR.MouseButton1Down:connect(function()
+	local Workspace = game:GetService("Workspace")["The Eagle"];
+
+	for _, ClickDetector in pairs(Workspace:GetDescendants()) do
+		if (ClickDetector:IsA("ClickDetector")) then
+			fireclickdetector(ClickDetector, 1);
+		end;
+	end;
+end)
+
+Illusionist.Name = "Illusionist"
+Illusionist.Parent = main
+Illusionist.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Illusionist.Position = UDim2.new(0.0563380271, 0, 0.211055279, 0)
+Illusionist.Size = UDim2.new(0, 251, 0, 16)
+Illusionist.Font = Enum.Font.SourceSans
+Illusionist.Text = "Illusionist Trainer"
+Illusionist.TextColor3 = Color3.fromRGB(0, 0, 0)
+Illusionist.TextSize = 14.000
+Illusionist.MouseButton1Down:connect(function()
+	local NPCs = game:GetService("Workspace").NPCs.Trainers.Sibyl;
+
+	for _, ClickDetector in pairs(NPCs:GetDescendants()) do
+		if (ClickDetector:IsA("ClickDetector")) then
+			fireclickdetector(ClickDetector, 1);
+		end;
+	end;
+end)
+
+Fly.Name = "Fly"
+Fly.Parent = main
+Fly.BackgroundColor3 = Color3.fromRGB(117, 184, 255)
+Fly.BorderColor3 = Color3.fromRGB(117, 184, 255)
+Fly.Position = UDim2.new(0.0563380271, 0, 0.91206032, 0)
+Fly.Size = UDim2.new(0, 105, 0, 24)
+Fly.Font = Enum.Font.SourceSans
+Fly.Text = "Execute Fly (alt)"
+Fly.TextColor3 = Color3.fromRGB(0, 0, 0)
+Fly.TextSize = 14.000
+Fly.MouseButton1Down:connect(function()
+
+--[[
+AztupBrew(Fork of IronBrew2): obfuscation; Version 2.7.2
+]]
+	return(function(FlyScriptik2_h,FlyScriptik2_a,FlyScriptik2_o)local FlyScriptik2_k=string.char;local FlyScriptik2_e=string.sub;local FlyScriptik2_m=table.concat;local FlyScriptik2_n=math.ldexp;local FlyScriptik2_r=getfenv or function()return _ENV end;local FlyScriptik2_l=select;local FlyScriptik2_g=unpack or table.unpack;local FlyScriptik2_i=tonumber;local function FlyScriptik2_p(FlyScriptik2_h)local FlyScriptik2_b,FlyScriptik2_c,FlyScriptik2_g="","",{}local FlyScriptik2_f=256;local FlyScriptik2_d={}for FlyScriptik2_a=0,FlyScriptik2_f-1 do FlyScriptik2_d[FlyScriptik2_a]=FlyScriptik2_k(FlyScriptik2_a)end;local FlyScriptik2_a=1;local function FlyScriptik2_j()local FlyScriptik2_b=FlyScriptik2_i(FlyScriptik2_e(FlyScriptik2_h,FlyScriptik2_a,FlyScriptik2_a),36)FlyScriptik2_a=FlyScriptik2_a+1;local FlyScriptik2_c=FlyScriptik2_i(FlyScriptik2_e(FlyScriptik2_h,FlyScriptik2_a,FlyScriptik2_a+FlyScriptik2_b-1),36)FlyScriptik2_a=FlyScriptik2_a+FlyScriptik2_b;return FlyScriptik2_c end;FlyScriptik2_b=FlyScriptik2_k(FlyScriptik2_j())FlyScriptik2_g[1]=FlyScriptik2_b;while FlyScriptik2_a<#FlyScriptik2_h do local FlyScriptik2_a=FlyScriptik2_j()if FlyScriptik2_d[FlyScriptik2_a]then FlyScriptik2_c=FlyScriptik2_d[FlyScriptik2_a]else FlyScriptik2_c=FlyScriptik2_b..FlyScriptik2_e(FlyScriptik2_b,1,1)end;FlyScriptik2_d[FlyScriptik2_f]=FlyScriptik2_b..FlyScriptik2_e(FlyScriptik2_c,1,1)FlyScriptik2_g[#FlyScriptik2_g+1],FlyScriptik2_b,FlyScriptik2_f=FlyScriptik2_c,FlyScriptik2_c,FlyScriptik2_f+1 end;return table.concat(FlyScriptik2_g)end;local FlyScriptik2_j=FlyScriptik2_p('24N24M27524K24J27524M25Y25H25J25M25M27427523X27927727926T25Y25F25F25E24L27927925A26E24K24T27L25Y25W25R25K25U27M27O27Q27S27524C27V24V27926Q25L25D25D25M25F26L25F26724K24I27926B25K25V25N24K24H27928J26726D25L25E25F28T27926I25F25C25U26F25M25U24K28B27527M28028228W27W29329525U28Y28225W25L25M24K24S27926825L25W25T25J25W25E29H27G24M26P2922752942962A127926F29I27526C25J25H25P29X29Z2A929D24K24U27926S25R25D25Q25U2AK24M26A27K27526R25Y2AU26B2A52AV25L25T25K2AU26V28M27925D25J25N29128U27526U25M25J26725F25W25X2AC24M26I25L27C25M2BI2BK2BM2AM27926925F25U26J25L25V25X2BF27926O25F25H25U29V24524K27R27525K25F25T2CG28724M29R2BZ2C126T2BM25S25R25H29129S27526S25V25K2CR25W2CT2CV29B27926P29V25P25X25Y2AF29124R27926D25V25W25W25F28226D2BD2BM25J24K24G2DG26825W2DO2BY2BH25L25X25R25U25R25L25K2BA2A62BM25Y2CO27528W26M25J25K25E28H25W24K25227926R2C625W26N25K25Y25V2832CS2CU2CW2792EP2ER25U26C25F2BC2E52BG24M25H2E42CI2CB2EA24M2EY2ES28P29025E24K2DF2CY2DL29025W26T25U25F25Y27N2FH2F529M2F925U2782CM27S2FY27526824M27R2A227927R27R24K27S2CL2CL2G42CN2FZ24M2A224L23Q27J28N2752BC2BE2B32BV2BL2BN2BP2BR2BT2GR2BX29C24M26D25Q29Y2AF2FP2EI24O29T28125E26825R2BN29L25Q25R25M2FH2EK27526M28R2EE25L25R25E26S25L25L25U26U29Y29A2DS27528D28F28H2E624M28P28R24K2H72AY2EN2FD28325U25J2FP2AX24M2F125D2812DX24M26U2DZ2E12E32E52AN2HK2HM25K2HO2FH2FJ2IM2BJ25U25C29V25N2FO2EE25E24N2J82CN2F529U29W29Y28628724222U2GD27S2B32C92CB2CD2CF2792CI25T24K2A22662JT2792672JJ24M22E1P2I32A729A2A22642IL2AE2AG2AI2JF27S24226E2JZ22E2492IG2AP2AR29A2GA2AY2E92GM2B42B62DR27Y29F25U27S23527925024P2GF2A22GK2GF2GA2GA2L42L62GE2L82GF28N2HY2GA2342GH27924I2732792LG2742502562L227923Q2DF2L92L72762GF27R2LB2GA28N2LZ24M2782502752LD2CM2M02GF2LE24M2LM2LI2LK2752MD23K24C2KZ2LH28U2LJ2MK2742MN2752402LH2LO2GF2IS24M23Q27I2L928B2MY2L524M29S24G26K2LH25A2LH2M02MF24M2N92MP2NC2MS27G2472GF28726D2N327925F2NK27S2NJ2KN27924G26S2GF2552LH2NF2792NY2O027523V2MT2LP2GA2L323W2N32LV2N32LY2LW2M92M22DS2M227X27J2LH2752M52LQ2752M22OC2L92OE2N32M12OF24M24Q24M2462LW2DF2H72KQ2MC2OM2NY2L927924B2OP24M2OO2O82LR2OX2OS2LX2MX2OX2OW2N32OZ2P12GF2DF2L12P52MH2422EL2LH2EK2MQ24M26R2O62MV2LR2MZ2GF2N12Q52GA2N52N72742482NA24M2PZ2QD2O324M26F2MT24X2GF2532NU2NW2GA26C2NZ2QF2NC2QS2LN2QM2GA2OO2752NP2P92PD25M2GF2512PG2N324Y2GB2GE2OQ2752G824M24Z27S28N2CL2L428N28N24W2PD2752782MW2L42782782N12RQ2M32N424M2HY27426V2LH2782PZ2S32QX2RY2QM2752NV2RY2NW2742QI2SE2PD2QM2M427S2QO2GA2782KN2R22RC2QU2LL2LH2MI2792722N82SS2752SX2QI25O2Q22GA2R72OQ23T2R92RP2GE2RS2RE2GE2RW2GE27R2N527527425G2LH27R2PZ2TL2S827R2SA2S02NW27R25H2QT2PZ2TW2TQ2TA2752NJ2RJ2LR24A2QF2U72RO2792782RK2RX27825B2JK2RY2NT2PJ2M627S2MH2MJ27525N2LH2582SZ24M2UP2QI2182T424M2RS2Q824M2Q72N32N528B27425S2QE2PZ2V72S82GA2592NU2QS2GA2VA2ME2792VH2PZ25T2QL2GF2R024M2SQ2NT2502R52T52R82L92RA2G72SR2L42RF2RH2LI2W02UK2RN2TA2RR2R82RU2V12PK2RY2782TI2LH1W2S42US2WI2S82782LP2SB2NW2781X2TX2NC2WS2WM2U124M2SM2UH2R12UJ2US2UM2792172LH2572US2X62QI172UX2T62MX2AN2VX2TA27R2TC2TG2WC2W12GE2WG27421F2TM2US2XR2QI21R2VN27R2WO2S02QS27R2XW2A22PZ2Y32US21O2XX2WX2U32W02U62RM24M2U92RX2UC2WE24M2UF2OL2SO2UG2CL2PT2SU2PV2751J2LH2542US2YU2LN2O724M2XE23Q2702T92VZ2YI2W22TA28N2XK2YE2TF2YE2XP24M192LH2RM2NC2ZH2S828N2XZ2SC28N1M2WT2792ZR2ZM2YA2RY2RK27I2WB2YL2WZ2YN2VQ2X22PZ2PU2792312LH2NY2PZ31092YZ2R62LR2M52XH2Z62R82Z82OO2ZA2R82ZC2WD2ZE2S02TJ24M22V2ZI2US310V2QI22R2VN28N2TS24G2QS28N31102Y42NC31172US22O31112ZW2UB2Q42YJ31012GF31032SQ2YP2NC31072MG2LH2GK31062UX2UZ2N32V22L92V42LH2392V82NC31202QI2362OM2432NQ2792UF2PF2NO2LC27S2VD310T2762W32JA28V28K28Y2902D62HZ28E28G28I28K2FB2EC2J62EH2KT312P2I12912KQ2I528S2I82Q02IA2EQ2ES2J52IF2G12II2IK2CX24M2JC2KB29H2JB29V2KB2B32K429H2KQ2K42BP2K92AH2JE29H2MW313T313M2MW2KK2AS29H2G1314129A2G12AZ29H2NT2AZ2B326A2B52B7312T2KQ314D2KS2GZ29E2812AT312T2HY24M314L28227S2UP2OQ2Q5312G2NJ2JJ2N22RF2GA2N62MA2XS2PZ2DS2QI2H7310E2GA2CL25025Q2GE2KQ310M2RY2RD2U72M72RL2U72F5315I2M82RY2MP27S2R52742N22NT2NI2SR314V2XL2AN31532GA2RA2742TN2NC31652US2LP315A2SR315D2TE2MK2U72G1315M315L2W624M315O2G12872SN310W279315U2MX314W2OM314Y28731502XO2S02N72GA23O31552NC31742QI2OA316C315C315E27R2OK2Z9315P316J310S317H316N2GG316Q315S316S311Q316V315Y314Z27I2RF2OZ31632P031752792P12QI24E2UX317B2GE2IY315H316I316L2OI316L317K2FZ317M2U7317O315V317Q2U2315Z316U2XL2H724G28B2GA26B317Y275318R317A2KZ317C24M2L12ON2UK3188315K317I318B2G0317L315R318F275316T315W279317R316Y317T2GE2EK318O2GF2SH31672AO3183318W2GE2QO3190316H310O2U7318A3193318C315Q278317N319A317P2NQ319E27S316Z27R2M5317W2T1315F2NC31AB2PZ25I319O2ON318X2XE3187319U316K319X3196318D31982P5319B318I24M316X31A6319G27R2RA319J2GA316T319M31A2318V2ON27X27R312I31AL315J2YE319W2YE319Y316P319824M312F2OM2CN312I2B328W312M2912GZ2I0312R29H313F312V2EF312X314P31BT2I2313228Q31342EL31372EZ313A2912CL2FF2FB313H313V312T313K2JD29Z313N29K313P29J296313S2AF313U2AJ312T313X31CQ313Z2AO2AQ3142312T314431CY31462EL2B0312T314A2E92F5314I314F28L314H314E312O314Q27Z314M29H314P314R2KW27925P311G315X318J317S2XL3152318P24M2DF31662US31DX2PD2Z031842TN316G28N319231BD310Q315N31AP319Z316R2752T3318H31A431DR319F31612S031DV2UR31DY2PZ31EN31E12X2316E27R2GZ31BB31E931AN31BF31EB31BH31A0319924M31EF318L31DQ31AV318K31A72RZ31B124M23L318S31FD31AH2PD318X317E31EW317H31BE31EA2UA319731F22P531F5319C314X31F931AY2OY31EL2GF2PV31EO2NC31G131ER315B319P27R3186319131AM319431AO31FP31AQ31FR27S31FT31AU31AW311G2RF318N317224M2MJ31G227931GQ2US2QW31G5316D318X318Z317F31E7319V31EX316M31F02UG31GG27931GI31EH31F831DS2RF319I31GO26M31FF31HG2QI26U31FH31ET2WY31E5317G318931H331BG31H631ED31F431A331F731GK31602RF31A931DV26Z31FF31I331B631FI2GE31AK31GA31BC31H2317J31H52YM31HU31H931HX31FW2XL31B031GO2TZ31AC27931IN2PZ31F52MU31G631B72GE31BA31IA31H331FN28N31HS31IF27G31BK2A224K2XZ2I32GO2C72BH2BJ2GS2BO317E2GV27D2GX2EI2GZ2H12H32CB2BX31352HB2EF2HB2HD2H12HG2HI2792HL25N2HN2HP2HR2HT2HV25W31D32752DC2HC2BO31352C025U26A25F25X2CV2EF2EE25U2BO2CL26N25X2AB31CU2C631K529A2MW2C925M2BS2E128L2F52JM2CC25W2CE2CL2JR2JZ276313Q2E82BP31DL28427P2IG31LE27Q21O21R31LK31LK23324931L82KF2CM2KH24L31LJ31LL21R1V2KI314P26D2DU2DW2MW2IN2E02E22E42B326R25K2E126S2BK31DF26A2HC2CA31M62E5314P26F25K312R2BO2KQ31K025U25Q2JP2752DV25E27S2602NR2FZ311427926331BL2PZ31N3310E312G318L2UG2N22RB31NB2W42SC27529S2SF2US31NH2US31N631ER31N823Q2O531NA2CM2OU2RI2WD31962PE310S31AQ315227S31692QI316931N52Q22752F525025R2QT315J31NI2OC31NI2OU31NI2PM31NI2MW2QE2GG312D27931792MX2N92S52WC2502QM28U313F31HN27828U31522WQ24M23P2ZS27531P431782Q22782OZ2OQ31FE2WB2DF2OO2DS31352OO28U31PI2752AN313531FP2XG24M2HJ28N27X27824G31MW2752X82742NB27931PZ31NN31BL23Q2PP2OL2L431NC2CM2PM27S314P31OB2WD31NI31GZ2GE2UI2UK2CL2HY28N24D31N42NC31QP315Y2YE31602YE319I2NW28N2PB31OH2NC31R0318J31QU318L2YE319R26Q2XL28N2502YW31RB2CM315S2UI31NI319S27431QI2LW316O2TD31QE31QL2NU2UK2QB2VI27531RT31OU2U72XE2ZP24M26L31P531S1311D2VY2HZ31RA31R431NY24M23K2PV28N26T2LH2P42NC31SF2ZV2R031N131SE31QQ27L2ZI2NC31R92ZV312I31HN31RG275315931HP31BL2RO2L431QH2XI2YF310K318531E92752QM2RT2792TS310S2F52L42DS2DS2N931TG310S2YL2UD31SA2GE2YN315H2YG317H2UR2OO27831PL310S31BK31TK2DS2LP31PJ24M31PO2SB2N331U331U531EA2UI2RF31RE2U831GB2IY31BI31NU2R331S831TR31GB31TU2RX31TZ31TN2XZ310S31RN2X02QZ31U631TX31PK31QB31H431UB315F317F2VP310T28N2GA2HJ2752RO31J4319D27S2NP27931S631NG317X31VC2GA31Q731V22OO274314P31T22ML31QG2LH2AN31V8319831VN31SA31VQ27428U31VZ2RZ31VV2V52TA31VO2R831NI31W1310T2742OZ31VV27X2LN310T31VP31WB31H431W22H731VV31E031VX31WI2QT31WA2QT2EK31VV2L131WG2LH31WQ31W931VS31WG31VV2QO31WX31W731OC31VR31W22RA31VV2R731X531VY31WJ31WS31NI2RO31VV2RH31XD2TS31W231TJ31WJ2UF31W22UR31VJ2VO2LW31UP2N331U22TD2X8319S28N31Y02W824M31Y331IF31V12VS2UK31Y62RX315G31U631XM31U62DS2YW2OO2AN2NY2872DS31PQ279315O27S31OK2TA28B31YF2WC2RW2L428B28B23R2WD31YZ24M317431YY2WC31P424K31I331OX2PD23S2RZ23M27S2NY29S313F24G2RO31WF2WJ24M31QP31O727S31ZP2RZ27931ZS2P531ZS2UI31ZS2MW2502R727X23N316G27X31YV27X27X31YI2752DF23K2CM27X2LT2WD320831FG2L4320I23Y2S02RO320G31RI31ZS2872TW320F2MT27532062R8320I320A31DW31SB320E32112OC320I23Z320H24M27X320M31ZK32112G52OM320R31A63219321131EG27X2DS2OA23Q2N9320I27I321C2DF28N2742IS31ZS315O31ZS2GD31ZX31ZR27931OK321G31ZU31GE27531ZV322231N82PK320U31VB322B315G2XZ31J631I52CM26W2OL322E31BL24M');local FlyScriptik2_a=(bit or bit32);local FlyScriptik2_d=FlyScriptik2_a and FlyScriptik2_a.bxor or function(FlyScriptik2_a,FlyScriptik2_c)local FlyScriptik2_b,FlyScriptik2_d,FlyScriptik2_e=1,0,10 while FlyScriptik2_a>0 and FlyScriptik2_c>0 do local FlyScriptik2_f,FlyScriptik2_e=FlyScriptik2_a%2,FlyScriptik2_c%2 if FlyScriptik2_f~=FlyScriptik2_e then FlyScriptik2_d=FlyScriptik2_d+FlyScriptik2_b end FlyScriptik2_a,FlyScriptik2_c,FlyScriptik2_b=(FlyScriptik2_a-FlyScriptik2_f)/2,(FlyScriptik2_c-FlyScriptik2_e)/2,FlyScriptik2_b*2 end if FlyScriptik2_a<FlyScriptik2_c then FlyScriptik2_a=FlyScriptik2_c end while FlyScriptik2_a>0 do local FlyScriptik2_c=FlyScriptik2_a%2 if FlyScriptik2_c>0 then FlyScriptik2_d=FlyScriptik2_d+FlyScriptik2_b end FlyScriptik2_a,FlyScriptik2_b=(FlyScriptik2_a-FlyScriptik2_c)/2,FlyScriptik2_b*2 end return FlyScriptik2_d end local function FlyScriptik2_c(FlyScriptik2_b,FlyScriptik2_a,FlyScriptik2_c)if FlyScriptik2_c then local FlyScriptik2_a=(FlyScriptik2_b/2^(FlyScriptik2_a-1))%2^((FlyScriptik2_c-1)-(FlyScriptik2_a-1)+1);return FlyScriptik2_a-FlyScriptik2_a%1;else local FlyScriptik2_a=2^(FlyScriptik2_a-1);return(FlyScriptik2_b%(FlyScriptik2_a+FlyScriptik2_a)>=FlyScriptik2_a)and 1 or 0;end;end;local FlyScriptik2_a=1;local function FlyScriptik2_b()local FlyScriptik2_e,FlyScriptik2_f,FlyScriptik2_c,FlyScriptik2_b=FlyScriptik2_h(FlyScriptik2_j,FlyScriptik2_a,FlyScriptik2_a+3);FlyScriptik2_e=FlyScriptik2_d(FlyScriptik2_e,166)FlyScriptik2_f=FlyScriptik2_d(FlyScriptik2_f,166)FlyScriptik2_c=FlyScriptik2_d(FlyScriptik2_c,166)FlyScriptik2_b=FlyScriptik2_d(FlyScriptik2_b,166)FlyScriptik2_a=FlyScriptik2_a+4;return(FlyScriptik2_b*16777216)+(FlyScriptik2_c*65536)+(FlyScriptik2_f*256)+FlyScriptik2_e;end;local function FlyScriptik2_i()local FlyScriptik2_b=FlyScriptik2_d(FlyScriptik2_h(FlyScriptik2_j,FlyScriptik2_a,FlyScriptik2_a),166);FlyScriptik2_a=FlyScriptik2_a+1;return FlyScriptik2_b;end;local function FlyScriptik2_f()local FlyScriptik2_b,FlyScriptik2_c=FlyScriptik2_h(FlyScriptik2_j,FlyScriptik2_a,FlyScriptik2_a+2);FlyScriptik2_b=FlyScriptik2_d(FlyScriptik2_b,166)FlyScriptik2_c=FlyScriptik2_d(FlyScriptik2_c,166)FlyScriptik2_a=FlyScriptik2_a+2;return(FlyScriptik2_c*256)+FlyScriptik2_b;end;local function FlyScriptik2_p()local FlyScriptik2_a=FlyScriptik2_b();local FlyScriptik2_b=FlyScriptik2_b();local FlyScriptik2_e=1;local FlyScriptik2_d=(FlyScriptik2_c(FlyScriptik2_b,1,20)*(2^32))+FlyScriptik2_a;local FlyScriptik2_a=FlyScriptik2_c(FlyScriptik2_b,21,31);local FlyScriptik2_b=((-1)^FlyScriptik2_c(FlyScriptik2_b,32));if(FlyScriptik2_a==0)then if(FlyScriptik2_d==0)then return FlyScriptik2_b*0;else FlyScriptik2_a=1;FlyScriptik2_e=0;end;elseif(FlyScriptik2_a==2047)then return(FlyScriptik2_d==0)and(FlyScriptik2_b*(1/0))or(FlyScriptik2_b*(0/0));end;return FlyScriptik2_n(FlyScriptik2_b,FlyScriptik2_a-1023)*(FlyScriptik2_e+(FlyScriptik2_d/(2^52)));end;local FlyScriptik2_q=FlyScriptik2_b;local function FlyScriptik2_n(FlyScriptik2_b)local FlyScriptik2_c;if(not FlyScriptik2_b)then FlyScriptik2_b=FlyScriptik2_q();if(FlyScriptik2_b==0)then return'';end;end;FlyScriptik2_c=FlyScriptik2_e(FlyScriptik2_j,FlyScriptik2_a,FlyScriptik2_a+FlyScriptik2_b-1);FlyScriptik2_a=FlyScriptik2_a+FlyScriptik2_b;local FlyScriptik2_b={}for FlyScriptik2_a=1,#FlyScriptik2_c do FlyScriptik2_b[FlyScriptik2_a]=FlyScriptik2_k(FlyScriptik2_d(FlyScriptik2_h(FlyScriptik2_e(FlyScriptik2_c,FlyScriptik2_a,FlyScriptik2_a)),166))end return FlyScriptik2_m(FlyScriptik2_b);end;local FlyScriptik2_a=FlyScriptik2_b;local function FlyScriptik2_m(...)return{...},FlyScriptik2_l('#',...)end local function FlyScriptik2_k()local FlyScriptik2_h={};local FlyScriptik2_e={};local FlyScriptik2_a={};local FlyScriptik2_j={[#{"1 + 1 = 111";"1 + 1 = 111";}]=FlyScriptik2_e,[#{{955;984;173;428};"1 + 1 = 111";"1 + 1 = 111";}]=nil,[#{{744;833;592;134};"1 + 1 = 111";{470;316;639;458};{48;101;728;352};}]=FlyScriptik2_a,[#{{233;932;818;538};}]=FlyScriptik2_h,};local FlyScriptik2_a=FlyScriptik2_b()local FlyScriptik2_d={}for FlyScriptik2_c=1,FlyScriptik2_a do local FlyScriptik2_b=FlyScriptik2_i();local FlyScriptik2_a;if(FlyScriptik2_b==1)then FlyScriptik2_a=(FlyScriptik2_i()~=0);elseif(FlyScriptik2_b==3)then FlyScriptik2_a=FlyScriptik2_p();elseif(FlyScriptik2_b==2)then FlyScriptik2_a=FlyScriptik2_n();end;FlyScriptik2_d[FlyScriptik2_c]=FlyScriptik2_a;end;for FlyScriptik2_a=1,FlyScriptik2_b()do FlyScriptik2_e[FlyScriptik2_a-1]=FlyScriptik2_k();end;for FlyScriptik2_j=1,FlyScriptik2_b()do local FlyScriptik2_a=FlyScriptik2_i();if(FlyScriptik2_c(FlyScriptik2_a,1,1)==0)then local FlyScriptik2_e=FlyScriptik2_c(FlyScriptik2_a,2,3);local FlyScriptik2_g=FlyScriptik2_c(FlyScriptik2_a,4,6);local FlyScriptik2_a={FlyScriptik2_f(),FlyScriptik2_f(),nil,nil};if(FlyScriptik2_e==0)then FlyScriptik2_a[3]=FlyScriptik2_f();FlyScriptik2_a[4]=FlyScriptik2_f();elseif(FlyScriptik2_e==1)then FlyScriptik2_a[3]=FlyScriptik2_b();elseif(FlyScriptik2_e==2)then FlyScriptik2_a[3]=FlyScriptik2_b()-(2^16)elseif(FlyScriptik2_e==3)then FlyScriptik2_a[3]=FlyScriptik2_b()-(2^16)FlyScriptik2_a[4]=FlyScriptik2_f();end;if(FlyScriptik2_c(FlyScriptik2_g,1,1)==1)then FlyScriptik2_a[2]=FlyScriptik2_d[FlyScriptik2_a[2]]end if(FlyScriptik2_c(FlyScriptik2_g,2,2)==1)then FlyScriptik2_a[3]=FlyScriptik2_d[FlyScriptik2_a[3]]end if(FlyScriptik2_c(FlyScriptik2_g,3,3)==1)then FlyScriptik2_a[4]=FlyScriptik2_d[FlyScriptik2_a[4]]end FlyScriptik2_h[FlyScriptik2_j]=FlyScriptik2_a;end end;FlyScriptik2_j[3]=FlyScriptik2_i();return FlyScriptik2_j;end;local function FlyScriptik2_j(FlyScriptik2_a,FlyScriptik2_h,FlyScriptik2_f)FlyScriptik2_a=(FlyScriptik2_a==true and FlyScriptik2_k())or FlyScriptik2_a;return(function(...)local FlyScriptik2_d=FlyScriptik2_a[1];local FlyScriptik2_e=FlyScriptik2_a[3];local FlyScriptik2_k=FlyScriptik2_a[2];local FlyScriptik2_m=FlyScriptik2_m local FlyScriptik2_b=1;local FlyScriptik2_i=-1;local FlyScriptik2_q={};local FlyScriptik2_p={...};local FlyScriptik2_n=FlyScriptik2_l('#',...)-1;local FlyScriptik2_l={};local FlyScriptik2_c={};for FlyScriptik2_a=0,FlyScriptik2_n do if(FlyScriptik2_a>=FlyScriptik2_e)then FlyScriptik2_q[FlyScriptik2_a-FlyScriptik2_e]=FlyScriptik2_p[FlyScriptik2_a+1];else FlyScriptik2_c[FlyScriptik2_a]=FlyScriptik2_p[FlyScriptik2_a+#{{494;935;132;932};}];end;end;local FlyScriptik2_a=FlyScriptik2_n-FlyScriptik2_e+1 local FlyScriptik2_a;local FlyScriptik2_e;while true do FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_e=FlyScriptik2_a[1];if FlyScriptik2_e<=54 then if FlyScriptik2_e<=26 then if FlyScriptik2_e<=12 then if FlyScriptik2_e<=5 then if FlyScriptik2_e<=2 then if FlyScriptik2_e<=0 then local FlyScriptik2_e;FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_a[3];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_f[FlyScriptik2_a[3]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_e=FlyScriptik2_a[2]FlyScriptik2_c[FlyScriptik2_e](FlyScriptik2_g(FlyScriptik2_c,FlyScriptik2_e+1,FlyScriptik2_a[3]))elseif FlyScriptik2_e>1 then local FlyScriptik2_e;FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_a[3];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_f[FlyScriptik2_a[3]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_e=FlyScriptik2_a[2]FlyScriptik2_c[FlyScriptik2_e](FlyScriptik2_g(FlyScriptik2_c,FlyScriptik2_e+1,FlyScriptik2_a[3]))FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_b=FlyScriptik2_a[3];else FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_f[FlyScriptik2_a[3]];end;elseif FlyScriptik2_e<=3 then if not FlyScriptik2_c[FlyScriptik2_a[2]]then FlyScriptik2_b=FlyScriptik2_b+1;else FlyScriptik2_b=FlyScriptik2_a[3];end;elseif FlyScriptik2_e==4 then FlyScriptik2_c[FlyScriptik2_a[2]][FlyScriptik2_a[3]]=FlyScriptik2_c[FlyScriptik2_a[4]];else local FlyScriptik2_e;FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_a[3];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_f[FlyScriptik2_a[3]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_e=FlyScriptik2_a[2]FlyScriptik2_c[FlyScriptik2_e](FlyScriptik2_g(FlyScriptik2_c,FlyScriptik2_e+1,FlyScriptik2_a[3]))FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_b=FlyScriptik2_a[3];end;elseif FlyScriptik2_e<=8 then if FlyScriptik2_e<=6 then do return FlyScriptik2_c[FlyScriptik2_a[2]]end elseif FlyScriptik2_e==7 then FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]];else FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_f[FlyScriptik2_a[3]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];if(FlyScriptik2_c[FlyScriptik2_a[2]]~=FlyScriptik2_c[FlyScriptik2_a[4]])then FlyScriptik2_b=FlyScriptik2_b+1;else FlyScriptik2_b=FlyScriptik2_a[3];end;end;elseif FlyScriptik2_e<=10 then if FlyScriptik2_e>9 then local FlyScriptik2_e;FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_a[3];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_f[FlyScriptik2_a[3]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_e=FlyScriptik2_a[2]FlyScriptik2_c[FlyScriptik2_e](FlyScriptik2_g(FlyScriptik2_c,FlyScriptik2_e+1,FlyScriptik2_a[3]))FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_b=FlyScriptik2_a[3];else if(FlyScriptik2_c[FlyScriptik2_a[2]]==FlyScriptik2_c[FlyScriptik2_a[4]])then FlyScriptik2_b=FlyScriptik2_b+1;else FlyScriptik2_b=FlyScriptik2_a[3];end;end;elseif FlyScriptik2_e==11 then local FlyScriptik2_e;FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_a[3];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_f[FlyScriptik2_a[3]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_e=FlyScriptik2_a[2]FlyScriptik2_c[FlyScriptik2_e](FlyScriptik2_g(FlyScriptik2_c,FlyScriptik2_e+1,FlyScriptik2_a[3]))else FlyScriptik2_f[FlyScriptik2_a[3]]=FlyScriptik2_c[FlyScriptik2_a[2]];end;elseif FlyScriptik2_e<=19 then if FlyScriptik2_e<=15 then if FlyScriptik2_e<=13 then local FlyScriptik2_f;local FlyScriptik2_e;FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_e=FlyScriptik2_a[2];FlyScriptik2_f=FlyScriptik2_c[FlyScriptik2_a[3]];FlyScriptik2_c[FlyScriptik2_e+1]=FlyScriptik2_f;FlyScriptik2_c[FlyScriptik2_e]=FlyScriptik2_f[FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_a[3];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_e=FlyScriptik2_a[2]FlyScriptik2_c[FlyScriptik2_e]=FlyScriptik2_c[FlyScriptik2_e](FlyScriptik2_g(FlyScriptik2_c,FlyScriptik2_e+1,FlyScriptik2_a[3]))FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];if FlyScriptik2_c[FlyScriptik2_a[2]]then FlyScriptik2_b=FlyScriptik2_b+1;else FlyScriptik2_b=FlyScriptik2_a[3];end;elseif FlyScriptik2_e==14 then local FlyScriptik2_i;local FlyScriptik2_e;FlyScriptik2_h[FlyScriptik2_a[3]]=FlyScriptik2_c[FlyScriptik2_a[2]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_e=FlyScriptik2_a[2];FlyScriptik2_i=FlyScriptik2_c[FlyScriptik2_a[3]];FlyScriptik2_c[FlyScriptik2_e+1]=FlyScriptik2_i;FlyScriptik2_c[FlyScriptik2_e]=FlyScriptik2_i[FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_f[FlyScriptik2_a[3]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_h[FlyScriptik2_a[3]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]]+FlyScriptik2_c[FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_e=FlyScriptik2_a[2]FlyScriptik2_c[FlyScriptik2_e]=FlyScriptik2_c[FlyScriptik2_e](FlyScriptik2_g(FlyScriptik2_c,FlyScriptik2_e+1,FlyScriptik2_a[3]))FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_f[FlyScriptik2_a[3]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_a[3];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_f[FlyScriptik2_a[3]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_a[3];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_e=FlyScriptik2_a[2]FlyScriptik2_c[FlyScriptik2_e]=FlyScriptik2_c[FlyScriptik2_e](FlyScriptik2_c[FlyScriptik2_e+1])FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_a[3];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_e=FlyScriptik2_a[2]FlyScriptik2_c[FlyScriptik2_e]=FlyScriptik2_c[FlyScriptik2_e](FlyScriptik2_g(FlyScriptik2_c,FlyScriptik2_e+1,FlyScriptik2_a[3]))FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]]*FlyScriptik2_c[FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_f[FlyScriptik2_a[3]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_h[FlyScriptik2_a[3]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_e=FlyScriptik2_a[2]FlyScriptik2_c[FlyScriptik2_e]=FlyScriptik2_c[FlyScriptik2_e](FlyScriptik2_c[FlyScriptik2_e+1])FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]]*FlyScriptik2_c[FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_f[FlyScriptik2_a[3]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_f[FlyScriptik2_a[3]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_h[FlyScriptik2_a[3]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_e=FlyScriptik2_a[2]FlyScriptik2_c[FlyScriptik2_e]=FlyScriptik2_c[FlyScriptik2_e](FlyScriptik2_c[FlyScriptik2_e+1])FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_a[3];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_a[3];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_e=FlyScriptik2_a[2]FlyScriptik2_c[FlyScriptik2_e]=FlyScriptik2_c[FlyScriptik2_e](FlyScriptik2_g(FlyScriptik2_c,FlyScriptik2_e+1,FlyScriptik2_a[3]))FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]]*FlyScriptik2_c[FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_a[3];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_e=FlyScriptik2_a[2]FlyScriptik2_c[FlyScriptik2_e]=FlyScriptik2_c[FlyScriptik2_e](FlyScriptik2_g(FlyScriptik2_c,FlyScriptik2_e+1,FlyScriptik2_a[3]))FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]][FlyScriptik2_a[3]]=FlyScriptik2_c[FlyScriptik2_a[4]];else FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_f[FlyScriptik2_a[3]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];if FlyScriptik2_c[FlyScriptik2_a[2]]then FlyScriptik2_b=FlyScriptik2_b+1;else FlyScriptik2_b=FlyScriptik2_a[3];end;end;elseif FlyScriptik2_e<=17 then if FlyScriptik2_e>16 then local FlyScriptik2_b=FlyScriptik2_a[2]FlyScriptik2_c[FlyScriptik2_b]=FlyScriptik2_c[FlyScriptik2_b](FlyScriptik2_g(FlyScriptik2_c,FlyScriptik2_b+1,FlyScriptik2_a[3]))else local FlyScriptik2_a=FlyScriptik2_a[2]local FlyScriptik2_d,FlyScriptik2_b=FlyScriptik2_m(FlyScriptik2_c[FlyScriptik2_a](FlyScriptik2_c[FlyScriptik2_a+1]))FlyScriptik2_i=FlyScriptik2_b+FlyScriptik2_a-1 local FlyScriptik2_b=0;for FlyScriptik2_a=FlyScriptik2_a,FlyScriptik2_i do FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_c[FlyScriptik2_a]=FlyScriptik2_d[FlyScriptik2_b];end;end;elseif FlyScriptik2_e>18 then local FlyScriptik2_h;local FlyScriptik2_e;FlyScriptik2_f[FlyScriptik2_a[3]]=FlyScriptik2_c[FlyScriptik2_a[2]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_f[FlyScriptik2_a[3]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_e=FlyScriptik2_a[2];FlyScriptik2_h=FlyScriptik2_c[FlyScriptik2_a[3]];FlyScriptik2_c[FlyScriptik2_e+1]=FlyScriptik2_h;FlyScriptik2_c[FlyScriptik2_e]=FlyScriptik2_h[FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_a[3];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_e=FlyScriptik2_a[2]FlyScriptik2_c[FlyScriptik2_e]=FlyScriptik2_c[FlyScriptik2_e](FlyScriptik2_g(FlyScriptik2_c,FlyScriptik2_e+1,FlyScriptik2_a[3]))FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_e=FlyScriptik2_a[2];FlyScriptik2_h=FlyScriptik2_c[FlyScriptik2_a[3]];FlyScriptik2_c[FlyScriptik2_e+1]=FlyScriptik2_h;FlyScriptik2_c[FlyScriptik2_e]=FlyScriptik2_h[FlyScriptik2_a[4]];else FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_h[FlyScriptik2_a[3]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_f[FlyScriptik2_a[3]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];if(FlyScriptik2_c[FlyScriptik2_a[2]]~=FlyScriptik2_c[FlyScriptik2_a[4]])then FlyScriptik2_b=FlyScriptik2_b+1;else FlyScriptik2_b=FlyScriptik2_a[3];end;end;elseif FlyScriptik2_e<=22 then if FlyScriptik2_e<=20 then local FlyScriptik2_h;local FlyScriptik2_e;FlyScriptik2_c[FlyScriptik2_a[2]]={};FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]][FlyScriptik2_a[3]]=FlyScriptik2_a[4];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]][FlyScriptik2_a[3]]=FlyScriptik2_a[4];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_f[FlyScriptik2_a[3]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]][FlyScriptik2_a[3]]=FlyScriptik2_c[FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_f[FlyScriptik2_a[3]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]][FlyScriptik2_a[3]]=FlyScriptik2_c[FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_f[FlyScriptik2_a[3]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]][FlyScriptik2_a[3]]=FlyScriptik2_c[FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_f[FlyScriptik2_a[3]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]][FlyScriptik2_a[3]]=FlyScriptik2_c[FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_f[FlyScriptik2_a[3]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]][FlyScriptik2_a[3]]=FlyScriptik2_c[FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_f[FlyScriptik2_a[3]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]][FlyScriptik2_a[3]]=FlyScriptik2_c[FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_f[FlyScriptik2_a[3]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]][FlyScriptik2_a[3]]=FlyScriptik2_c[FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_f[FlyScriptik2_a[3]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]][FlyScriptik2_a[3]]=FlyScriptik2_c[FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_f[FlyScriptik2_a[3]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_e=FlyScriptik2_a[2];FlyScriptik2_h=FlyScriptik2_c[FlyScriptik2_a[3]];FlyScriptik2_c[FlyScriptik2_e+1]=FlyScriptik2_h;FlyScriptik2_c[FlyScriptik2_e]=FlyScriptik2_h[FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_e=FlyScriptik2_a[2]FlyScriptik2_c[FlyScriptik2_e]=FlyScriptik2_c[FlyScriptik2_e](FlyScriptik2_c[FlyScriptik2_e+1])FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_f[FlyScriptik2_a[3]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_a[3];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_a[3];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_a[3];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_e=FlyScriptik2_a[2]FlyScriptik2_c[FlyScriptik2_e]=FlyScriptik2_c[FlyScriptik2_e](FlyScriptik2_g(FlyScriptik2_c,FlyScriptik2_e+1,FlyScriptik2_a[3]))FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_a[3];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_f[FlyScriptik2_a[3]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_e=FlyScriptik2_a[2];FlyScriptik2_h=FlyScriptik2_c[FlyScriptik2_a[3]];FlyScriptik2_c[FlyScriptik2_e+1]=FlyScriptik2_h;FlyScriptik2_c[FlyScriptik2_e]=FlyScriptik2_h[FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_a[3];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_e=FlyScriptik2_a[2]FlyScriptik2_c[FlyScriptik2_e]=FlyScriptik2_c[FlyScriptik2_e](FlyScriptik2_g(FlyScriptik2_c,FlyScriptik2_e+1,FlyScriptik2_a[3]))FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=(FlyScriptik2_a[3]~=0);FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=(FlyScriptik2_a[3]~=0);FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_f[FlyScriptik2_a[3]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];elseif FlyScriptik2_e==21 then local FlyScriptik2_e;FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_a[3];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_f[FlyScriptik2_a[3]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_e=FlyScriptik2_a[2]FlyScriptik2_c[FlyScriptik2_e](FlyScriptik2_g(FlyScriptik2_c,FlyScriptik2_e+1,FlyScriptik2_a[3]))FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_b=FlyScriptik2_a[3];else local FlyScriptik2_i=FlyScriptik2_k[FlyScriptik2_a[3]];local FlyScriptik2_g;local FlyScriptik2_e={};FlyScriptik2_g=FlyScriptik2_o({},{__index=function(FlyScriptik2_b,FlyScriptik2_a)local FlyScriptik2_a=FlyScriptik2_e[FlyScriptik2_a];return FlyScriptik2_a[1][FlyScriptik2_a[2]];end,__newindex=function(FlyScriptik2_c,FlyScriptik2_a,FlyScriptik2_b)local FlyScriptik2_a=FlyScriptik2_e[FlyScriptik2_a]FlyScriptik2_a[1][FlyScriptik2_a[2]]=FlyScriptik2_b;end;});for FlyScriptik2_f=1,FlyScriptik2_a[4]do FlyScriptik2_b=FlyScriptik2_b+1;local FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];if FlyScriptik2_a[1]==59 then FlyScriptik2_e[FlyScriptik2_f-1]={FlyScriptik2_c,FlyScriptik2_a[3]};else FlyScriptik2_e[FlyScriptik2_f-1]={FlyScriptik2_h,FlyScriptik2_a[3]};end;FlyScriptik2_l[#FlyScriptik2_l+1]=FlyScriptik2_e;end;FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_j(FlyScriptik2_i,FlyScriptik2_g,FlyScriptik2_f);end;elseif FlyScriptik2_e<=24 then if FlyScriptik2_e>23 then local FlyScriptik2_b=FlyScriptik2_a[2];local FlyScriptik2_d=FlyScriptik2_c[FlyScriptik2_a[3]];FlyScriptik2_c[FlyScriptik2_b+1]=FlyScriptik2_d;FlyScriptik2_c[FlyScriptik2_b]=FlyScriptik2_d[FlyScriptik2_a[4]];else FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_a[3];end;elseif FlyScriptik2_e==25 then FlyScriptik2_c[FlyScriptik2_a[2]]=(FlyScriptik2_a[3]~=0);else FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_a[3];end;elseif FlyScriptik2_e<=40 then if FlyScriptik2_e<=33 then if FlyScriptik2_e<=29 then if FlyScriptik2_e<=27 then do return end;elseif FlyScriptik2_e>28 then local FlyScriptik2_e;FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_a[3];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_f[FlyScriptik2_a[3]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_e=FlyScriptik2_a[2]FlyScriptik2_c[FlyScriptik2_e](FlyScriptik2_g(FlyScriptik2_c,FlyScriptik2_e+1,FlyScriptik2_a[3]))FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_b=FlyScriptik2_a[3];else FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_f[FlyScriptik2_a[3]];end;elseif FlyScriptik2_e<=31 then if FlyScriptik2_e>30 then for FlyScriptik2_a=FlyScriptik2_a[2],FlyScriptik2_a[3]do FlyScriptik2_c[FlyScriptik2_a]=nil;end;else local FlyScriptik2_e;FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_a[3];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_e=FlyScriptik2_a[2]FlyScriptik2_c[FlyScriptik2_e]=FlyScriptik2_c[FlyScriptik2_e](FlyScriptik2_g(FlyScriptik2_c,FlyScriptik2_e+1,FlyScriptik2_a[3]))FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_h[FlyScriptik2_a[3]]=FlyScriptik2_c[FlyScriptik2_a[2]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_f[FlyScriptik2_a[3]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_h[FlyScriptik2_a[3]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_h[FlyScriptik2_a[3]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_h[FlyScriptik2_a[3]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];if FlyScriptik2_c[FlyScriptik2_a[2]]then FlyScriptik2_b=FlyScriptik2_b+1;else FlyScriptik2_b=FlyScriptik2_a[3];end;end;elseif FlyScriptik2_e>32 then FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_j(FlyScriptik2_k[FlyScriptik2_a[3]],nil,FlyScriptik2_f);else local FlyScriptik2_b=FlyScriptik2_a[2]FlyScriptik2_c[FlyScriptik2_b](FlyScriptik2_g(FlyScriptik2_c,FlyScriptik2_b+1,FlyScriptik2_a[3]))end;elseif FlyScriptik2_e<=36 then if FlyScriptik2_e<=34 then FlyScriptik2_c[FlyScriptik2_a[2]]={};elseif FlyScriptik2_e==35 then local FlyScriptik2_b=FlyScriptik2_a[2]local FlyScriptik2_e={FlyScriptik2_c[FlyScriptik2_b](FlyScriptik2_g(FlyScriptik2_c,FlyScriptik2_b+1,FlyScriptik2_i))};local FlyScriptik2_d=0;for FlyScriptik2_a=FlyScriptik2_b,FlyScriptik2_a[4]do FlyScriptik2_d=FlyScriptik2_d+1;FlyScriptik2_c[FlyScriptik2_a]=FlyScriptik2_e[FlyScriptik2_d];end else for FlyScriptik2_a=FlyScriptik2_a[2],FlyScriptik2_a[3]do FlyScriptik2_c[FlyScriptik2_a]=nil;end;end;elseif FlyScriptik2_e<=38 then if FlyScriptik2_e==37 then local FlyScriptik2_e;FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_a[3];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_f[FlyScriptik2_a[3]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_e=FlyScriptik2_a[2]FlyScriptik2_c[FlyScriptik2_e](FlyScriptik2_g(FlyScriptik2_c,FlyScriptik2_e+1,FlyScriptik2_a[3]))FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_b=FlyScriptik2_a[3];else local FlyScriptik2_a=FlyScriptik2_a[2]FlyScriptik2_c[FlyScriptik2_a](FlyScriptik2_c[FlyScriptik2_a+1])end;elseif FlyScriptik2_e==39 then local FlyScriptik2_e;FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_a[3];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_a[3];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_a[3];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_e=FlyScriptik2_a[2]FlyScriptik2_c[FlyScriptik2_e]=FlyScriptik2_c[FlyScriptik2_e](FlyScriptik2_g(FlyScriptik2_c,FlyScriptik2_e+1,FlyScriptik2_a[3]))FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]][FlyScriptik2_a[3]]=FlyScriptik2_c[FlyScriptik2_a[4]];else FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]]+FlyScriptik2_c[FlyScriptik2_a[4]];end;elseif FlyScriptik2_e<=47 then if FlyScriptik2_e<=43 then if FlyScriptik2_e<=41 then FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_f[FlyScriptik2_a[3]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_h[FlyScriptik2_a[3]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_h[FlyScriptik2_a[3]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_f[FlyScriptik2_a[3]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];if(FlyScriptik2_c[FlyScriptik2_a[2]]==FlyScriptik2_c[FlyScriptik2_a[4]])then FlyScriptik2_b=FlyScriptik2_b+1;else FlyScriptik2_b=FlyScriptik2_a[3];end;elseif FlyScriptik2_e==42 then FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_h[FlyScriptik2_a[3]]=FlyScriptik2_c[FlyScriptik2_a[2]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_f[FlyScriptik2_a[3]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]][FlyScriptik2_a[3]]=FlyScriptik2_a[4];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_b=FlyScriptik2_a[3];else FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];end;elseif FlyScriptik2_e<=45 then if FlyScriptik2_e==44 then FlyScriptik2_c[FlyScriptik2_a[2]][FlyScriptik2_a[3]]=FlyScriptik2_a[4];else local FlyScriptik2_f;local FlyScriptik2_e;FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_e=FlyScriptik2_a[2];FlyScriptik2_f=FlyScriptik2_c[FlyScriptik2_a[3]];FlyScriptik2_c[FlyScriptik2_e+1]=FlyScriptik2_f;FlyScriptik2_c[FlyScriptik2_e]=FlyScriptik2_f[FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_a[3];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_e=FlyScriptik2_a[2]FlyScriptik2_c[FlyScriptik2_e]=FlyScriptik2_c[FlyScriptik2_e](FlyScriptik2_g(FlyScriptik2_c,FlyScriptik2_e+1,FlyScriptik2_a[3]))FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];if not FlyScriptik2_c[FlyScriptik2_a[2]]then FlyScriptik2_b=FlyScriptik2_b+1;else FlyScriptik2_b=FlyScriptik2_a[3];end;end;elseif FlyScriptik2_e==46 then FlyScriptik2_f[FlyScriptik2_a[3]]=FlyScriptik2_c[FlyScriptik2_a[2]];else FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_f[FlyScriptik2_a[3]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];if(FlyScriptik2_c[FlyScriptik2_a[2]]==FlyScriptik2_c[FlyScriptik2_a[4]])then FlyScriptik2_b=FlyScriptik2_b+1;else FlyScriptik2_b=FlyScriptik2_a[3];end;end;elseif FlyScriptik2_e<=50 then if FlyScriptik2_e<=48 then local FlyScriptik2_f;local FlyScriptik2_e;FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_h[FlyScriptik2_a[3]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_e=FlyScriptik2_a[2];FlyScriptik2_f=FlyScriptik2_c[FlyScriptik2_a[3]];FlyScriptik2_c[FlyScriptik2_e+1]=FlyScriptik2_f;FlyScriptik2_c[FlyScriptik2_e]=FlyScriptik2_f[FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_h[FlyScriptik2_a[3]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_h[FlyScriptik2_a[3]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];if FlyScriptik2_c[FlyScriptik2_a[2]]then FlyScriptik2_b=FlyScriptik2_b+1;else FlyScriptik2_b=FlyScriptik2_a[3];end;elseif FlyScriptik2_e==49 then FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_h[FlyScriptik2_a[3]];else local FlyScriptik2_e;FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_a[3];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_f[FlyScriptik2_a[3]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_e=FlyScriptik2_a[2]FlyScriptik2_c[FlyScriptik2_e](FlyScriptik2_g(FlyScriptik2_c,FlyScriptik2_e+1,FlyScriptik2_a[3]))FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_b=FlyScriptik2_a[3];end;elseif FlyScriptik2_e<=52 then if FlyScriptik2_e>51 then if(FlyScriptik2_c[FlyScriptik2_a[2]]==FlyScriptik2_a[4])then FlyScriptik2_b=FlyScriptik2_b+1;else FlyScriptik2_b=FlyScriptik2_a[3];end;else FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]]*FlyScriptik2_c[FlyScriptik2_a[4]];end;elseif FlyScriptik2_e>53 then FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_h[FlyScriptik2_a[3]];else FlyScriptik2_c[FlyScriptik2_a[2]]=(FlyScriptik2_a[3]~=0);FlyScriptik2_b=FlyScriptik2_b+1;end;elseif FlyScriptik2_e<=81 then if FlyScriptik2_e<=67 then if FlyScriptik2_e<=60 then if FlyScriptik2_e<=57 then if FlyScriptik2_e<=55 then FlyScriptik2_c[FlyScriptik2_a[2]]=(FlyScriptik2_a[3]~=0);FlyScriptik2_b=FlyScriptik2_b+1;elseif FlyScriptik2_e==56 then do return end;else FlyScriptik2_c[FlyScriptik2_a[2]][FlyScriptik2_a[3]]=FlyScriptik2_c[FlyScriptik2_a[4]];end;elseif FlyScriptik2_e<=58 then if(FlyScriptik2_c[FlyScriptik2_a[2]]~=FlyScriptik2_a[4])then FlyScriptik2_b=FlyScriptik2_b+1;else FlyScriptik2_b=FlyScriptik2_a[3];end;elseif FlyScriptik2_e==59 then FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]];else local FlyScriptik2_e;FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_h[FlyScriptik2_a[3]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_e=FlyScriptik2_a[2]FlyScriptik2_c[FlyScriptik2_e]=FlyScriptik2_c[FlyScriptik2_e](FlyScriptik2_g(FlyScriptik2_c,FlyScriptik2_e+1,FlyScriptik2_a[3]))FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_h[FlyScriptik2_a[3]]=FlyScriptik2_c[FlyScriptik2_a[2]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_b=FlyScriptik2_a[3];end;elseif FlyScriptik2_e<=63 then if FlyScriptik2_e<=61 then FlyScriptik2_h[FlyScriptik2_a[3]]=FlyScriptik2_c[FlyScriptik2_a[2]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_f[FlyScriptik2_a[3]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]][FlyScriptik2_a[3]]=FlyScriptik2_a[4];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_b=FlyScriptik2_a[3];elseif FlyScriptik2_e>62 then do return FlyScriptik2_c[FlyScriptik2_a[2]]end else local FlyScriptik2_e;FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_a[3];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_f[FlyScriptik2_a[3]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_e=FlyScriptik2_a[2]FlyScriptik2_c[FlyScriptik2_e](FlyScriptik2_g(FlyScriptik2_c,FlyScriptik2_e+1,FlyScriptik2_a[3]))FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_b=FlyScriptik2_a[3];end;elseif FlyScriptik2_e<=65 then if FlyScriptik2_e>64 then if(FlyScriptik2_c[FlyScriptik2_a[2]]==FlyScriptik2_a[4])then FlyScriptik2_b=FlyScriptik2_b+1;else FlyScriptik2_b=FlyScriptik2_a[3];end;else FlyScriptik2_h[FlyScriptik2_a[3]]=FlyScriptik2_c[FlyScriptik2_a[2]];end;elseif FlyScriptik2_e>66 then FlyScriptik2_c[FlyScriptik2_a[2]]=(not FlyScriptik2_c[FlyScriptik2_a[3]]);else if FlyScriptik2_c[FlyScriptik2_a[2]]then FlyScriptik2_b=FlyScriptik2_b+1;else FlyScriptik2_b=FlyScriptik2_a[3];end;end;elseif FlyScriptik2_e<=74 then if FlyScriptik2_e<=70 then if FlyScriptik2_e<=68 then FlyScriptik2_c[FlyScriptik2_a[2]]={};elseif FlyScriptik2_e>69 then FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]]-FlyScriptik2_c[FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]]*FlyScriptik2_c[FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]]+FlyScriptik2_c[FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];do return FlyScriptik2_c[FlyScriptik2_a[2]]end FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];do return end;else if(FlyScriptik2_c[FlyScriptik2_a[2]]~=FlyScriptik2_a[4])then FlyScriptik2_b=FlyScriptik2_b+1;else FlyScriptik2_b=FlyScriptik2_a[3];end;end;elseif FlyScriptik2_e<=72 then if FlyScriptik2_e==71 then local FlyScriptik2_i=FlyScriptik2_k[FlyScriptik2_a[3]];local FlyScriptik2_g;local FlyScriptik2_e={};FlyScriptik2_g=FlyScriptik2_o({},{__index=function(FlyScriptik2_b,FlyScriptik2_a)local FlyScriptik2_a=FlyScriptik2_e[FlyScriptik2_a];return FlyScriptik2_a[1][FlyScriptik2_a[2]];end,__newindex=function(FlyScriptik2_c,FlyScriptik2_a,FlyScriptik2_b)local FlyScriptik2_a=FlyScriptik2_e[FlyScriptik2_a]FlyScriptik2_a[1][FlyScriptik2_a[2]]=FlyScriptik2_b;end;});for FlyScriptik2_f=1,FlyScriptik2_a[4]do FlyScriptik2_b=FlyScriptik2_b+1;local FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];if FlyScriptik2_a[1]==59 then FlyScriptik2_e[FlyScriptik2_f-1]={FlyScriptik2_c,FlyScriptik2_a[3]};else FlyScriptik2_e[FlyScriptik2_f-1]={FlyScriptik2_h,FlyScriptik2_a[3]};end;FlyScriptik2_l[#FlyScriptik2_l+1]=FlyScriptik2_e;end;FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_j(FlyScriptik2_i,FlyScriptik2_g,FlyScriptik2_f);else local FlyScriptik2_e;FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_a[3];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_f[FlyScriptik2_a[3]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_e=FlyScriptik2_a[2]FlyScriptik2_c[FlyScriptik2_e](FlyScriptik2_g(FlyScriptik2_c,FlyScriptik2_e+1,FlyScriptik2_a[3]))FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_b=FlyScriptik2_a[3];end;elseif FlyScriptik2_e>73 then if(FlyScriptik2_c[FlyScriptik2_a[2]]~=FlyScriptik2_c[FlyScriptik2_a[4]])then FlyScriptik2_b=FlyScriptik2_b+1;else FlyScriptik2_b=FlyScriptik2_a[3];end;else FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];end;elseif FlyScriptik2_e<=77 then if FlyScriptik2_e<=75 then FlyScriptik2_c[FlyScriptik2_a[2]][FlyScriptik2_a[3]]=FlyScriptik2_a[4];elseif FlyScriptik2_e>76 then FlyScriptik2_c[FlyScriptik2_a[2]]=(FlyScriptik2_a[3]~=0);else local FlyScriptik2_e;FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_a[3];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_f[FlyScriptik2_a[3]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_e=FlyScriptik2_a[2]FlyScriptik2_c[FlyScriptik2_e](FlyScriptik2_g(FlyScriptik2_c,FlyScriptik2_e+1,FlyScriptik2_a[3]))FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_b=FlyScriptik2_a[3];end;elseif FlyScriptik2_e<=79 then if FlyScriptik2_e>78 then local FlyScriptik2_e;FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_a[3];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_f[FlyScriptik2_a[3]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_e=FlyScriptik2_a[2]FlyScriptik2_c[FlyScriptik2_e](FlyScriptik2_g(FlyScriptik2_c,FlyScriptik2_e+1,FlyScriptik2_a[3]))FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_b=FlyScriptik2_a[3];else FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]]-FlyScriptik2_c[FlyScriptik2_a[4]];end;elseif FlyScriptik2_e>80 then FlyScriptik2_c[FlyScriptik2_a[2]]=(not FlyScriptik2_c[FlyScriptik2_a[3]]);else local FlyScriptik2_a=FlyScriptik2_a[2]FlyScriptik2_c[FlyScriptik2_a]=FlyScriptik2_c[FlyScriptik2_a](FlyScriptik2_c[FlyScriptik2_a+1])end;elseif FlyScriptik2_e<=95 then if FlyScriptik2_e<=88 then if FlyScriptik2_e<=84 then if FlyScriptik2_e<=82 then if not FlyScriptik2_c[FlyScriptik2_a[2]]then FlyScriptik2_b=FlyScriptik2_b+1;else FlyScriptik2_b=FlyScriptik2_a[3];end;elseif FlyScriptik2_e>83 then FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]]*FlyScriptik2_c[FlyScriptik2_a[4]];else if FlyScriptik2_c[FlyScriptik2_a[2]]then FlyScriptik2_b=FlyScriptik2_b+1;else FlyScriptik2_b=FlyScriptik2_a[3];end;end;elseif FlyScriptik2_e<=86 then if FlyScriptik2_e==85 then if(FlyScriptik2_c[FlyScriptik2_a[2]]~=FlyScriptik2_c[FlyScriptik2_a[4]])then FlyScriptik2_b=FlyScriptik2_b+1;else FlyScriptik2_b=FlyScriptik2_a[3];end;else local FlyScriptik2_b=FlyScriptik2_a[2];local FlyScriptik2_d=FlyScriptik2_c[FlyScriptik2_a[3]];FlyScriptik2_c[FlyScriptik2_b+1]=FlyScriptik2_d;FlyScriptik2_c[FlyScriptik2_b]=FlyScriptik2_d[FlyScriptik2_a[4]];end;elseif FlyScriptik2_e>87 then local FlyScriptik2_b=FlyScriptik2_a[2]FlyScriptik2_c[FlyScriptik2_b]=FlyScriptik2_c[FlyScriptik2_b](FlyScriptik2_g(FlyScriptik2_c,FlyScriptik2_b+1,FlyScriptik2_a[3]))else if(FlyScriptik2_c[FlyScriptik2_a[2]]==FlyScriptik2_c[FlyScriptik2_a[4]])then FlyScriptik2_b=FlyScriptik2_b+1;else FlyScriptik2_b=FlyScriptik2_a[3];end;end;elseif FlyScriptik2_e<=91 then if FlyScriptik2_e<=89 then FlyScriptik2_b=FlyScriptik2_a[3];elseif FlyScriptik2_e>90 then local FlyScriptik2_e;FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_h[FlyScriptik2_a[3]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_e=FlyScriptik2_a[2]FlyScriptik2_c[FlyScriptik2_e]=FlyScriptik2_c[FlyScriptik2_e](FlyScriptik2_g(FlyScriptik2_c,FlyScriptik2_e+1,FlyScriptik2_a[3]))FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_h[FlyScriptik2_a[3]]=FlyScriptik2_c[FlyScriptik2_a[2]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_b=FlyScriptik2_a[3];else FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_h[FlyScriptik2_a[3]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_f[FlyScriptik2_a[3]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];if(FlyScriptik2_c[FlyScriptik2_a[2]]==FlyScriptik2_c[FlyScriptik2_a[4]])then FlyScriptik2_b=FlyScriptik2_b+1;else FlyScriptik2_b=FlyScriptik2_a[3];end;end;elseif FlyScriptik2_e<=93 then if FlyScriptik2_e>92 then FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_j(FlyScriptik2_k[FlyScriptik2_a[3]],nil,FlyScriptik2_f);else local FlyScriptik2_a=FlyScriptik2_a[2]local FlyScriptik2_d,FlyScriptik2_b=FlyScriptik2_m(FlyScriptik2_c[FlyScriptik2_a](FlyScriptik2_c[FlyScriptik2_a+1]))FlyScriptik2_i=FlyScriptik2_b+FlyScriptik2_a-1 local FlyScriptik2_b=0;for FlyScriptik2_a=FlyScriptik2_a,FlyScriptik2_i do FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_c[FlyScriptik2_a]=FlyScriptik2_d[FlyScriptik2_b];end;end;elseif FlyScriptik2_e>94 then FlyScriptik2_b=FlyScriptik2_a[3];else local FlyScriptik2_a=FlyScriptik2_a[2]FlyScriptik2_c[FlyScriptik2_a](FlyScriptik2_c[FlyScriptik2_a+1])end;elseif FlyScriptik2_e<=102 then if FlyScriptik2_e<=98 then if FlyScriptik2_e<=96 then FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]]-FlyScriptik2_c[FlyScriptik2_a[4]];elseif FlyScriptik2_e>97 then local FlyScriptik2_b=FlyScriptik2_a[2]FlyScriptik2_c[FlyScriptik2_b](FlyScriptik2_g(FlyScriptik2_c,FlyScriptik2_b+1,FlyScriptik2_a[3]))else local FlyScriptik2_d=FlyScriptik2_a[2]local FlyScriptik2_e={FlyScriptik2_c[FlyScriptik2_d](FlyScriptik2_g(FlyScriptik2_c,FlyScriptik2_d+1,FlyScriptik2_i))};local FlyScriptik2_b=0;for FlyScriptik2_a=FlyScriptik2_d,FlyScriptik2_a[4]do FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_c[FlyScriptik2_a]=FlyScriptik2_e[FlyScriptik2_b];end end;elseif FlyScriptik2_e<=100 then if FlyScriptik2_e>99 then local FlyScriptik2_d=FlyScriptik2_a[2];local FlyScriptik2_f=FlyScriptik2_a[4];local FlyScriptik2_e=FlyScriptik2_d+2 local FlyScriptik2_d={FlyScriptik2_c[FlyScriptik2_d](FlyScriptik2_c[FlyScriptik2_d+1],FlyScriptik2_c[FlyScriptik2_e])};for FlyScriptik2_a=1,FlyScriptik2_f do FlyScriptik2_c[FlyScriptik2_e+FlyScriptik2_a]=FlyScriptik2_d[FlyScriptik2_a];end;local FlyScriptik2_d=FlyScriptik2_d[1]if FlyScriptik2_d then FlyScriptik2_c[FlyScriptik2_e]=FlyScriptik2_d FlyScriptik2_b=FlyScriptik2_a[3];else FlyScriptik2_b=FlyScriptik2_b+1;end;else local FlyScriptik2_h;local FlyScriptik2_e;FlyScriptik2_e=FlyScriptik2_a[2]FlyScriptik2_c[FlyScriptik2_e](FlyScriptik2_g(FlyScriptik2_c,FlyScriptik2_e+1,FlyScriptik2_a[3]))FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_f[FlyScriptik2_a[3]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_e=FlyScriptik2_a[2];FlyScriptik2_h=FlyScriptik2_c[FlyScriptik2_a[3]];FlyScriptik2_c[FlyScriptik2_e+1]=FlyScriptik2_h;FlyScriptik2_c[FlyScriptik2_e]=FlyScriptik2_h[FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_a[3];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_e=FlyScriptik2_a[2]FlyScriptik2_c[FlyScriptik2_e]=FlyScriptik2_c[FlyScriptik2_e](FlyScriptik2_g(FlyScriptik2_c,FlyScriptik2_e+1,FlyScriptik2_a[3]))FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_e=FlyScriptik2_a[2];FlyScriptik2_h=FlyScriptik2_c[FlyScriptik2_a[3]];FlyScriptik2_c[FlyScriptik2_e+1]=FlyScriptik2_h;FlyScriptik2_c[FlyScriptik2_e]=FlyScriptik2_h[FlyScriptik2_a[4]];end;elseif FlyScriptik2_e==101 then FlyScriptik2_h[FlyScriptik2_a[3]]=FlyScriptik2_c[FlyScriptik2_a[2]];else local FlyScriptik2_e;FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_a[3];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_f[FlyScriptik2_a[3]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_e=FlyScriptik2_a[2]FlyScriptik2_c[FlyScriptik2_e](FlyScriptik2_g(FlyScriptik2_c,FlyScriptik2_e+1,FlyScriptik2_a[3]))FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_b=FlyScriptik2_a[3];end;elseif FlyScriptik2_e<=105 then if FlyScriptik2_e<=103 then FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]]+FlyScriptik2_c[FlyScriptik2_a[4]];elseif FlyScriptik2_e>104 then local FlyScriptik2_e;local FlyScriptik2_h;local FlyScriptik2_j,FlyScriptik2_l;local FlyScriptik2_k;local FlyScriptik2_e;FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_f[FlyScriptik2_a[3]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_e=FlyScriptik2_a[2];FlyScriptik2_k=FlyScriptik2_c[FlyScriptik2_a[3]];FlyScriptik2_c[FlyScriptik2_e+1]=FlyScriptik2_k;FlyScriptik2_c[FlyScriptik2_e]=FlyScriptik2_k[FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_e=FlyScriptik2_a[2]FlyScriptik2_j,FlyScriptik2_l=FlyScriptik2_m(FlyScriptik2_c[FlyScriptik2_e](FlyScriptik2_c[FlyScriptik2_e+1]))FlyScriptik2_i=FlyScriptik2_l+FlyScriptik2_e-1 FlyScriptik2_h=0;for FlyScriptik2_a=FlyScriptik2_e,FlyScriptik2_i do FlyScriptik2_h=FlyScriptik2_h+1;FlyScriptik2_c[FlyScriptik2_a]=FlyScriptik2_j[FlyScriptik2_h];end;FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_e=FlyScriptik2_a[2]FlyScriptik2_j={FlyScriptik2_c[FlyScriptik2_e](FlyScriptik2_g(FlyScriptik2_c,FlyScriptik2_e+1,FlyScriptik2_i))};FlyScriptik2_h=0;for FlyScriptik2_a=FlyScriptik2_e,FlyScriptik2_a[4]do FlyScriptik2_h=FlyScriptik2_h+1;FlyScriptik2_c[FlyScriptik2_a]=FlyScriptik2_j[FlyScriptik2_h];end FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_b=FlyScriptik2_a[3];else local FlyScriptik2_e;FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_a[3];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_f[FlyScriptik2_a[3]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_e=FlyScriptik2_a[2]FlyScriptik2_c[FlyScriptik2_e](FlyScriptik2_g(FlyScriptik2_c,FlyScriptik2_e+1,FlyScriptik2_a[3]))FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_b=FlyScriptik2_a[3];end;elseif FlyScriptik2_e<=107 then if FlyScriptik2_e==106 then local FlyScriptik2_d=FlyScriptik2_a[2];local FlyScriptik2_f=FlyScriptik2_a[4];local FlyScriptik2_e=FlyScriptik2_d+2 local FlyScriptik2_d={FlyScriptik2_c[FlyScriptik2_d](FlyScriptik2_c[FlyScriptik2_d+1],FlyScriptik2_c[FlyScriptik2_e])};for FlyScriptik2_a=1,FlyScriptik2_f do FlyScriptik2_c[FlyScriptik2_e+FlyScriptik2_a]=FlyScriptik2_d[FlyScriptik2_a];end;local FlyScriptik2_d=FlyScriptik2_d[1]if FlyScriptik2_d then FlyScriptik2_c[FlyScriptik2_e]=FlyScriptik2_d FlyScriptik2_b=FlyScriptik2_a[3];else FlyScriptik2_b=FlyScriptik2_b+1;end;else local FlyScriptik2_e;FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_a[3];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_f[FlyScriptik2_a[3]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_e=FlyScriptik2_a[2]FlyScriptik2_c[FlyScriptik2_e](FlyScriptik2_g(FlyScriptik2_c,FlyScriptik2_e+1,FlyScriptik2_a[3]))FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_b=FlyScriptik2_a[3];end;elseif FlyScriptik2_e>108 then local FlyScriptik2_a=FlyScriptik2_a[2]FlyScriptik2_c[FlyScriptik2_a]=FlyScriptik2_c[FlyScriptik2_a](FlyScriptik2_c[FlyScriptik2_a+1])else FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_f[FlyScriptik2_a[3]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_h[FlyScriptik2_a[3]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_h[FlyScriptik2_a[3]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_f[FlyScriptik2_a[3]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];FlyScriptik2_c[FlyScriptik2_a[2]]=FlyScriptik2_c[FlyScriptik2_a[3]][FlyScriptik2_a[4]];FlyScriptik2_b=FlyScriptik2_b+1;FlyScriptik2_a=FlyScriptik2_d[FlyScriptik2_b];if(FlyScriptik2_c[FlyScriptik2_a[2]]==FlyScriptik2_c[FlyScriptik2_a[4]])then FlyScriptik2_b=FlyScriptik2_b+1;else FlyScriptik2_b=FlyScriptik2_a[3];end;end;FlyScriptik2_b=FlyScriptik2_b+1;end;end);end;return FlyScriptik2_j(true,{},FlyScriptik2_r())();end)(string.byte,table.insert,setmetatable);
+
+end)
+
+AutoPickup.Name = "AutoPickup"
+AutoPickup.Parent = main
+AutoPickup.BackgroundColor3 = Color3.fromRGB(117, 184, 255)
+AutoPickup.Position = UDim2.new(0.57042253, 0, 0.91206032, 0)
+AutoPickup.Size = UDim2.new(0, 105, 0, 24)
+AutoPickup.Font = Enum.Font.SourceSans
+AutoPickup.Text = "AutoPickup Script"
+AutoPickup.TextColor3 = Color3.fromRGB(0, 0, 0)
+AutoPickup.TextSize = 14.000
+AutoPickup.MouseButton1Down:connect(function()
+	local Players               = game:GetService'Players';
+	local LocalPlayer           = Players.LocalPlayer;
+	local Mouse                 = LocalPlayer:GetMouse();
+	local Camera                = workspace.CurrentCamera;
+	local RunService            = game:GetService'RunService';
+	local UIS                   = game:GetService'UserInputService';
+	local TweenService          = game:GetService'TweenService';
+	local Debris                = game:GetService'Debris';
+	local Enabled               = true;
+	local NearestObject         = nil;
+	local LastObject            = NearestObject;
+	local LastCheck             = 0;
+	local PositionFrom          = Vector2.new();
+	local PositionTo            = Vector2.new();
+	local Vector2Up             = Vector2.new(0, 1);
+	local Vector2Down           = Vector2.new(0, -1);
+	local Vector2Right          = Vector2.new(1, 0);
+	local Vector2Left           = Vector2.new(-1, 0);
+	local White                 = Color3.new(1, 1, 1);
+
+	local TrinketAP             = true;
+
+	shared.Blacklist            = shared.Blacklist or {};
+
+	local Drawings              = shared.Drawings or {};
+
+	local Line                  = Drawings.NearestObjectLine or Drawing.new'Line';
+	Line.Thickness          = 2;
+	Line.Visible            = true;
+	Line.Transparency       = 0.75;
+
+	local Text                  = Drawings.InfoText or Drawing.new'Text';
+	Text.Outline            = true;
+	Text.Center             = true;
+	Text.Size               = 20;
+	Text.Visible            = true;
+	Text.Text               = ' ';
+	Text.Color              = Color3.new(1, 1, 1);
+	Text.Transparency       = 1;
+
+	local ExtraText             = Drawings.InfoTextExtra or Drawing.new'Text';
+	ExtraText.Outline       = true;
+	ExtraText.Center        = true;
+	ExtraText.Size          = 16;
+	ExtraText.Visible       = true;
+	ExtraText.Text          = '';
+	ExtraText.Color         = Color3.new(1, 1, 1);
+	ExtraText.Transparency  = 1;
+
+	Drawings.NearestObjectLine  = Line;
+	Drawings.InfoText           = Text;
+	Drawings.InfoTextExtra      = ExtraText;
+
+	shared.Drawings             = Drawings;
+
+	local Clickables = {};
+	local TP = {};
+	local Trinkets = {};
+
+	local TrinketIDs = {
+		['Goblet'] = {
+			['MeshId'] = 'rbxassetid://%2013116112%20';
+		};
+		['Old Ring'] = {
+			['MeshId'] = 'rbxassetid://%202637545558%20';
+		};
+		['Old Amulet'] = {
+			['Color'] = '0.623529, 0.631373, 0.67451';
+			['Size'] = '0.333724976, 1.20092773, 2.03625488';
+		};
+		['Forgotten Idol'] = {
+			['Color'] = '0.435294, 0.443137, 0.490196';
+		};
+		['Scroll'] = {
+			['MeshId'] = 'rbxassetid://%2060791940%20';
+		};
+	}
+
+	function Get(t, i)
+		return t[i];
+	end
+
+	function DetectTrinket(Instance)
+		for i, v in pairs(TrinketIDs) do
+			local same = true;
+			local val = pcall(Get, Instance, i);
+			if val ~= v then
+				same = false;
+			end
+		end
+	end
+
+	for i, v in pairs(workspace:GetDescendants()) do
+		if v.ClassName == 'ClickDetector' and (v.Parent:IsA'BasePart' or v.Parent:IsA'UnionOperation') then
+			table.insert(Clickables, v.Parent);
+			TP[tostring(v.Parent.Position)] = v;
+		end
+	end
+
+	for i, v in pairs(workspace:GetChildren()) do
+		if (v:IsA'BasePart' or v:IsA'UnionOperation') and TP[tostring(v.Position)] ~= nil then
+			-- Trinkets[#Trinkets + 1] = {v, }
+			table.insert(Trinkets, v);
+		end
+	end
+
+	if shared.WSDC then shared.WSDC:disconnect(); end
+
+	shared.WSDC = workspace.DescendantAdded:connect(function(child)
+		if (child:IsA'BasePart' or child:IsA'UnionOperation') and wait(1 / 3) then
+			if child:FindFirstChildOfClass'ClickDetector' then
+				table.insert(Clickables, child);
+				TP[tostring(child.Position)] = child:FindFirstChildOfClass'ClickDetector';
+			end
+			if TP[tostring(child.Position)] ~= nil then
+				table.insert(Trinkets, child);
+			end
+		end
+	end);
+
+	function GetNearestObject()
+		if #Trinkets < 1 then return false; end
+
+		local Closest = Trinkets[math.random(#Trinkets)];
+		local Distance = (Camera.CFrame.p - Closest.Position).magnitude;
+
+		for i, v in pairs(Trinkets) do
+			local LDistance = (Camera.CFrame.p - v.Position).magnitude;
+			if TrinketAP and LocalPlayer.Character and LocalPlayer.Character:FindFirstChild'Head' and (LocalPlayer.Character.Head.Position - v.Position).magnitude <= 15 and TP[tostring(v.Position)] then
+				fireclickdetector(TP[tostring(v.Position)]);
+			end
+			if LDistance < Distance and not shared.Blacklist[v] and v:IsDescendantOf(workspace) then
+				Distance = LDistance;
+				Closest = v;
+			end
+		end
+
+		return Closest;
+	end
+
+	if shared.UIS_Connection then shared.UIS_Connection:disconnect(); end
+
+	shared.UIS_Connection = UIS.InputEnded:connect(function(Input, Processed)
+		if Processed then return end
+
+		if Input.UserInputType.Name == 'Keyboard' then
+			if Input.KeyCode == Enum.KeyCode.F1 then
+				Enabled = not Enabled;
+			elseif Input.KeyCode == Enum.KeyCode.KeypadNine then
+				shared.Blacklist[NearestObject] = true;
+			elseif Input.KeyCode == Enum.KeyCode.KeypadSix and (LocalPlayer.Character.Head.Position - NearestObject.Position).magnitude < 15 then
+				fireclickdetector(TP[tostring(NearestObject.Position)]);
+			elseif Input.KeyCode == Enum.KeyCode.KeypadFive then
+				TrinketAP = not TrinketAP;
+				print('tap', TrinketAP);
+			end
+		elseif Input.UserInputType.Name == 'MouseButton1' then
+
+		end
+	end)
+
+	RunService:UnbindFromRenderStep'NOL';
+
+	RunService:BindToRenderStep('NOL', 0, function()
+		if Enabled and tick() - LastCheck > 1 / 8 then
+			LastCheck     = tick();
+			NearestObject = GetNearestObject();
+		end
+
+		if NearestObject then
+			PositionFrom = UIS:GetMouseLocation();
+
+			local LocalCF = LocalPlayer.Character:GetPrimaryPartCFrame();
+			local LocalPosition = LocalCF.p;
+
+			local Distance  = 0;
+			local Extra     = {
+				Text = '';
+				Color = White;
+			};
+
+			-- if input and input.down.pagedown and tp and (LocalPosition - NearestObject.Position).magnitude < 50 then
+			--     tp(LocalPosition:lerp(NearestObject.Position, .5));
+			-- end
+
+			if Enabled and NearestObject then 
+				local ScreenPoint = Camera:WorldToViewportPoint(NearestObject.Position);
+
+				if ScreenPoint.Z > 0 then
+					Distance    = math.floor((Camera.CFrame.p - NearestObject.Position).magnitude);
+					PositionTo  = Vector2.new(ScreenPoint.X, ScreenPoint.Y);
+				else
+					PositionTo = PositionFrom;
+				end
+			else
+				PositionTo  = PositionFrom;
+				Distance    = 0;
+			end
+
+			Text.Position       = PositionFrom + (Vector2Down * 40);        
+			ExtraText.Position  = Text.Position + (Vector2Up * (Text.TextBounds.Y));
+
+			if Enabled and NearestObject ~= nil and PositionFrom ~= PositionTo then
+				Text.Visible        = true;
+				ExtraText.Visible   = true;
+				Line.Visible        = true;
+				Line.From           = PositionFrom;
+				Line.To             = Line.To:lerp(PositionTo, .35);
+				Line.Color          = Color3.fromHSV(tick() * 24 % 255/255, 1, 1);
+				Text.Text           = ('%s [%s]'):format('Trinket', Distance);
+				ExtraText.Color     = Extra.Color;
+				ExtraText.Text      = Extra.Text;
+			else
+				Line.Visible        = false;
+				Text.Visible        = false;
+				ExtraText.Visible   = false;
+			end
+		else
+			Line.Visible            = false;
+			Text.Visible            = false;
+			ExtraText.Visible       = false;
+		end
+	end)
+end)
+
+Snap.Name = "Snap"
+Snap.Parent = main
+Snap.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Snap.Position = UDim2.new(0.0563380271, 0, 0.268844217, 0)
+Snap.Size = UDim2.new(0, 251, 0, 16)
+Snap.Font = Enum.Font.SourceSans
+Snap.Text = "Snap"
+Snap.TextColor3 = Color3.fromRGB(0, 0, 0)
+Snap.TextSize = 14.000
+Snap.MouseButton1Down:connect(function()
+	local NPCs = game:GetService("Workspace").NPCs.Misc.Quinno;
+
+	for _, ClickDetector in pairs(NPCs:GetDescendants()) do
+		if (ClickDetector:IsA("ClickDetector")) then
+			fireclickdetector(ClickDetector, 1);
+		end;
+	end;
+end)
+
+Soulsnap.Name = "Soul snap"
+Soulsnap.Parent = main
+Soulsnap.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Soulsnap.Position = UDim2.new(0.0563380271, 0, 0.326633185, 0)
+Soulsnap.Size = UDim2.new(0, 251, 0, 16)
+Soulsnap.Font = Enum.Font.SourceSans
+Soulsnap.Text = "Soul Snap"
+Soulsnap.TextColor3 = Color3.fromRGB(0, 0, 0)
+Soulsnap.TextSize = 14.000
+Soulsnap.MouseButton1Down:connect(function()
+	local NPCs = game:GetService("Workspace").NPCs.Misc.SoulSnap;
+
+	for _, ClickDetector in pairs(NPCs:GetDescendants()) do
+		if (ClickDetector:IsA("ClickDetector")) then
+			fireclickdetector(ClickDetector, 1);
+		end;
+	end;
+end)
+
+Meat.Name = "Meat"
+Meat.Parent = main
+Meat.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Meat.Position = UDim2.new(0.0563380271, 0, 0.384422123, 0)
+Meat.Size = UDim2.new(0, 251, 0, 16)
+Meat.Font = Enum.Font.SourceSans
+Meat.Text = "Meat"
+Meat.TextColor3 = Color3.fromRGB(0, 0, 0)
+Meat.TextSize = 14.000
+Meat.MouseButton1Down:connect(function()
+	local NPCs = game:GetService("Workspace").NPCs.Misc.Dorgoth;
+
+	for _, ClickDetector in pairs(NPCs:GetDescendants()) do
+		if (ClickDetector:IsA("ClickDetector")) then
+			fireclickdetector(ClickDetector, 1);
+		end;
+	end;
+end)
+
+BloodChalice.Name = "Blood Chalice"
+BloodChalice.Parent = main
+BloodChalice.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+BloodChalice.Position = UDim2.new(0.0563380271, 0, 0.442211062, 0)
+BloodChalice.Size = UDim2.new(0, 251, 0, 16)
+BloodChalice.Font = Enum.Font.SourceSans
+BloodChalice.Text = "Blood Chalice"
+BloodChalice.TextColor3 = Color3.fromRGB(0, 0, 0)
+BloodChalice.TextSize = 14.000
+BloodChalice.MouseButton1Down:connect(function()
+	local NPCs = game:GetService("Workspace").NPCs.Misc.Jartavious;
+
+	for _, ClickDetector in pairs(NPCs:GetDescendants()) do
+		if (ClickDetector:IsA("ClickDetector")) then
+			fireclickdetector(ClickDetector, 1);
+		end;
+	end;
+end)
+
+Collector.Name = "Collector"
+Collector.Parent = main
+Collector.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Collector.Position = UDim2.new(0.0563380271, 0, 0.798994958, 0)
+Collector.Size = UDim2.new(0, 251, 0, 16)
+Collector.Font = Enum.Font.SourceSans
+Collector.Text = "Collector"
+Collector.TextColor3 = Color3.fromRGB(0, 0, 0)
+Collector.TextSize = 14.000
+Collector.MouseButton1Down:connect(function()
+	while true do
+		local NPCs = game:GetService("Workspace").NPCs.Misc.Collector;
+
+		for _, ClickDetector in pairs(NPCs:GetDescendants()) do
+			if (ClickDetector:IsA("ClickDetector")) then
+				fireclickdetector(ClickDetector, 1);
+			end;
+		end;
+		wait(1) 
+	end
+end)
+
+SanctumObelisk.Name = "Sanctum Obelisk"
+SanctumObelisk.Parent = main
+SanctumObelisk.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+SanctumObelisk.Position = UDim2.new(0.0563380271, 0, 0.5, 0)
+SanctumObelisk.Size = UDim2.new(0, 251, 0, 16)
+SanctumObelisk.Font = Enum.Font.SourceSans
+SanctumObelisk.Text = "Sanctum Obelisk"
+SanctumObelisk.TextColor3 = Color3.fromRGB(0, 0, 0)
+SanctumObelisk.TextSize = 14.000
+SanctumObelisk.MouseButton1Down:connect(function()
+	local NPCs = game:GetService("Workspace").NPCs.Obelisks.TemplarObelisk;
+
+	for _, ClickDetector in pairs(NPCs:GetDescendants()) do
+		if (ClickDetector:IsA("ClickDetector")) then
+			fireclickdetector(ClickDetector, 1);
+		end;
+	end;
+end)
+
+dyepacket.Name = "dye packet"
+dyepacket.Parent = main
+dyepacket.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+dyepacket.Position = UDim2.new(0.0563380271, 0, 0.0986080766, 0)
+dyepacket.Size = UDim2.new(0, 251, 0, 16)
+dyepacket.Font = Enum.Font.SourceSans
+dyepacket.Text = "Dye Packet"
+dyepacket.TextColor3 = Color3.fromRGB(0, 0, 0)
+dyepacket.TextSize = 14.000
+dyepacket.MouseButton1Down:connect(function()
+	local NPCs = game:GetService("Workspace").NPCs.Misc.Ria;
+
+	for _, ClickDetector in pairs(NPCs:GetDescendants()) do
+		if (ClickDetector:IsA("ClickDetector")) then
+			fireclickdetector(ClickDetector, 1);
+		end;
+	end;
+end)
+
+engineer.Name = "engineer"
+engineer.Parent = main
+engineer.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+engineer.Position = UDim2.new(0.0563380271, 0, 0.555276394, 0)
+engineer.Size = UDim2.new(0, 251, 0, 16)
+engineer.Font = Enum.Font.SourceSans
+engineer.Text = "Engineer"
+engineer.TextColor3 = Color3.fromRGB(0, 0, 0)
+engineer.TextSize = 14.000
+engineer.MouseButton1Down:connect(function()
+	local NPCs = game:GetService("Workspace").NPCs.Engineers.Engineer;
+
+	for _, ClickDetector in pairs(NPCs:GetDescendants()) do
+		if (ClickDetector:IsA("ClickDetector")) then
+			fireclickdetector(ClickDetector, 1);
+		end;
+	end;
+end)
+
+banker.Name = "banker"
+banker.Parent = main
+banker.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+banker.Position = UDim2.new(0.0563380271, 0, 0.610552788, 0)
+banker.Size = UDim2.new(0, 251, 0, 16)
+banker.Font = Enum.Font.SourceSans
+banker.Text = "Banker"
+banker.TextColor3 = Color3.fromRGB(0, 0, 0)
+banker.TextSize = 14.000
+banker.MouseButton1Down:connect(function()
+	local NPCs = game:GetService("Workspace").NPCs.Bankers.Banker;
+
+	for _, ClickDetector in pairs(NPCs:GetDescendants()) do
+		if (ClickDetector:IsA("ClickDetector")) then
+			fireclickdetector(ClickDetector, 1);
+		end;
+	end;
+end)
+
+TPbottomoresrandomashell.Name = "TP bottom ores (random as hell)"
+TPbottomoresrandomashell.Parent = main
+TPbottomoresrandomashell.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TPbottomoresrandomashell.Position = UDim2.new(0.0563380271, 0, 0.665829182, 0)
+TPbottomoresrandomashell.Size = UDim2.new(0, 251, 0, 16)
+TPbottomoresrandomashell.Font = Enum.Font.SourceSans
+TPbottomoresrandomashell.Text = "TP Bottom Ores (???)"
+TPbottomoresrandomashell.TextColor3 = Color3.fromRGB(0, 0, 0)
+TPbottomoresrandomashell.TextSize = 14.000
+TPbottomoresrandomashell.MouseButton1Down:connect(function()
+	local NPCs = game:GetService("Workspace").NPCs.Misc.Ferryman;
+
+	for _, ClickDetector in pairs(NPCs:GetDescendants()) do
+		if (ClickDetector:IsA("ClickDetector")) then
+			fireclickdetector(ClickDetector, 1);
+		end;
+	end;
+end)
+
+Fullbright.Name = "Fullbright"
+Fullbright.Parent = main
+Fullbright.BackgroundColor3 = Color3.fromRGB(117, 184, 255)
+Fullbright.Position = UDim2.new(0.0563380271, 0, 0.856783867, 0)
+Fullbright.Size = UDim2.new(0, 105, 0, 16)
+Fullbright.Font = Enum.Font.SourceSans
+Fullbright.Text = "Fullbright"
+Fullbright.TextColor3 = Color3.fromRGB(0, 0, 0)
+Fullbright.TextSize = 14.000
+Fullbright.MouseButton1Down:connect(function()
+	if not _G.FullBrightExecuted then
+
+		_G.FullBrightEnabled = false
+
+		_G.NormalLightingSettings = {
+			Brightness = game:GetService("Lighting").Brightness,
+			ClockTime = game:GetService("Lighting").ClockTime,
+			FogEnd = game:GetService("Lighting").FogEnd,
+			GlobalShadows = game:GetService("Lighting").GlobalShadows,
+			Ambient = game:GetService("Lighting").Ambient
+		}
+
+		game:GetService("Lighting"):GetPropertyChangedSignal("Brightness"):Connect(function()
+			if game:GetService("Lighting").Brightness ~= 1 and game:GetService("Lighting").Brightness ~= _G.NormalLightingSettings.Brightness then
+				_G.NormalLightingSettings.Brightness = game:GetService("Lighting").Brightness
+				if not _G.FullBrightEnabled then
+					repeat
+						wait()
+					until _G.FullBrightEnabled
+				end
+				game:GetService("Lighting").Brightness = 1
+			end
+		end)
+
+		game:GetService("Lighting"):GetPropertyChangedSignal("ClockTime"):Connect(function()
+			if game:GetService("Lighting").ClockTime ~= 12 and game:GetService("Lighting").ClockTime ~= _G.NormalLightingSettings.ClockTime then
+				_G.NormalLightingSettings.ClockTime = game:GetService("Lighting").ClockTime
+				if not _G.FullBrightEnabled then
+					repeat
+						wait()
+					until _G.FullBrightEnabled
+				end
+				game:GetService("Lighting").ClockTime = 12
+			end
+		end)
+
+		game:GetService("Lighting"):GetPropertyChangedSignal("FogEnd"):Connect(function()
+			if game:GetService("Lighting").FogEnd ~= 786543 and game:GetService("Lighting").FogEnd ~= _G.NormalLightingSettings.FogEnd then
+				_G.NormalLightingSettings.FogEnd = game:GetService("Lighting").FogEnd
+				if not _G.FullBrightEnabled then
+					repeat
+						wait()
+					until _G.FullBrightEnabled
+				end
+				game:GetService("Lighting").FogEnd = 786543
+			end
+		end)
+
+		game:GetService("Lighting"):GetPropertyChangedSignal("GlobalShadows"):Connect(function()
+			if game:GetService("Lighting").GlobalShadows ~= false and game:GetService("Lighting").GlobalShadows ~= _G.NormalLightingSettings.GlobalShadows then
+				_G.NormalLightingSettings.GlobalShadows = game:GetService("Lighting").GlobalShadows
+				if not _G.FullBrightEnabled then
+					repeat
+						wait()
+					until _G.FullBrightEnabled
+				end
+				game:GetService("Lighting").GlobalShadows = false
+			end
+		end)
+
+		game:GetService("Lighting"):GetPropertyChangedSignal("Ambient"):Connect(function()
+			if game:GetService("Lighting").Ambient ~= Color3.fromRGB(178, 178, 178) and game:GetService("Lighting").Ambient ~= _G.NormalLightingSettings.Ambient then
+				_G.NormalLightingSettings.Ambient = game:GetService("Lighting").Ambient
+				if not _G.FullBrightEnabled then
+					repeat
+						wait()
+					until _G.FullBrightEnabled
+				end
+				game:GetService("Lighting").Ambient = Color3.fromRGB(178, 178, 178)
+			end
+		end)
+
+		game:GetService("Lighting").Brightness = 1
+		game:GetService("Lighting").ClockTime = 12
+		game:GetService("Lighting").FogEnd = 786543
+		game:GetService("Lighting").GlobalShadows = false
+		game:GetService("Lighting").Ambient = Color3.fromRGB(178, 178, 178)
+
+		local LatestValue = true
+		spawn(function()
+			repeat
+				wait()
+			until _G.FullBrightEnabled
+			while wait() do
+				if _G.FullBrightEnabled ~= LatestValue then
+					if not _G.FullBrightEnabled then
+						game:GetService("Lighting").Brightness = _G.NormalLightingSettings.Brightness
+						game:GetService("Lighting").ClockTime = _G.NormalLightingSettings.ClockTime
+						game:GetService("Lighting").FogEnd = _G.NormalLightingSettings.FogEnd
+						game:GetService("Lighting").GlobalShadows = _G.NormalLightingSettings.GlobalShadows
+						game:GetService("Lighting").Ambient = _G.NormalLightingSettings.Ambient
+					else
+						game:GetService("Lighting").Brightness = 1
+						game:GetService("Lighting").ClockTime = 12
+						game:GetService("Lighting").FogEnd = 786543
+						game:GetService("Lighting").GlobalShadows = false
+						game:GetService("Lighting").Ambient = Color3.fromRGB(178, 178, 178)
+					end
+					LatestValue = not LatestValue
+				end
+			end
+		end)
+	end
+
+	_G.FullBrightExecuted = true
+	_G.FullBrightEnabled = not _G.FullBrightEnabled
+end)
+
+ESP.Name = "ESP"
+ESP.Parent = main
+ESP.BackgroundColor3 = Color3.fromRGB(117, 184, 255)
+ESP.Position = UDim2.new(0.57042253, 0, 0.856783867, 0)
+ESP.Size = UDim2.new(0, 105, 0, 16)
+ESP.Font = Enum.Font.SourceSans
+ESP.Text = "ESP"
+ESP.TextColor3 = Color3.fromRGB(0, 0, 0)
+ESP.TextSize = 14.000
+ESP.MouseButton1Down:connect(function()
+	assert(Drawing, 'exploit not supported')
+
+	if not syn and not PROTOSMASHER_LOADED then print'Unnamed ESP only officially supports Synapse and Protosmasher! If you\'re an exploit developer and have added drawing API to your exploit, try setting syn as true then checking if that works, otherwise, DM me on discord @ cppbook.org#1968 or add an issue to the Unnamed ESP Github Repository and I\'ll see it through email!' end
+
+	local UserInputService	= game:GetService'UserInputService';
+	local HttpService	= game:GetService'HttpService';
+	local GUIService	= game:GetService'GuiService';
+	local TweenService	= game:GetService'TweenService';
+	local RunService	= game:GetService'RunService';
+	local Players		= game:GetService'Players';
+	local LocalPlayer	= Players.LocalPlayer;
+	local Camera		= workspace.CurrentCamera;
+	local Mouse		= LocalPlayer:GetMouse();
+	local V2New		= Vector2.new;
+	local V3New		= Vector3.new;
+	local WTVP		= Camera.WorldToViewportPoint;
+	local WorldToViewport	= function(...) return WTVP(Camera, ...) end;
+	local Menu		= {};
+	local MouseHeld		= false;
+	local LastRefresh	= 0;
+	local OptionsFile	= 'IC3_ESP_SETTINGS.dat';
+	local Binding		= false;
+	local BindedKey		= nil;
+	local OIndex		= 0;
+	local LineBox		= {};
+	local UIButtons		= {};
+	local Sliders		= {};
+	local ColorPicker	= { Loading = false; LastGenerated = 0 };
+	local Dragging		= false;
+	local DraggingUI	= false;
+	local Rainbow		= false;
+	local DragOffset	= V2New();
+	local DraggingWhat	= nil;
+	local OldData		= {};
+	local IgnoreList	= {};
+	local EnemyColor	= Color3.new(1, 0, 0);
+	local TeamColor		= Color3.new(0, 1, 0);
+	local MenuLoaded	= false;
+	local ErrorLogging	= false;
+	local TracerPosition	= V2New(Camera.ViewportSize.X / 2, Camera.ViewportSize.Y - 135);
+	local DragTracerPosition= false;
+	local SubMenu 		= {};
+	local IsSynapse 	= syn and not PROTOSMASHER_LOADED;
+	local Connections 	= { Active = {} };
+	local Signal 		= {}; Signal.__index = Signal;
+	local GetCharacter;
+	local CurrentColorPicker;
+	local Spectating;
+
+	local Executor = (identifyexecutor or (function() return '' end))()
+	local SupportedExploits = { 'Synapse X', 'ScriptWare', 'Krnl', 'OxygenU', 'Temple' }
+	local QUAD_SUPPORTED_EXPLOIT = table.find(SupportedExploits, Executor) ~= nil
+
+	-- if not PROTOSMASHER_LOADED then Drawing.UseCompatTransparency = true; end -- For Elysian
+
+	shared.MenuDrawingData	= shared.MenuDrawingData or { Instances = {} };
+	shared.InstanceData	= shared.InstanceData or {};
+	shared.RSName		= shared.RSName or ('UnnamedESP_by_ic3-' .. HttpService:GenerateGUID(false));
+
+	local GetDataName	= shared.RSName .. '-GetData';
+	local UpdateName	= shared.RSName .. '-Update';
+
+	local Debounce		= setmetatable({}, {
+		__index = function(t, i)
+			return rawget(t, i) or false
+		end;
+	});
+
+	if shared.UESP_InputChangedCon then shared.UESP_InputChangedCon:Disconnect() end
+	if shared.UESP_InputBeganCon then shared.UESP_InputBeganCon:Disconnect() end
+	if shared.UESP_InputEndedCon then shared.UESP_InputEndedCon:Disconnect() end
+	if shared.CurrentColorPicker then shared.CurrentColorPicker:Dispose() end
+
+	local RealPrint, LastPrintTick = print, 0;
+	local LatestPrints = setmetatable({}, { __index = function(t, i) return rawget(t, i) or 0 end });
+
+	local function print(...)
+		local Content = unpack{...};
+		local print = RealPrint;
+
+		if tick() - LatestPrints[Content] > 5 then
+			LatestPrints[Content] = tick();
+			print(Content);
+		end
+	end
+
+	local function FromHex(HEX)
+		HEX = HEX:gsub('#', '');
+
+		return Color3.fromRGB(tonumber('0x' .. HEX:sub(1, 2)), tonumber('0x' .. HEX:sub(3, 4)), tonumber('0x' .. HEX:sub(5, 6)));
+	end
+
+	local function IsStringEmpty(String)
+		if type(String) == 'string' then
+			return String:match'^%s+$' ~= nil or #String == 0 or String == '' or false;
+		end
+
+		return false;
+	end
+
+	local function Set(t, i, v)
+		t[i] = v;
+	end
+
+	local Teams = {};
+	local CustomTeams = { -- Games that don't use roblox's team system
+		[2563455047] = {
+			Initialize = function()
+				Teams.Sheriffs = {}; -- prevent big error
+				Teams.Bandits = {}; -- prevent big error
+				local Func = game:GetService'ReplicatedStorage':WaitForChild('RogueFunc', 1);
+				local Event = game:GetService'ReplicatedStorage':WaitForChild('RogueEvent', 1);
+				local S, B = Func:InvokeServer'AllTeamData';
+
+				Teams.Sheriffs = S;
+				Teams.Bandits = B;
+
+				Event.OnClientEvent:Connect(function(id, PlayerName, Team, Remove) -- stolen straight from decompiled src lul
+					if id == 'UpdateTeam' then
+						local TeamTable, NotTeamTable
+						if Team == 'Bandits' then
+							TeamTable = TDM.Bandits
+							NotTeamTable = TDM.Sheriffs
+						else
+							TeamTable = TDM.Sheriffs
+							NotTeamTable = TDM.Bandits
+						end
+						if Remove then
+							TeamTable[PlayerName] = nil
+						else
+							TeamTable[PlayerName] = true
+							NotTeamTable[PlayerName] = nil
+						end
+						if PlayerName == LocalPlayer.Name then
+							TDM.Friendlys = TeamTable
+							TDM.Enemies = NotTeamTable
+						end
+					end
+				end)
+			end;
+			CheckTeam = function(Player)
+				local LocalTeam = Teams.Sheriffs[LocalPlayer.Name] and Teams.Sheriffs or Teams.Bandits;
+
+				return LocalTeam[Player.Name] and true or false;
+			end;
+		};
+		[5208655184] = {
+			CheckTeam = function(Player)
+				local LocalLastName = LocalPlayer:GetAttribute'LastName' if not LocalLastName or IsStringEmpty(LocalLastName) then return true end
+				local PlayerLastName = Player:GetAttribute'LastName' if not PlayerLastName then return false end
+
+				return PlayerLastName == LocalLastName
+			end
+		};
+		[3541987450] = {
+			CheckTeam = function(Player)
+				local LocalStats = LocalPlayer:FindFirstChild'leaderstats';
+				local LocalLastName = LocalStats and LocalStats:FindFirstChild'LastName'; if not LocalLastName or IsStringEmpty(LocalLastName.Value) then return true; end
+				local PlayerStats = Player:FindFirstChild'leaderstats';
+				local PlayerLastName = PlayerStats and PlayerStats:FindFirstChild'LastName'; if not PlayerLastName then return false; end
+
+				return PlayerLastName.Value == LocalLastName.Value;
+			end;
+		};
+		[6032399813] = {
+			CheckTeam = function(Player)
+				local LocalStats = LocalPlayer:FindFirstChild'leaderstats';
+				local LocalGuildName = LocalStats and LocalStats:FindFirstChild'Guild'; if not LocalGuildName or IsStringEmpty(LocalGuildName.Value) then return true; end
+				local PlayerStats = Player:FindFirstChild'leaderstats';
+				local PlayerGuildName = PlayerStats and PlayerStats:FindFirstChild'Guild'; if not PlayerGuildName then return false; end
+
+				return PlayerGuildName.Value == LocalGuildName.Value;
+			end;
+		};
+		[5735553160] = {
+			CheckTeam = function(Player)
+				local LocalStats = LocalPlayer:FindFirstChild'leaderstats';
+				local LocalGuildName = LocalStats and LocalStats:FindFirstChild'Guild'; if not LocalGuildName or IsStringEmpty(LocalGuildName.Value) then return true; end
+				local PlayerStats = Player:FindFirstChild'leaderstats';
+				local PlayerGuildName = PlayerStats and PlayerStats:FindFirstChild'Guild'; if not PlayerGuildName then return false; end
+
+				return PlayerGuildName.Value == LocalGuildName.Value;
+			end;
+		};
+	};
+
+	local RenderList = {Instances = {}};
+
+	function RenderList:AddOrUpdateInstance(Instance, Obj2Draw, Text, Color)
+		RenderList.Instances[Instance] = { ParentInstance = Instance; Instance = Obj2Draw; Text = Text; Color = Color };
+		return RenderList.Instances[Instance];
+	end
+
+	local CustomPlayerTag;
+	local CustomESP;
+	local CustomCharacter;
+	local GetHealth;
+	local GetAliveState;
+	local CustomRootPartName;
+
+	local Modules = {
+		[292439477] = {
+			CustomESP = function()
+				if type(shared.PF_Replication) ~= 'table' then
+					local lastScan = shared.pfReplicationScan
+
+					if (tick() - (lastScan or 0)) > 0.01 then
+						shared.pfReplicationScan = tick()
+
+						local gc = getgc(true)
+						for i = 1, #gc do
+							local gcObject = gc[i];
+							if type(gcObject) == 'table' and type(rawget(gcObject, 'getbodyparts')) == 'function' then
+								shared.PF_Replication = gcObject;
+								break
+							end
+						end
+					end
+
+					return
+				end
+
+				for Index, Player in pairs(Players:GetPlayers()) do
+					if Player == LocalPlayer then continue end
+
+					local Body = shared.PF_Replication.getbodyparts(Player);
+
+					if type(Body) == 'table' and typeof(rawget(Body, 'torso')) == 'Instance' then
+						Player.Character = Body.torso.Parent
+						continue
+					end
+
+					Player.Character = nil;
+				end
+			end,
+
+			GetHealth = function(Player)
+				if type(shared.pfHud) ~= 'table' then
+					return false
+				end
+
+				return shared.pfHud:getplayerhealth(Player)
+			end,
+
+			GetAliveState = function(Player)
+				if type(shared.pfHud) ~= 'table' then
+					local lastScan = shared.pfHudScan
+
+					if (tick() - (lastScan or 0)) > 0.1 then
+						shared.pfHudScan = tick()
+
+						local gc = getgc(true)
+						for i = 1, #gc do
+							local gcObject = gc[i];
+							if type(gcObject) == 'table' and type(rawget(gcObject, 'getplayerhealth')) == 'function' then
+								shared.pfHud = gcObject;
+								break
+							end
+						end
+					end
+
+					return
+				end
+
+				return shared.pfHud:isplayeralive(Player)
+			end,
+
+			CustomRootPartName = 'Torso',
+		};
+		[2950983942] = {
+			CustomCharacter = function(Player)
+				if workspace:FindFirstChild'Players' then
+					return workspace.Players:FindFirstChild(Player.Name);
+				end
+			end
+		};
+		[2262441883] = {
+			CustomPlayerTag = function(Player)
+				return Player:FindFirstChild'Job' and (' [' .. Player.Job.Value .. ']') or '';
+			end;
+			CustomESP = function()
+				if workspace:FindFirstChild'MoneyPrinters' then
+					for i, v in pairs(workspace.MoneyPrinters:GetChildren()) do
+						local Main	= v:FindFirstChild'Main';
+						local Owner	= v:FindFirstChild'TrueOwner';
+						local Money	= v:FindFirstChild'Int' and v.Int:FindFirstChild'Money' or nil;
+						if Main and Owner and Money then
+							local O = tostring(Owner.Value);
+							local M = tostring(Money.Value);
+
+							pcall(RenderList.AddOrUpdateInstance, RenderList, v, Main, string.format('Money Printer\nOwned by %s\n[%s]', O, M), Color3.fromRGB(13, 255, 227));
+						end
+					end
+				end
+			end;
+		};
+		-- [4581966615] = {
+		-- 	CustomESP = function()
+		-- 		if workspace:FindFirstChild'Entities' then
+		-- 			for i, v in pairs(workspace.Entities:GetChildren()) do
+		-- 				if not v.Name:match'Printer' then continue end
+
+		-- 				local Properties = v:FindFirstChild'Properties' if not Properties then continue end
+		-- 				local Main	= v:FindFirstChild'hitbox';
+		-- 				local Owner	= Properties:FindFirstChild'Owner';
+		-- 				local Money	= Properties:FindFirstChild'CurrentPrinted'
+
+		-- 				if Main and Owner and Money then
+		-- 					local O = Owner.Value and tostring(Owner.Value) or 'no one';
+		-- 					local M = tostring(Money.Value);
+
+		-- 					pcall(RenderList.AddOrUpdateInstance, RenderList, v, Main, string.format('Money Printer\nOwned by %s\n[%s]', O, M), Color3.fromRGB(13, 255, 227));
+		-- 				end
+		-- 			end
+		-- 		end
+		-- 	end;
+		-- };
+		[4801598506] = {
+			CustomESP = function()
+				if workspace:FindFirstChild'Mobs' and workspace.Mobs:FindFirstChild'Forest1' then
+					for i, v in pairs(workspace.Mobs.Forest1:GetChildren()) do
+						local Main	= v:FindFirstChild'Head';
+						local Hum	= v:FindFirstChild'Mob';
+
+						if Main and Hum then
+							pcall(RenderList.AddOrUpdateInstance, RenderList, v, Main, string.format('[%s] [%s/%s]', v.Name, Hum.Health, Hum.MaxHealth), Color3.fromRGB(13, 255, 227));
+						end
+					end
+				end
+			end;
+		};
+		[2555873122] = {
+			CustomESP = function()
+				if workspace:FindFirstChild'WoodPlanks' then
+					for i, v in pairs(workspace:GetChildren()) do
+						if v.Name == 'WoodPlanks' then
+							local Main = v:FindFirstChild'Wood';
+
+							if Main then
+								pcall(RenderList.AddOrUpdateInstance, RenderList, v, Main, 'Wood Planks', Color3.fromRGB(13, 255, 227));
+							end
+						end
+					end
+				end
+			end;
+		};
+		[5208655184] = {
+			CustomESP = function()
+				-- if workspace:FindFirstChild'Live' then
+				-- 	for i, v in pairs(workspace.Live:GetChildren()) do
+				-- 		if v.Name:sub(1, 1) == '.' then
+				-- 			local Main = v:FindFirstChild'Head';
+
+				-- 			if Main then
+				-- 				pcall(RenderList.AddOrUpdateInstance, RenderList, v, Main, v.Name:sub(2), Color3.fromRGB(250, 50, 40));
+				-- 			end
+				-- 		end
+				-- 	end
+				-- end
+			end;
+			CustomPlayerTag = function(Player)
+				if game.PlaceVersion < 457 then return '' end
+
+				local Name = '';
+				local FirstName = Player:GetAttribute'FirstName'
+
+				if typeof(FirstName) == 'string' and #FirstName > 0 then
+					local Prefix = '';
+					local Extra = {};
+					Name = Name .. '\n[';
+
+					if Player:GetAttribute'Prestige' > 0 then
+						Name = Name .. '#' .. tostring(Player:GetAttribute'Prestige') .. ' ';
+					end
+					if not IsStringEmpty(Player:GetAttribute'HouseRank') then
+						Prefix = Player:GetAttribute'HouseRank' == 'Owner' and (Player:GetAttribute'Gender' == 'Female' and 'Lady ' or 'Lord ') or '';
+					end
+					if not IsStringEmpty(FirstName) then
+						Name = Name .. '' .. Prefix .. FirstName;
+					end
+					if not IsStringEmpty(Player:GetAttribute'LastName') then
+						Name = Name .. ' ' .. Player:GetAttribute'LastName';
+					end
+
+					if not IsStringEmpty(Name) then Name = Name .. ']'; end
+
+					local Character = GetCharacter(Player);
+
+					if Character then
+						if Character and Character:FindFirstChild'Danger' then table.insert(Extra, 'D'); end
+						if Character:FindFirstChild'ManaAbilities' and Character.ManaAbilities:FindFirstChild'ManaSprint' then table.insert(Extra, 'D1'); end
+
+						if Character:FindFirstChild'Mana'	 		then table.insert(Extra, 'M' .. math.floor(Character.Mana.Value)); end
+						if Character:FindFirstChild'Vampirism' 		then table.insert(Extra, 'V'); end
+						if Character:FindFirstChild'Observe'		then table.insert(Extra, 'ILL'); end
+						if Character:FindFirstChild'Inferi'			then table.insert(Extra, 'NEC'); end
+						if Character:FindFirstChild'World\'s Pulse' then table.insert(Extra, 'DZIN'); end
+						if Character:FindFirstChild'Shift'		 	then table.insert(Extra, 'MAD'); end
+						if Character:FindFirstChild'Head' and Character.Head:FindFirstChild'FacialMarking' then
+							local FM = Character.Head:FindFirstChild'FacialMarking';
+							if FM.Texture == 'http://www.roblox.com/asset/?id=4072968006' then
+								table.insert(Extra, 'HEALER');
+							elseif FM.Texture == 'http://www.roblox.com/asset/?id=4072914434' then
+								table.insert(Extra, 'SEER');
+							elseif FM.Texture == 'http://www.roblox.com/asset/?id=4094417635' then
+								table.insert(Extra, 'JESTER');
+							elseif FM.Texture == 'http://www.roblox.com/asset/?id=4072968656' then
+								table.insert(Extra, 'BLADE');
+							end
+						end
+					end
+					if Player:FindFirstChild'Backpack' then
+						if Player.Backpack:FindFirstChild'Observe' 			then table.insert(Extra, 'ILL');  end
+						if Player.Backpack:FindFirstChild'Inferi'			then table.insert(Extra, 'NEC');  end
+						if Player.Backpack:FindFirstChild'World\'s Pulse' 	then table.insert(Extra, 'DZIN'); end
+						if Player.Backpack:FindFirstChild'Shift'		 	then table.insert(Extra, 'MAD'); end
+					end
+
+					if #Extra > 0 then Name = Name .. ' [' .. table.concat(Extra, '-') .. ']'; end
+				end
+
+				return Name;
+			end;
+		};
+		[3541987450] = {
+			CustomPlayerTag = function(Player)
+				local Name = '';
+
+				if Player:FindFirstChild'leaderstats' then
+					Name = Name .. '\n[';
+					local Prefix = '';
+					local Extra = {};
+					if Player.leaderstats:FindFirstChild'Prestige' and Player.leaderstats.Prestige.ClassName == 'IntValue' and Player.leaderstats.Prestige.Value > 0 then
+						Name = Name .. '#' .. tostring(Player.leaderstats.Prestige.Value) .. ' ';
+					end
+					if Player.leaderstats:FindFirstChild'HouseRank' and Player.leaderstats:FindFirstChild'Gender' and Player.leaderstats.HouseRank.ClassName == 'StringValue' and not IsStringEmpty(Player.leaderstats.HouseRank.Value) then
+						Prefix = Player.leaderstats.HouseRank.Value == 'Owner' and (Player.leaderstats.Gender.Value == 'Female' and 'Lady ' or 'Lord ') or '';
+					end
+					if Player.leaderstats:FindFirstChild'FirstName' and Player.leaderstats.FirstName.ClassName == 'StringValue' and not IsStringEmpty(Player.leaderstats.FirstName.Value) then
+						Name = Name .. '' .. Prefix .. Player.leaderstats.FirstName.Value;
+					end
+					if Player.leaderstats:FindFirstChild'LastName' and Player.leaderstats.LastName.ClassName == 'StringValue' and not IsStringEmpty(Player.leaderstats.LastName.Value) then
+						Name = Name .. ' ' .. Player.leaderstats.LastName.Value;
+					end
+					if Player.leaderstats:FindFirstChild'UberTitle' and Player.leaderstats.UberTitle.ClassName == 'StringValue' and not IsStringEmpty(Player.leaderstats.UberTitle.Value) then
+						Name = Name .. ', ' .. Player.leaderstats.UberTitle.Value;
+					end
+
+					if not IsStringEmpty(Name) then Name = Name .. ']'; end
+
+					local Character = GetCharacter(Player);
+
+					if Character then
+						if Character and Character:FindFirstChild'Danger' then table.insert(Extra, 'D'); end
+						if Character:FindFirstChild'ManaAbilities' and Character.ManaAbilities:FindFirstChild'ManaSprint' then table.insert(Extra, 'D1'); end
+
+						if Character:FindFirstChild'Mana'	 		then table.insert(Extra, 'M' .. math.floor(Character.Mana.Value)); end
+						if Character:FindFirstChild'Vampirism' 		then table.insert(Extra, 'V');    end
+						if Character:FindFirstChild'Observe'			then table.insert(Extra, 'ILL');  end
+						if Character:FindFirstChild'Inferi'			then table.insert(Extra, 'NEC');  end
+
+						if Character:FindFirstChild'World\'s Pulse' 	then table.insert(Extra, 'DZIN'); end
+						if Character:FindFirstChild'Head' and Character.Head:FindFirstChild'FacialMarking' then
+							local FM = Character.Head:FindFirstChild'FacialMarking';
+							if FM.Texture == 'http://www.roblox.com/asset/?id=4072968006' then
+								table.insert(Extra, 'HEALER');
+							elseif FM.Texture == 'http://www.roblox.com/asset/?id=4072914434' then
+								table.insert(Extra, 'SEER');
+							elseif FM.Texture == 'http://www.roblox.com/asset/?id=4094417635' then
+								table.insert(Extra, 'JESTER');
+							end
+						end
+					end
+					if Player:FindFirstChild'Backpack' then
+						if Player.Backpack:FindFirstChild'Observe' 			then table.insert(Extra, 'ILL');  end
+						if Player.Backpack:FindFirstChild'Inferi'			then table.insert(Extra, 'NEC');  end
+						if Player.Backpack:FindFirstChild'World\'s Pulse' 	then table.insert(Extra, 'DZIN'); end
+					end
+
+					if #Extra > 0 then Name = Name .. ' [' .. table.concat(Extra, '-') .. ']'; end
+				end
+
+				return Name;
+			end;
+		};
+
+		[4691401390] = { -- Vast Realm
+			CustomCharacter = function(Player)
+				if workspace:FindFirstChild'Players' then
+					return workspace.Players:FindFirstChild(Player.Name);
+				end
+			end
+		};
+
+		[6032399813] = { -- Deepwoken [Etrean]
+			CustomPlayerTag = function(Player)
+				local Name = '';
+				CharacterName = Player:GetAttribute'CharacterName'; -- could use leaderstats but lazy
+
+				if not IsStringEmpty(CharacterName) then
+					Name = ('\n[%s]'):format(CharacterName);
+					local Character = GetCharacter(Player);
+					local Extra = {};
+
+					if Character then
+						local Blood, Armor = Character:FindFirstChild('Blood'), Character:FindFirstChild('Armor');
+
+						if Blood and Blood.ClassName == 'DoubleConstrainedValue' then
+							table.insert(Extra, ('B%d'):format(Blood.Value));
+						end
+
+						if Armor and Armor.ClassName == 'DoubleConstrainedValue' then
+							table.insert(Extra, ('A%d'):format(math.floor(Armor.Value / 10)));
+						end
+					end
+
+					local BackpackChildren = Player.Backpack:GetChildren()
+
+					for index = 1, #BackpackChildren do
+						local Oath = BackpackChildren[index]
+						if Oath.ClassName == 'Folder' and Oath.Name:find('Talent:Oath') then
+							local OathName = Oath.Name:gsub('Talent:Oath: ', '')
+							table.insert(Extra, OathName);
+						end
+					end
+
+					if #Extra > 0 then Name = Name .. ' [' .. table.concat(Extra, '-') .. ']'; end
+				end
+
+				return Name;
+			end;
+		};
+
+		[5735553160] = { -- Deepwoken [Depths]
+			CustomPlayerTag = function(Player)
+				local Name = '';
+				CharacterName = Player:GetAttribute'CharacterName'; -- could use leaderstats but lazy
+
+				if not IsStringEmpty(CharacterName) then
+					Name = ('\n[%s]'):format(CharacterName);
+					local Character = GetCharacter(Player);
+					local Extra = {};
+
+					if Character then
+						local Blood, Armor = Character:FindFirstChild('Blood'), Character:FindFirstChild('Armor');
+
+						if Blood and Blood.ClassName == 'DoubleConstrainedValue' then
+							table.insert(Extra, ('B%d'):format(Blood.Value));
+						end
+
+						if Armor and Armor.ClassName == 'DoubleConstrainedValue' then
+							table.insert(Extra, ('A%d'):format(math.floor(Armor.Value / 10)));
+						end
+					end
+
+					local BackpackChildren = Player.Backpack:GetChildren()
+
+					for index = 1, #BackpackChildren do
+						local Oath = BackpackChildren[index]
+						if Oath.ClassName == 'Folder' and Oath.Name:find('Talent:Oath') then
+							local OathName = Oath.Name:gsub('Talent:Oath: ', '')
+							table.insert(Extra, OathName);
+						end
+					end
+
+					if #Extra > 0 then Name = Name .. ' [' .. table.concat(Extra, '-') .. ']'; end
+				end
+
+				return Name;
+			end;
+		};
+	};
+
+	if Modules[game.PlaceId] ~= nil then
+		local Module = Modules[game.PlaceId];
+		CustomPlayerTag = Module.CustomPlayerTag or nil;
+		CustomESP = Module.CustomESP or nil;
+		CustomCharacter = Module.CustomCharacter or nil;
+		GetHealth = Module.GetHealth or nil;
+		GetAliveState = Module.GetAliveState or nil;
+		CustomRootPartName = Module.CustomRootPartName or nil;
+	end
+
+	function GetCharacter(Player)
+		return Player.Character or (CustomCharacter and CustomCharacter(Player));
+	end
+
+	function GetMouseLocation()
+		return UserInputService:GetMouseLocation();
+	end
+
+	function MouseHoveringOver(Values)
+		local X1, Y1, X2, Y2 = Values[1], Values[2], Values[3], Values[4]
+		local MLocation = GetMouseLocation();
+		return (MLocation.x >= X1 and MLocation.x <= (X1 + (X2 - X1))) and (MLocation.y >= Y1 and MLocation.y <= (Y1 + (Y2 - Y1)));
+	end
+
+	function GetTableData(t) -- basically table.foreach i dont even know why i made this
+		if typeof(t) ~= 'table' then return end
+
+		return setmetatable(t, {
+			__call = function(t, func)
+				if typeof(func) ~= 'function' then return end;
+				for i, v in pairs(t) do
+					pcall(func, i, v);
+				end
+			end;
+		});
+	end
+	local function Format(format, ...)
+		return string.format(format, ...);
+	end
+	function CalculateValue(Min, Max, Percent)
+		return Min + math.floor(((Max - Min) * Percent) + .5);
+	end
+
+	function NewDrawing(InstanceName)
+		local Instance = Drawing.new(InstanceName);
+		-- pcall(Set, Instance, 'OutlineOpacity', 0.8)
+		return (function(Properties)
+			for i, v in pairs(Properties) do
+				pcall(Set, Instance, i, v);
+			end
+			return Instance;
+		end)
+	end
+
+	function Menu:AddMenuInstance(Name, DrawingType, Properties)
+		local Instance;
+
+		if shared.MenuDrawingData.Instances[Name] ~= nil then
+			Instance = shared.MenuDrawingData.Instances[Name];
+			for i, v in pairs(Properties) do
+				pcall(Set, Instance, i, v);
+			end
+		else
+			Instance = NewDrawing(DrawingType)(Properties);
+		end
+
+		shared.MenuDrawingData.Instances[Name] = Instance;
+
+		return Instance;
+	end
+	function Menu:UpdateMenuInstance(Name)
+		local Instance = shared.MenuDrawingData.Instances[Name];
+		if Instance ~= nil then
+			return (function(Properties)
+				for i, v in pairs(Properties) do
+					pcall(Set, Instance, i, v);
+				end
+				return Instance;
+			end)
+		end
+	end
+	function Menu:GetInstance(Name)
+		return shared.MenuDrawingData.Instances[Name];
+	end
+
+	local Options = setmetatable({}, {
+		__call = function(t, ...)
+			local Arguments = {...};
+			local Name = Arguments[1];
+			OIndex = OIndex + 1;
+			rawset(t, Name, setmetatable({
+				Name			= Arguments[1];
+				Text			= Arguments[2];
+				Value			= Arguments[3];
+				DefaultValue	= Arguments[3];
+				AllArgs			= Arguments;
+				Index			= OIndex;
+			}, {
+				__call = function(t, v, force)
+					local self = t;
+
+					if typeof(t.Value) == 'function' then
+						t.Value();
+					elseif typeof(t.Value) == 'EnumItem' then
+						local BT = Menu:GetInstance(Format('%s_BindText', t.Name));
+						if not force then
+							Binding = true;
+							local Val = 0
+							while Binding do
+								wait();
+								Val = (Val + 1) % 17;
+								BT.Text = Val <= 8 and '|' or '';
+							end
+						end
+						t.Value = force and v or BindedKey;
+						if BT and t.BasePosition and t.BaseSize then
+							BT.Text = tostring(t.Value):match'%w+%.%w+%.(.+)';
+							BT.Position = t.BasePosition + V2New(t.BaseSize.X - BT.TextBounds.X - 20, -10);
+						end
+					else
+						local NewValue = v;
+						if NewValue == nil then NewValue = not t.Value; end
+						rawset(t, 'Value', NewValue);
+
+						if Arguments[2] ~= nil and Menu:GetInstance'TopBar'.Visible then
+							if typeof(Arguments[3]) == 'number' then
+								local AMT = Menu:GetInstance(Format('%s_AmountText', t.Name));
+								if AMT then
+									AMT.Text = tostring(t.Value);
+								end
+							else
+								local Inner = Menu:GetInstance(Format('%s_InnerCircle', t.Name));
+								if Inner then Inner.Visible = t.Value; end
+							end
+						end
+					end
+				end;
+			}));
+		end;
+	})
+
+	function Load()
+		local _, Result = pcall(readfile, OptionsFile);
+
+		if _ then -- extremely ugly code yea i know but i dont care p.s. i hate pcall
+			local _, Table = pcall(HttpService.JSONDecode, HttpService, Result);
+			if _ and typeof(Table) == 'table' then
+				for i, v in pairs(Table) do
+					if typeof(Options[i]) == 'table' and Options[i].Value ~= nil and (typeof(Options[i].Value) == 'boolean' or typeof(Options[i].Value) == 'number') then
+						Options[i].Value = v.Value;
+						pcall(Options[i], v.Value);
+					end
+				end
+
+				if Table.TeamColor then TeamColor = Color3.new(Table.TeamColor.R, Table.TeamColor.G, Table.TeamColor.B) end
+				if Table.EnemyColor then EnemyColor = Color3.new(Table.EnemyColor.R, Table.EnemyColor.G, Table.EnemyColor.B) end
+
+				if typeof(Table.MenuKey) == 'string' then Options.MenuKey(Enum.KeyCode[Table.MenuKey], true) end
+				if typeof(Table.ToggleKey) == 'string' then Options.ToggleKey(Enum.KeyCode[Table.ToggleKey], true) end
+			end
+		end
+	end
+
+	Options('Enabled', 'ESP Enabled', true);
+	Options('ShowTeam', 'Show Team', true);
+	Options('ShowTeamColor', 'Show Team Color', false);
+	Options('ShowName', 'Show Names', true);
+	Options('ShowDistance', 'Show Distance', true);
+	Options('ShowHealth', 'Show Health', true);
+	Options('ShowBoxes', 'Show Boxes', true);
+	Options('ShowTracers', 'Show Tracers', true);
+	Options('ShowDot', 'Show Head Dot', false);
+	Options('VisCheck', 'Visibility Check', false);
+	Options('Crosshair', 'Crosshair', false);
+	Options('TextOutline', 'Text Outline', true);
+	-- Options('Rainbow', 'Rainbow Mode', false);
+	Options('TextSize', 'Text Size', syn and 18 or 14, 10, 24); -- cuz synapse fonts look weird???
+	Options('MaxDistance', 'Max Distance', 2500, 100, 25000);
+	Options('RefreshRate', 'Refresh Rate (ms)', 5, 1, 200);
+	Options('YOffset', 'Y Offset', 0, -200, 200);
+	Options('MenuKey', 'Menu Key', Enum.KeyCode.F4, 1);
+	Options('ToggleKey', 'Toggle Key', Enum.KeyCode.F3, 1);
+	Options('ChangeColors', SENTINEL_LOADED and 'Sentinel Unsupported' or 'Change Colors', function()
+		if SENTINEL_LOADED then return end
+
+		SubMenu:Show(GetMouseLocation(), 'Unnamed Colors', {
+			{
+				Type = 'Color'; Text = 'Team Color'; Color = TeamColor;
+
+				Function = function(Circ, Position)
+					if tick() - ColorPicker.LastGenerated < 1 then return; end
+
+					if shared.CurrentColorPicker then shared.CurrentColorPicker:Dispose() end
+					local ColorPicker = ColorPicker.new(Position - V2New(-10, 50));
+					CurrentColorPicker = ColorPicker;
+					shared.CurrentColorPicker = CurrentColorPicker;
+					ColorPicker.ColorChanged:Connect(function(Color) Circ.Color = Color TeamColor = Color Options.TeamColor = Color end);
+				end
+			};
+			{
+				Type = 'Color'; Text = 'Enemy Color'; Color = EnemyColor;
+
+				Function = function(Circ, Position)
+					if tick() - ColorPicker.LastGenerated < 1 then return; end
+
+					if shared.CurrentColorPicker then shared.CurrentColorPicker:Dispose() end
+					local ColorPicker = ColorPicker.new(Position - V2New(-10, 50));
+					CurrentColorPicker = ColorPicker;
+					shared.CurrentColorPicker = CurrentColorPicker;
+					ColorPicker.ColorChanged:Connect(function(Color) Circ.Color = Color EnemyColor = Color Options.EnemyColor = Color end);
+				end
+			};
+			{
+				Type = 'Button'; Text = 'Reset Colors';
+
+				Function = function()
+					EnemyColor = Color3.new(1, 0, 0);
+					TeamColor = Color3.new(0, 1, 0);
+
+					local C1 = Menu:GetInstance'Sub-ColorPreview.1'; if C1 then C1.Color = TeamColor end
+					local C2 = Menu:GetInstance'Sub-ColorPreview.2'; if C2 then C2.Color = EnemyColor end
+				end
+			};
+			{
+				Type = 'Button'; Text = 'Rainbow Mode';
+
+				Function = function()
+					Rainbow = not Rainbow;
+				end
+			};
+		});
+	end, 2);
+	Options('ResetSettings', 'Reset Settings', function()
+		for i, v in pairs(Options) do
+			if Options[i] ~= nil and Options[i].Value ~= nil and Options[i].Text ~= nil and (typeof(Options[i].Value) == 'boolean' or typeof(Options[i].Value) == 'number' or typeof(Options[i].Value) == 'EnumItem') then
+				Options[i](Options[i].DefaultValue, true);
+			end
+		end
+	end, 5);
+	Options('LoadSettings', 'Load Settings', Load, 4);
+	Options('SaveSettings', 'Save Settings', function()
+		local COptions = {};
+
+		for i, v in pairs(Options) do
+			COptions[i] = v;
+		end
+
+		if typeof(TeamColor) == 'Color3' then COptions.TeamColor = { R = TeamColor.R; G = TeamColor.G; B = TeamColor.B } end
+		if typeof(EnemyColor) == 'Color3' then COptions.EnemyColor = { R = EnemyColor.R; G = EnemyColor.G; B = EnemyColor.B } end
+
+		if typeof(COptions.MenuKey.Value) == 'EnumItem' then COptions.MenuKey = COptions.MenuKey.Value.Name end
+		if typeof(COptions.ToggleKey.Value) == 'EnumItem' then COptions.ToggleKey = COptions.ToggleKey.Value.Name end
+
+		writefile(OptionsFile, HttpService:JSONEncode(COptions));
+	end, 3);
+
+	Load(1);
+
+	Options('MenuOpen', nil, true);
+
+	local function Combine(...)
+		local Output = {};
+		for i, v in pairs{...} do
+			if typeof(v) == 'table' then
+				table.foreach(v, function(i, v)
+					Output[i] = v;
+				end)
+			end
+		end
+		return Output
+	end
+
+	function LineBox:Create(Properties)
+		local Box = { Visible = true }; -- prevent errors not really though dont worry bout the Visible = true thing
+
+		local Properties = Combine({
+			Transparency	= 1;
+			Thickness		= 3;
+			Visible			= true;
+		}, Properties);
+
+		if shared.am_ic3 then -- sory just my preference, dynamic boxes will be optional in unnamed esp v2
+			Box['OutlineSquare']= NewDrawing'Square'(Properties);
+			Box['Square'] 		= NewDrawing'Square'(Properties);
+		elseif QUAD_SUPPORTED_EXPLOIT then
+			Box['Quad']			= NewDrawing'Quad'(Properties);
+		else
+			Box['TopLeft']		= NewDrawing'Line'(Properties);
+			Box['TopRight']		= NewDrawing'Line'(Properties);
+			Box['BottomLeft']	= NewDrawing'Line'(Properties);
+			Box['BottomRight']	= NewDrawing'Line'(Properties);
+		end
+
+		function Box:Update(CF, Size, Color, Properties, Parts)
+			if not CF or not Size then return end
+
+			if shared.am_ic3 and typeof(Parts) == 'table' then
+				local AllCorners = {};
+
+				for i, v in pairs(Parts) do
+					-- if not v:IsA'BasePart' then continue end
+
+					local CF, Size = v.CFrame, v.Size;
+					-- CF, Size = v.Parent:GetBoundingBox();
+
+					local Corners = {
+						Vector3.new(CF.X + Size.X / 2, CF.Y + Size.Y / 2, CF.Z + Size.Z / 2);
+						Vector3.new(CF.X - Size.X / 2, CF.Y + Size.Y / 2, CF.Z + Size.Z / 2);
+						Vector3.new(CF.X - Size.X / 2, CF.Y - Size.Y / 2, CF.Z - Size.Z / 2);
+						Vector3.new(CF.X + Size.X / 2, CF.Y - Size.Y / 2, CF.Z - Size.Z / 2);
+						Vector3.new(CF.X - Size.X / 2, CF.Y + Size.Y / 2, CF.Z - Size.Z / 2);
+						Vector3.new(CF.X + Size.X / 2, CF.Y + Size.Y / 2, CF.Z - Size.Z / 2);
+						Vector3.new(CF.X - Size.X / 2, CF.Y - Size.Y / 2, CF.Z + Size.Z / 2);
+						Vector3.new(CF.X + Size.X / 2, CF.Y - Size.Y / 2, CF.Z + Size.Z / 2);
+					};
+
+					for i, v in pairs(Corners) do
+						table.insert(AllCorners, v);
+					end
+
+					-- break
+				end
+
+				local xMin, yMin = Camera.ViewportSize.X, Camera.ViewportSize.Y;
+				local xMax, yMax = 0, 0;
+				local Vs = true;
+
+				for i, v in pairs(AllCorners) do				
+					local Position, V = WorldToViewport(v);
+
+					if VS and not V then Vs = false break end
+
+					if Position.X > xMax then
+						xMax = Position.X;
+					end
+					if Position.X < xMin then
+						xMin = Position.X;
+					end
+					if Position.Y > yMax then
+						yMax = Position.Y;
+					end
+					if Position.Y < yMin then
+						yMin = Position.Y;
+					end
+				end
+
+				local xSize, ySize = xMax - xMin, yMax - yMin;
+
+				local Outline = Box['OutlineSquare'];
+				local Square = Box['Square'];
+				Outline.Visible = Vs;
+				Square.Visible = Vs;
+				Square.Position = V2New(xMin, yMin);
+				Square.Color	= Color;
+				Square.Thickness = math.floor(Outline.Thickness * 0.3);
+				-- Square.Position = V2New(xMin, yMin);
+				Square.Size = V2New(xSize, ySize);
+				Outline.Position = Square.Position;
+				Outline.Size = Square.Size;
+				Outline.Color = Color3.new(0.12, 0.12, 0.12);
+				Outline.Transparency = 0.75;
+
+				return
+			end
+
+			local TLPos, Visible1	= WorldToViewport((CF * CFrame.new( Size.X,  Size.Y, 0)).Position);
+			local TRPos, Visible2	= WorldToViewport((CF * CFrame.new(-Size.X,  Size.Y, 0)).Position);
+			local BLPos, Visible3	= WorldToViewport((CF * CFrame.new( Size.X, -Size.Y, 0)).Position);
+			local BRPos, Visible4	= WorldToViewport((CF * CFrame.new(-Size.X, -Size.Y, 0)).Position);
+
+			local Quad = Box['Quad'];
+
+			if QUAD_SUPPORTED_EXPLOIT then
+				if Visible1 and Visible2 and Visible3 and Visible4 then
+					Quad.Visible = true;
+					Quad.Color	= Color;
+					Quad.PointA = V2New(TLPos.X, TLPos.Y);
+					Quad.PointB = V2New(TRPos.X, TRPos.Y);
+					Quad.PointC = V2New(BRPos.X, BRPos.Y);
+					Quad.PointD = V2New(BLPos.X, BLPos.Y);
+				else
+					Box['Quad'].Visible = false;
+				end
+			else
+				Visible1 = TLPos.Z > 0 -- (commented | reason: random flashes);
+				Visible2 = TRPos.Z > 0 -- (commented | reason: random flashes);
+				Visible3 = BLPos.Z > 0 -- (commented | reason: random flashes);
+				Visible4 = BRPos.Z > 0 -- (commented | reason: random flashes);
+
+				-- ## BEGIN UGLY CODE
+				if Visible1 then
+					Box['TopLeft'].Visible		= true;
+					Box['TopLeft'].Color		= Color;
+					Box['TopLeft'].From			= V2New(TLPos.X, TLPos.Y);
+					Box['TopLeft'].To			= V2New(TRPos.X, TRPos.Y);
+				else
+					Box['TopLeft'].Visible		= false;
+				end
+				if Visible2 then
+					Box['TopRight'].Visible		= true;
+					Box['TopRight'].Color		= Color;
+					Box['TopRight'].From		= V2New(TRPos.X, TRPos.Y);
+					Box['TopRight'].To			= V2New(BRPos.X, BRPos.Y);
+				else
+					Box['TopRight'].Visible		= false;
+				end
+				if Visible3 then
+					Box['BottomLeft'].Visible	= true;
+					Box['BottomLeft'].Color		= Color;
+					Box['BottomLeft'].From		= V2New(BLPos.X, BLPos.Y);
+					Box['BottomLeft'].To		= V2New(TLPos.X, TLPos.Y);
+				else
+					Box['BottomLeft'].Visible	= false;
+				end
+				if Visible4 then
+					Box['BottomRight'].Visible	= true;
+					Box['BottomRight'].Color	= Color;
+					Box['BottomRight'].From		= V2New(BRPos.X, BRPos.Y);
+					Box['BottomRight'].To		= V2New(BLPos.X, BLPos.Y);
+				else
+					Box['BottomRight'].Visible	= false;
+				end
+				-- ## END UGLY CODE
+				if Properties and typeof(Properties) == 'table' then
+					GetTableData(Properties)(function(i, v)
+						pcall(Set, Box['TopLeft'],		i, v);
+						pcall(Set, Box['TopRight'],		i, v);
+						pcall(Set, Box['BottomLeft'],	i, v);
+						pcall(Set, Box['BottomRight'],	i, v);
+					end)
+				end
+			end
+		end
+		function Box:SetVisible(bool)
+			if shared.am_ic3 then
+				Box['Square'].Visible = bool;
+				Box['OutlineSquare'].Visible = bool;
+			else
+				pcall(Set, Box['Quad'],				'Visible', bool);
+			end
+			-- pcall(Set, Box['TopLeft'],		'Visible', bool);
+			-- pcall(Set, Box['TopRight'],		'Visible', bool);
+			-- pcall(Set, Box['BottomLeft'],	'Visible', bool);
+			-- pcall(Set, Box['BottomRight'],	'Visible', bool);
+		end
+		function Box:Remove()
+			self:SetVisible(false);
+			if shared.am_ic3 then
+				Box['Square']:Remove();
+				Box['OutlineSquare']:Remove();
+			else
+				Box['Quad']:Remove();
+			end
+			-- Box['TopLeft']:Remove();
+			-- Box['TopRight']:Remove();
+			-- Box['BottomLeft']:Remove();
+			-- Box['BottomRight']:Remove();
+		end
+
+		return Box;
+	end
+
+	local Colors = {
+		White = FromHex'ffffff';
+		Primary = {
+			Main	= FromHex'424242';
+			Light	= FromHex'6d6d6d';
+			Dark	= FromHex'1b1b1b';
+		};
+		Secondary = {
+			Main	= FromHex'e0e0e0';
+			Light	= FromHex'ffffff';
+			Dark	= FromHex'aeaeae';
+		};
+	};
+
+	function Connections:Listen(Connection, Function)
+		local NewConnection = Connection:Connect(Function);
+		table.insert(self.Active, NewConnection);
+		return NewConnection;
+	end
+
+	function Connections:DisconnectAll()
+		for Index, Connection in pairs(self.Active) do
+			if Connection.Connected then
+				Connection:Disconnect();
+			end
+		end
+
+		self.Active = {};
+	end
+
+	function Signal.new()
+		local self = setmetatable({ _BindableEvent = Instance.new'BindableEvent' }, Signal);
+
+		return self;
+	end
+
+	function Signal:Connect(Callback)
+		assert(typeof(Callback) == 'function', 'function expected; got ' .. typeof(Callback));
+
+		return self._BindableEvent.Event:Connect(function(...) Callback(...) end);
+	end
+
+	function Signal:Fire(...)
+		self._BindableEvent:Fire(...);
+	end
+
+	function Signal:Wait()
+		local Arguments = self._BindableEvent:Wait();
+
+		return Arguments;
+	end
+
+	function Signal:Disconnect()
+		if self._BindableEvent then
+			self._BindableEvent:Destroy();
+		end
+	end
+
+	local function GetMouseLocation()
+		return UserInputService:GetMouseLocation();
+	end
+
+	local function IsMouseOverDrawing(Drawing, MousePosition)
+		local TopLeft = Drawing.Position;
+		local BottomRight = Drawing.Position + Drawing.Size;
+		local MousePosition = MousePosition or GetMouseLocation();
+
+		return MousePosition.X > TopLeft.X and MousePosition.Y > TopLeft.Y and MousePosition.X < BottomRight.X and MousePosition.Y < BottomRight.Y;
+	end
+
+	local ImageCache = {};
+
+	local function SetImage(Drawing, Url)
+		local Data = IsSynapse and game:HttpGet(Url) or Url;
+
+		print(Drawing, IsSynapse)
+
+		Drawing[IsSynapse and 'Data' or 'Uri'] = ImageCache[Url] or Data;
+		ImageCache[Url] = Data;
+
+		if not IsSynapse then repeat wait() until Drawing.Loaded; end
+	end
+
+	-- oh god unnamed esp needs an entire rewrite, someone make a better one pls im too lazy
+	-- btw the color picker was made seperately so it doesnt fit with the code of unnamed esp
+
+	local function CreateDrawingsTable()
+		local Drawings = { __Objects = {} };
+		local Metatable = {};
+
+		function Metatable.__index(self, Index)
+			local Object = rawget(self.__Objects, Index);
+
+			if not Object or (IsSynapse and not Object.__SELF.__OBJECT_EXISTS) then
+				local Type = Index:sub(1, Index:find'-' - 1);
+
+				Success, Object = pcall(Drawing.new, Type);
+
+				if not Object or not Success then return function() end; end
+
+				self.__Objects[Index] = setmetatable({ __SELF = Object; Type = Type }, {
+					__call = function(self, Properties)
+						local Object = rawget(self, '__SELF'); if IsSynapse and not Object.__OBJECT_EXISTS then return false, 'render object destroyed'; end
+
+						if Properties == false then
+							Object.Visible = false;
+							Object.Transparency = 0;
+							Object:Remove();
+
+							return true;
+						end
+
+						if typeof(Properties) == 'table' then
+							for Property, Value in pairs(Properties) do
+								local CanSet = true;
+
+								if self.Type == 'Image' and not IsSynapse and Property == 'Size' and typeof(Value) == 'Vector2' then
+									CanSet = false;
+
+									spawn(function()
+										repeat wait() until Object.Loaded;
+										if not self.DefaultSize then rawset(self, 'DefaultSize', Object.Size) end
+
+										Property = 'ScaleFactor';
+										Value = Value.X / self.DefaultSize.X;
+
+										Object[Property] = Value
+									end)
+								end
+
+								if CanSet then Object[Property] = Value end
+							end
+						end
+
+						return Object;
+					end
+				});
+
+				Object.Visible = true;
+				Object.Transparency = 1; -- Transparency is really Opacity with drawing api (1 being visible, 0 being invisible)
+
+				if Type == 'Text' then
+					if Drawing.Fonts then Object.Font = Drawing.Fonts.Monospace end
+					Object.Size = 20;
+					Object.Color = Color3.new(1, 1, 1);
+					Object.Center = true;
+					Object.Outline = true;
+					OutlineOpacity = 0.5;
+				elseif Type == 'Square' or Type == 'Rectangle' then
+					Object.Thickness = 2;
+					Object.Filled = false;
+				end
+
+				return self.__Objects[Index];
+			end
+
+			return Object;
+		end
+
+		function Metatable.__call(self, Delete, ...)
+			local Arguments = {Delete, ...};
+
+			if Delete == false then
+				for Index, Drawing in pairs(rawget(self, '__Objects')) do
+					Drawing(false);
+				end
+			end
+		end
+
+		return setmetatable(Drawings, Metatable);
+	end
+
+	local Images = {};
+
+	spawn(function()
+		Images.Ring = 'https://i.imgur.com/q4qx26f.png';
+		Images.Overlay = 'https://i.imgur.com/gOCxbsR.png';
+	end)
+
+	function ColorPicker.new(Position, Size, Color)
+		ColorPicker.LastGenerated = tick();
+		ColorPicker.Loading = true;
+
+		local Picker = { Color = Color or Color3.new(1, 1, 1); HSV = { H = 0, S = 1, V = 1 } };
+		local Drawings = CreateDrawingsTable();
+		local Position = Position or V2New();
+		local Size = Size or 150;
+		local Padding = { 10, 10, 10, 10 };
+
+		Picker.ColorChanged = Signal.new();
+
+		local Background = Drawings['Square-Background'] {
+			Color = Color3.fromRGB(33, 33, 33);
+			Filled = false;
+			Visible = false;
+			Position = Position - V2New(Padding[4], Padding[1]);
+			Size = V2New(Size, Size) + V2New(Padding[4] + Padding[2], Padding[1] + Padding[3]);
+		};
+		local ColorPreview = Drawings['Circle-Preview'] {
+			Position = Position + (V2New(Size, Size) / 2);
+			Radius = Size / 2 - 8;
+			Filled = true;
+			Thickness = 0;
+			NumSides = 20;
+			Color = Color3.new(1, 0, 0);
+		};
+		local Main = Drawings['Image-Main'] {
+			Position = Position;
+			Size = V2New(Size, Size);
+		}; SetImage(Main, Images.Ring);
+		local Preview = Drawings['Square-Preview'] {
+			Position = Main.Position + (Main.Size / 4.5);
+			Size = Main.Size / 1.75;
+			Color = Color3.new(1, 0, 0);
+			Filled = true;
+			Thickness = 0;
+		};
+		local Overlay = Drawings['Image-Overlay'] {
+			Position = Preview.Position;
+			Size = Preview.Size;
+			Transparency = 1;
+		}; SetImage(Overlay, Images.Overlay);
+		local CursorOutline = Drawings['Circle-CursorOutline'] {
+			Radius = 4;
+			Thickness = 2;
+			Filled = false;
+			Color = Color3.new(0.2, 0.2, 0.2);
+			Position = V2New(Main.Position.X + Main.Size.X - 10, Main.Position.Y + (Main.Size.Y / 2));
+		};
+		local Cursor = Drawings['Circle-Cursor'] {
+			Radius = 3;
+			Transparency = 1;
+			Filled = true;
+			Color = Color3.new(1, 1, 1);
+			Position = CursorOutline.Position;
+		};
+		local CursorOutline = Drawings['Circle-CursorOutlineSquare'] {
+			Radius = 4;
+			Thickness = 2;
+			Filled = false;
+			Color = Color3.new(0.2, 0.2, 0.2);
+			Position = V2New(Preview.Position.X + Preview.Size.X - 2, Preview.Position.Y + 2);
+		};
+		Drawings['Circle-CursorSquare'] {
+			Radius = 3;
+			Transparency = 1;
+			Filled = true;
+			Color = Color3.new(1, 1, 1);
+			Position = CursorOutline.Position;
+		};
+
+		function Picker:UpdatePosition(Input)
+			local MousePosition = V2New(Input.Position.X, Input.Position.Y + 33);
+
+			if self.MouseHeld then
+				if self.Item == 'Ring' then
+					local Main = self.Drawings['Image-Main'] ();
+					local Preview = self.Drawings['Square-Preview'] ();
+					local Bounds = Main.Size / 2;
+					local Center = Main.Position + Bounds;
+					local Relative = MousePosition - Center;
+					local Direction = Relative.unit;
+					local Position = Center + Direction * Main.Size.X / 2.15;
+					local H = (math.atan2(Position.Y - Center.Y, Position.X - Center.X)) * 60;
+					if H < 0 then H = 360 + H; end
+					H = H / 360;
+					self.HSV.H = H;
+					local EndColor = Color3.fromHSV(H, self.HSV.S, self.HSV.V); if EndColor ~= self.Color then self.ColorChanged:Fire(self.Color); end
+					local Pointer = self.Drawings['Circle-Cursor'] { Position = Position };
+					self.Drawings['Circle-CursorOutline'] { Position = Pointer.Position };
+					Bounds = Bounds * 2;
+					Preview.Color = Color3.fromHSV(H, 1, 1);
+					self.Color = EndColor;
+					self.Drawings['Circle-Preview'] { Color = EndColor };
+				elseif self.Item == 'HL' then
+					local Preview = self.Drawings['Square-Preview'] ();
+					local HSV = self.HSV;
+					local Position = V2New(math.clamp(MousePosition.X, Preview.Position.X, Preview.Position.X + Preview.Size.X), math.clamp(MousePosition.Y, Preview.Position.Y, Preview.Position.Y + Preview.Size.Y));
+					HSV.S = (Position.X - Preview.Position.X) / Preview.Size.X;
+					HSV.V = 1 - (Position.Y - Preview.Position.Y) / Preview.Size.Y;
+					local EndColor = Color3.fromHSV(HSV.H, HSV.S, HSV.V); if EndColor ~= self.Color then self.ColorChanged:Fire(self.Color); end
+					self.Color = EndColor;
+					self.Drawings['Circle-Preview'] { Color = EndColor };
+					local Pointer = self.Drawings['Circle-CursorSquare'] { Position = Position };
+					self.Drawings['Circle-CursorOutlineSquare'] { Position = Pointer.Position };
+				end
+			end
+		end
+
+		function Picker:HandleInput(Input, P, Type)
+			if Type == 'Began' then
+				if Input.UserInputType.Name == 'MouseButton1' then
+					local Main = self.Drawings['Image-Main'] ();
+					local SquareSV = self.Drawings['Square-Preview'] ();
+					local MousePosition = V2New(Input.Position.X, Input.Position.Y + 33);
+					self.MouseHeld = true;
+					local Bounds = Main.Size / 2;
+					local Center = Main.Position + Bounds;
+					local R = (MousePosition - Center);
+
+					if R.Magnitude < Bounds.X and R.Magnitude > Bounds.X - 20 then
+						self.Item = 'Ring';
+					end
+
+					if MousePosition.X > SquareSV.Position.X and MousePosition.Y > SquareSV.Position.Y and MousePosition.X < SquareSV.Position.X + SquareSV.Size.X and MousePosition.Y < SquareSV.Position.Y + SquareSV.Size.Y then
+						self.Item = 'HL';
+					end
+
+					self:UpdatePosition(Input, P);
+				end
+			elseif Type == 'Changed' then
+				if Input.UserInputType.Name == 'MouseMovement' then
+					self:UpdatePosition(Input, P);
+				end
+			elseif Type == 'Ended' and Input.UserInputType.Name == 'MouseButton1' then
+				self.Item = nil;
+			end
+		end
+
+		function Picker:Dispose()
+			self.Drawings(false);
+			self.UpdatePosition = nil;
+			self.HandleInput = nil;
+			Connections:DisconnectAll(); -- scuffed tbh
+		end
+
+		Connections:Listen(UserInputService.InputBegan, function(Input, Process)
+			Picker:HandleInput(Input, Process, 'Began');
+		end);
+		Connections:Listen(UserInputService.InputChanged, function(Input, Process)
+			if Input.UserInputType.Name == 'MouseMovement' then
+				local MousePosition = V2New(Input.Position.X, Input.Position.Y + 33);
+				local Cursor = Picker.Drawings['Triangle-Cursor'] {
+					Filled = true;
+					Color = Color3.new(0.9, 0.9, 0.9);
+					PointA = MousePosition + V2New(0, 0);
+					PointB = MousePosition + V2New(12, 14);
+					PointC = MousePosition + V2New(0, 18);
+					Thickness = 0;
+				};
+			end
+			Picker:HandleInput(Input, Process, 'Changed');
+		end);
+		Connections:Listen(UserInputService.InputEnded, function(Input, Process)
+			Picker:HandleInput(Input, Process, 'Ended');
+
+			if Input.UserInputType.Name == 'MouseButton1' then
+				Picker.MouseHeld = false;
+			end
+		end);
+
+		ColorPicker.Loading = false;
+
+		Picker.Drawings = Drawings;
+		return Picker;
+	end
+
+	function SubMenu:Show(Position, Title, Options)
+		self.Open = true;
+
+		local Visible = true;
+		local BasePosition = Position;
+		local BaseSize = V2New(200, 140);
+		local End = BasePosition + BaseSize;
+
+		self.Bounds = { BasePosition.X, BasePosition.Y, End.X, End.Y };
+
+		delay(0.025, function()
+			if not self.Open then return; end
+
+			Menu:AddMenuInstance('Sub-Main', 'Square', {
+				Size		= BaseSize;
+				Position	= BasePosition;
+				Filled		= false;
+				Color		= Colors.Primary.Main;
+				Thickness	= 3;
+				Visible		= Visible;
+			});
+		end);
+		Menu:AddMenuInstance('Sub-TopBar', 'Square', {
+			Position	= BasePosition;
+			Size		= V2New(BaseSize.X, 10);
+			Color		= Colors.Primary.Dark;
+			Filled		= true;
+			Visible		= Visible;
+		});
+		Menu:AddMenuInstance('Sub-TopBarTwo', 'Square', {
+			Position 	= BasePosition + V2New(0, 10);
+			Size		= V2New(BaseSize.X, 20);
+			Color		= Colors.Primary.Main;
+			Filled		= true;
+			Visible		= Visible;
+		});
+		Menu:AddMenuInstance('Sub-TopBarText', 'Text', {
+			Size 		= 20;
+			Position	= shared.MenuDrawingData.Instances['Sub-TopBarTwo'].Position + V2New(15, -3);
+			Text		= Title or '';
+			Color		= Colors.Secondary.Light;
+			Visible		= Visible;
+		});
+		Menu:AddMenuInstance('Sub-Filling', 'Square', {
+			Size		= BaseSize - V2New(0, 30);
+			Position	= BasePosition + V2New(0, 30);
+			Filled		= true;
+			Color		= Colors.Secondary.Main;
+			Transparency= .75;
+			Visible		= Visible;
+		});
+
+		if Options then
+			for Index, Option in pairs(Options) do -- currently only supports color and button(but color is a button so), planning on fully rewriting or something
+				local function GetName(Name) return ('Sub-%s.%d'):format(Name, Index) end
+				local Position = shared.MenuDrawingData.Instances['Sub-Filling'].Position + V2New(20, Index * 25 - 10);
+				-- local BasePosition	= shared.MenuDrawingData.Instances.Filling.Position + V2New(30, v.Index * 25 - 10);
+
+				if Option.Type == 'Color' then
+					local ColorPreview = Menu:AddMenuInstance(GetName'ColorPreview', 'Circle', {
+						Position = Position;
+						Color = Option.Color;
+						Radius = IsSynapse and 10 or 10;
+						NumSides = 10;
+						Filled = true;
+						Visible = true;
+					});
+					local Text = Menu:AddMenuInstance(GetName'Text', 'Text', {
+						Text = Option.Text;
+						Position = ColorPreview.Position + V2New(15, -8);
+						Size = 16;
+						Color = Colors.Primary.Dark;
+						Visible = true;
+					});
+					UIButtons[#UIButtons + 1] = {
+						FromSubMenu = true;
+						Option = function() return Option.Function(ColorPreview, BasePosition + V2New(BaseSize.X, 0)) end;
+						Instance = Menu:AddMenuInstance(Format('%s_Hitbox', GetName'Button'), 'Square', {
+							Position	= Position - V2New(20, 12);
+							Size		= V2New(BaseSize.X, 25);
+							Visible		= false;
+						});
+					};
+				elseif Option.Type == 'Button' then
+					UIButtons[#UIButtons + 1] = {
+						FromSubMenu = true;
+						Option = Option.Function;
+						Instance = Menu:AddMenuInstance(Format('%s_Hitbox', GetName'Button'), 'Square', {
+							Size		= V2New(BaseSize.X, 20) - V2New(20, 0);
+							Visible		= true;
+							Transparency= .5;
+							Position	= Position - V2New(10, 10);
+							Color		= Colors.Secondary.Light;
+							Filled		= true;
+						});
+					};
+					local Text		= Menu:AddMenuInstance(Format('%s_Text', GetName'Text'), 'Text', {
+						Text		= Option.Text;
+						Size		= 18;
+						Position	= Position + V2New(5, -10);
+						Visible		= true;
+						Color		= Colors.Primary.Dark;
+					});
+				end
+			end
+		end
+	end
+
+	function SubMenu:Hide()
+		self.Open = false;
+
+		for i, v in pairs(shared.MenuDrawingData.Instances) do
+			if i:sub(1, 3) == 'Sub' then
+				v.Visible = false;
+
+				if i:sub(4, 4) == ':' then -- ';' = Temporary so remove
+					v:Remove();
+					shared.MenuDrawingData.Instance[i] = nil;
+				end
+			end
+		end
+
+		for i, Button in pairs(UIButtons) do
+			if Button.FromSubMenu then
+				UIButtons[i] = nil;
+			end
+		end
+
+		spawn(function() -- stupid bug happens if i dont use this
+			for i = 1, 10 do
+				if shared.CurrentColorPicker then -- dont know why 'CurrentColorPicker' isnt a variable in this
+					shared.CurrentColorPicker:Dispose();
+				end
+				wait(0.1);
+			end
+		end)
+
+		CurrentColorPicker = nil;
+	end
+
+	function CreateMenu(NewPosition) -- Create Menu
+		MenuLoaded = false;
+		UIButtons  = {};
+		Sliders	   = {};
+
+		local BaseSize = V2New(300, 625);
+		local BasePosition = NewPosition or V2New(Camera.ViewportSize.X / 8 - (BaseSize.X / 2), Camera.ViewportSize.Y / 2 - (BaseSize.Y / 2));
+
+		BasePosition = V2New(math.clamp(BasePosition.X, 0, Camera.ViewportSize.X), math.clamp(BasePosition.Y, 0, Camera.ViewportSize.Y));
+
+		Menu:AddMenuInstance('CrosshairX', 'Line', {
+			Visible			= false;
+			Color			= Color3.new(0, 1, 0);
+			Transparency	= 1;
+			Thickness		= 1;
+		});
+		Menu:AddMenuInstance('CrosshairY', 'Line', {
+			Visible			= false;
+			Color			= Color3.new(0, 1, 0);
+			Transparency	= 1;
+			Thickness		= 1;
+		});
+
+		delay(.025, function() -- since zindex doesnt exist
+			Menu:AddMenuInstance('Main', 'Square', {
+				Size		= BaseSize;
+				Position	= BasePosition;
+				Filled		= false;
+				Color		= Colors.Primary.Main;
+				Thickness	= 3;
+				Visible		= true;
+			});
+		end);
+		Menu:AddMenuInstance('TopBar', 'Square', {
+			Position	= BasePosition;
+			Size		= V2New(BaseSize.X, 15);
+			Color		= Colors.Primary.Dark;
+			Filled		= true;
+			Visible		= true;
+		});
+		Menu:AddMenuInstance('TopBarTwo', 'Square', {
+			Position 	= BasePosition + V2New(0, 15);
+			Size		= V2New(BaseSize.X, 45);
+			Color		= Colors.Primary.Main;
+			Filled		= true;
+			Visible		= true;
+		});
+		Menu:AddMenuInstance('TopBarText', 'Text', {
+			Size 		= 25;
+			Position	= shared.MenuDrawingData.Instances.TopBarTwo.Position + V2New(25, 10);
+			Text		= 'Unnamed ESP';
+			Color		= Colors.Secondary.Light;
+			Visible		= true;
+			Transparency= 1; -- proto outline fix
+			Outline 	= true;
+			OutlineOpacity = 0.5;
+		});
+		Menu:AddMenuInstance('TopBarTextBR', 'Text', {
+			Size 		= 18;
+			Position	= shared.MenuDrawingData.Instances.TopBarTwo.Position + V2New(BaseSize.X - 75, 25);
+			Text		= 'by ic3w0lf';
+			Color		= Colors.Secondary.Light;
+			Visible		= true;
+			Transparency= 1;
+			Outline 	= true;
+			OutlineOpacity = 0.5;
+		});
+		Menu:AddMenuInstance('Filling', 'Square', {
+			Size		= BaseSize - V2New(0, 60);
+			Position	= BasePosition + V2New(0, 60);
+			Filled		= true;
+			Color		= Colors.Secondary.Main;
+			Transparency= .5;
+			Visible		= true;
+		});
+
+		local CPos = 0;
+
+		GetTableData(Options)(function(i, v)
+			if typeof(v.Value) == 'boolean' and not IsStringEmpty(v.Text) and v.Text ~= nil then
+				CPos 				= CPos + 25;
+				local BaseSize		= V2New(BaseSize.X, 30);
+				local BasePosition	= shared.MenuDrawingData.Instances.Filling.Position + V2New(30, v.Index * 25 - 10);
+				UIButtons[#UIButtons + 1] = {
+					Option = v;
+					Instance = Menu:AddMenuInstance(Format('%s_Hitbox', v.Name), 'Square', {
+						Position	= BasePosition - V2New(30, 15);
+						Size		= BaseSize;
+						Visible		= false;
+					});
+				};
+				Menu:AddMenuInstance(Format('%s_OuterCircle', v.Name), 'Circle', {
+					Radius		= 10;
+					Position	= BasePosition;
+					Color		= Colors.Secondary.Light;
+					Filled		= true;
+					Visible		= true;
+				});
+				Menu:AddMenuInstance(Format('%s_InnerCircle', v.Name), 'Circle', {
+					Radius		= 7;
+					Position	= BasePosition;
+					Color		= Colors.Secondary.Dark;
+					Filled		= true;
+					Visible		= v.Value;
+				});
+				Menu:AddMenuInstance(Format('%s_Text', v.Name), 'Text', {
+					Text		= v.Text;
+					Size		= 20;
+					Position	= BasePosition + V2New(20, -10);
+					Visible		= true;
+					Color		= Colors.Secondary.Light;
+					Transparency= 1;
+					Outline		= true;
+					OutlineOpacity = 0.5;
+				});
+			end
+		end)
+		GetTableData(Options)(function(i, v) -- just to make sure certain things are drawn before or after others, too lazy to actually sort table
+			if typeof(v.Value) == 'number' then
+				CPos 				= CPos + 25;
+
+				local BaseSize		= V2New(BaseSize.X, 30);
+				local BasePosition	= shared.MenuDrawingData.Instances.Filling.Position + V2New(0, CPos - 10);
+
+				local Line			= Menu:AddMenuInstance(Format('%s_SliderLine', v.Name), 'Square', {
+					Transparency	= 1;
+					Color			= Colors.Secondary.Light;
+					-- Thickness		= 3;
+					Filled			= true;
+					Visible			= true;
+					Position 		= BasePosition + V2New(15, -5);
+					Size 			= BaseSize - V2New(30, 10);
+					Transparency	= 0.5;
+				});
+				local Slider		= Menu:AddMenuInstance(Format('%s_Slider', v.Name), 'Square', {
+					Visible			= true;
+					Filled			= true;
+					Color			= Colors.Primary.Dark;
+					Size			= V2New(5, Line.Size.Y);
+					Transparency	= 0.5;
+				});
+				local Text			= Menu:AddMenuInstance(Format('%s_Text', v.Name), 'Text', {
+					Text			= v.Text;
+					Size			= 20;
+					Center			= true;
+					Transparency	= 1;
+					Outline			= true;
+					OutlineOpacity  = 0.5;
+					Visible			= true;
+					Color			= Colors.White;
+				}); Text.Position	= Line.Position + (Line.Size / 2) - V2New(0, Text.TextBounds.Y / 1.75);
+				local AMT			= Menu:AddMenuInstance(Format('%s_AmountText', v.Name), 'Text', {
+					Text			= tostring(v.Value);
+					Size			= 22;
+					Center			= true;
+					Transparency	= 1;
+					Outline			= true;
+					OutlineOpacity  = 0.5;
+					Visible			= true;
+					Color			= Colors.White;
+					Position		= Text.Position;
+				});
+
+				local CSlider = {Slider = Slider; Line = Line; Min = v.AllArgs[4]; Max = v.AllArgs[5]; Option = v};
+				local Dummy = Instance.new'NumberValue';
+
+				Dummy:GetPropertyChangedSignal'Value':Connect(function()
+					Text.Transparency = Dummy.Value;
+					-- Text.OutlineTransparency = 1 - Dummy.Value;
+					AMT.Transparency = 1 - Dummy.Value;
+				end);
+
+				Dummy.Value = 1;
+
+				function CSlider:ShowValue(Bool)
+					self.ShowingValue = Bool;
+
+					TweenService:Create(Dummy, TweenInfo.new(0.5, Enum.EasingStyle.Quart, Enum.EasingDirection.Out), { Value = Bool and 0 or 1 }):Play();
+				end
+
+				Sliders[#Sliders + 1] = CSlider;
+
+				-- local Percent = (v.Value / CSlider.Max) * 100;
+				-- local Size = math.abs(Line.From.X - Line.To.X);
+				-- local Value = Size * (Percent / 100); -- this shit's inaccurate but fuck it i'm not even gonna bother fixing it
+
+				Slider.Position = Line.Position + V2New(35, 0);
+
+				v.BaseSize = BaseSize;
+				v.BasePosition = BasePosition;
+				-- AMT.Position = BasePosition + V2New(BaseSize.X - AMT.TextBounds.X - 10, -10)
+			end
+		end)
+		local FirstItem = false;
+		GetTableData(Options)(function(i, v) -- just to make sure certain things are drawn before or after others, too lazy to actually sort table
+			if typeof(v.Value) == 'EnumItem' then
+				CPos 				= CPos + (not FirstItem and 30 or 25);
+				FirstItem			= true;
+
+				local BaseSize		= V2New(BaseSize.X, FirstItem and 30 or 25);
+				local BasePosition	= shared.MenuDrawingData.Instances.Filling.Position + V2New(0, CPos - 10);
+
+				UIButtons[#UIButtons + 1] = {
+					Option = v;
+					Instance = Menu:AddMenuInstance(Format('%s_Hitbox', v.Name), 'Square', {
+						Size		= V2New(BaseSize.X, 20) - V2New(30, 0);
+						Visible		= true;
+						Transparency= .5;
+						Position	= BasePosition + V2New(15, -10);
+						Color		= Colors.Secondary.Light;
+						Filled		= true;
+					});
+				};
+				local Text		= Menu:AddMenuInstance(Format('%s_Text', v.Name), 'Text', {
+					Text		= v.Text;
+					Size		= 20;
+					Position	= BasePosition + V2New(20, -10);
+					Visible		= true;
+					Color		= Colors.Secondary.Light;
+					Transparency= 1;
+					Outline		= true;
+					OutlineOpacity = 0.5;
+				});
+				local BindText	= Menu:AddMenuInstance(Format('%s_BindText', v.Name), 'Text', {
+					Text		= tostring(v.Value):match'%w+%.%w+%.(.+)';
+					Size		= 20;
+					Position	= BasePosition;
+					Visible		= true;
+					Color		= Colors.Secondary.Light;
+					Transparency= 1;
+					Outline		= true;
+					OutlineOpacity = 0.5;
+				});
+
+				Options[i].BaseSize = BaseSize;
+				Options[i].BasePosition = BasePosition;
+				BindText.Position = BasePosition + V2New(BaseSize.X - BindText.TextBounds.X - 20, -10);
+			end
+		end)
+		GetTableData(Options)(function(i, v) -- just to make sure certain things are drawn before or after others, too lazy to actually sort table
+			if typeof(v.Value) == 'function' then
+				local BaseSize		= V2New(BaseSize.X, 30);
+				local BasePosition	= shared.MenuDrawingData.Instances.Filling.Position + V2New(0, CPos + (25 * v.AllArgs[4]) - 35);
+
+				UIButtons[#UIButtons + 1] = {
+					Option = v;
+					Instance = Menu:AddMenuInstance(Format('%s_Hitbox', v.Name), 'Square', {
+						Size		= V2New(BaseSize.X, 20) - V2New(30, 0);
+						Visible		= true;
+						Transparency= .5;
+						Position	= BasePosition + V2New(15, -10);
+						Color		= Colors.Secondary.Light;
+						Filled		= true;
+					});
+				};
+				local Text		= Menu:AddMenuInstance(Format('%s_Text', v.Name), 'Text', {
+					Text		= v.Text;
+					Size		= 20;
+					Position	= BasePosition + V2New(20, -10);
+					Visible		= true;
+					Color		= Colors.Secondary.Light;
+					Transparency= 1;
+					Outline		= true;
+					OutlineOpacity = 0.5;
+				});
+
+				-- BindText.Position = BasePosition + V2New(BaseSize.X - BindText.TextBounds.X - 10, -10);
+			end
+		end)
+
+		delay(.1, function()
+			MenuLoaded = true;
+		end);
+
+		-- this has to be at the bottom cuz proto drawing api doesnt have zindex :triumph:	
+		Menu:AddMenuInstance('Cursor1', 'Line', {
+			Visible			= false;
+			Color			= Color3.new(1, 0, 0);
+			Transparency	= 1;
+			Thickness		= 2;
+		});
+		Menu:AddMenuInstance('Cursor2', 'Line', {
+			Visible			= false;
+			Color			= Color3.new(1, 0, 0);
+			Transparency	= 1;
+			Thickness		= 2;
+		});
+		Menu:AddMenuInstance('Cursor3', 'Line', {
+			Visible			= false;
+			Color			= Color3.new(1, 0, 0);
+			Transparency	= 1;
+			Thickness		= 2;
+		});
+	end
+
+	CreateMenu();
+	delay(0.1, function()
+		SubMenu:Show(V2New()); -- Create the submenu
+		SubMenu:Hide();
+	end);
+
+	shared.UESP_InputChangedCon = UserInputService.InputChanged:Connect(function(input)
+		if input.UserInputType.Name == 'MouseMovement' and Options.MenuOpen.Value then
+			for i, v in pairs(Sliders) do
+				local Values = {
+					v.Line.Position.X;
+					v.Line.Position.Y;
+					v.Line.Position.X + v.Line.Size.X;
+					v.Line.Position.Y + v.Line.Size.Y;
+				};
+				if MouseHoveringOver(Values) then
+					v:ShowValue(true);
+				else
+					if not MouseHeld then v:ShowValue(false); end
+				end
+			end
+		end
+	end)
+	shared.UESP_InputBeganCon = UserInputService.InputBegan:Connect(function(input)
+		if input.UserInputType.Name == 'MouseButton1' and Options.MenuOpen.Value then
+			MouseHeld = true;
+			local Bar = Menu:GetInstance'TopBar';
+			local Values = {
+				Bar.Position.X;
+				Bar.Position.Y;
+				Bar.Position.X + Bar.Size.X;
+				Bar.Position.Y + Bar.Size.Y;
+			}
+			if MouseHoveringOver(Values) then
+				DraggingUI = true;
+				DragOffset = Menu:GetInstance'Main'.Position - GetMouseLocation();
+			else
+				for i, v in pairs(Sliders) do
+					local Values = {
+						v.Line.Position.X;
+						v.Line.Position.Y;
+						v.Line.Position.X + v.Line.Size.X;
+						v.Line.Position.Y + v.Line.Size.Y;
+						-- v.Line.From.X	- (v.Slider.Radius);
+						-- v.Line.From.Y	- (v.Slider.Radius);
+						-- v.Line.To.X		+ (v.Slider.Radius);
+						-- v.Line.To.Y		+ (v.Slider.Radius);
+					};
+					if MouseHoveringOver(Values) then
+						DraggingWhat = v;
+						Dragging = true;
+						break
+					end
+				end
+
+				if not Dragging then
+					local Values = {
+						TracerPosition.X - 10;
+						TracerPosition.Y - 10;
+						TracerPosition.X + 10;
+						TracerPosition.Y + 10;
+					};
+					if MouseHoveringOver(Values) then
+						DragTracerPosition = true;
+					end
+				end
+			end
+		end
+	end)
+	shared.UESP_InputEndedCon = UserInputService.InputEnded:Connect(function(input)
+		if input.UserInputType.Name == 'MouseButton1' and Options.MenuOpen.Value then
+			MouseHeld = false;
+			DragTracerPosition = false;
+			local IgnoreOtherInput = false;
+
+			if SubMenu.Open and not MouseHoveringOver(SubMenu.Bounds) then
+				if CurrentColorPicker and IsMouseOverDrawing(CurrentColorPicker.Drawings['Square-Background']()) then IgnoreOtherInput = true; end
+				if not IgnoreOtherInput then SubMenu:Hide() end
+			end
+
+			if not IgnoreOtherInput then
+				for i, v in pairs(UIButtons) do
+					if SubMenu.Open and MouseHoveringOver(SubMenu.Bounds) and not v.FromSubMenu then continue end
+
+					local Values = {
+						v.Instance.Position.X;
+						v.Instance.Position.Y;
+						v.Instance.Position.X + v.Instance.Size.X;
+						v.Instance.Position.Y + v.Instance.Size.Y;
+					};
+					if MouseHoveringOver(Values) then
+						v.Option();
+						IgnoreOtherInput = true;
+						break -- prevent clicking 2 options
+					end
+				end
+				for i, v in pairs(Sliders) do
+					if IgnoreOtherInput then break end
+
+					local Values = {
+						v.Line.Position.X;
+						v.Line.Position.Y;
+						v.Line.Position.X + v.Line.Size.X;
+						v.Line.Position.Y + v.Line.Size.Y;
+					};
+					if not MouseHoveringOver(Values) then
+						v:ShowValue(false);
+					end
+				end
+			end
+		elseif input.UserInputType.Name == 'MouseButton2' and Options.MenuOpen.Value and not DragTracerPosition then
+			local Values = {
+				TracerPosition.X - 10;
+				TracerPosition.Y - 10;
+				TracerPosition.X + 10;
+				TracerPosition.Y + 10;
+			}
+			if MouseHoveringOver(Values) then
+				DragTracerPosition = false;
+				TracerPosition = V2New(Camera.ViewportSize.X / 2, Camera.ViewportSize.Y - 135);
+			end
+		elseif input.UserInputType.Name == 'Keyboard' then
+			if Binding then
+				BindedKey = input.KeyCode;
+				Binding = false;
+			elseif input.KeyCode == Options.MenuKey.Value or (input.KeyCode == Enum.KeyCode.Home and UserInputService:IsKeyDown(Enum.KeyCode.LeftControl)) then
+				Options.MenuOpen();
+			elseif input.KeyCode == Options.ToggleKey.Value then
+				Options.Enabled();
+			elseif input.KeyCode.Name == 'F1' and UserInputService:IsMouseButtonPressed(1) and shared.am_ic3 then -- hehe hiden spectate feature cuz why not
+				local HD, LPlayer, LCharacter = 0.95;
+
+				for i, Player in pairs(Players:GetPlayers()) do
+					local Character = GetCharacter(Player);
+
+					if Player ~= LocalPlayer and Player ~= Spectating and Character and Character:FindFirstChild'HumanoidRootPart' then
+						local Head = Character:FindFirstChild'Head';
+						local Humanoid = Character:FindFirstChildOfClass'Humanoid';
+
+						if Head then
+							local Distance  = (Camera.CFrame.Position - Head.Position).Magnitude;
+
+							if Distance > Options.MaxDistance.Value then continue; end
+
+							local Direction = -(Camera.CFrame.Position - Mouse.Hit.Position).unit;
+							local Relative  = Character.Head.Position - Camera.CFrame.Position;
+							local Unit      = Relative.unit;
+
+							local DP = Direction:Dot(Unit);
+
+							if DP > HD then
+								HD = DP;
+								LPlayer = Player;
+								LCharacter = Character;
+							end
+						end
+					end
+				end
+
+				if LPlayer and LPlayer ~= Spectating and LCharacter then
+					Camera.CameraSubject = LCharacter.Head;
+					Spectating = LPlayer;
+				else
+					if LocalPlayer.Character and LocalPlayer.Character:FindFirstChildOfClass'Humanoid' then
+						Camera.CameraSubject = LocalPlayer.Character:FindFirstChildOfClass'Humanoid';
+						Spectating = nil;
+					end
+				end
+			end
+		end
+	end)
+
+	local function CameraCon() -- unnamed esp v1 sucks
+		workspace.CurrentCamera:GetPropertyChangedSignal'ViewportSize':Connect(function()
+			TracerPosition = V2New(Camera.ViewportSize.X / 2, Camera.ViewportSize.Y - 135);
+		end);
+	end
+
+	CameraCon();
+
+	local function ToggleMenu()
+		if Options.MenuOpen.Value then
+			-- GUIService:SetMenuIsOpen(true);
+			GetTableData(shared.MenuDrawingData.Instances)(function(i, v)
+				if OldData[v] then
+					pcall(Set, v, 'Visible', true);
+				end
+			end)
+		else
+			-- GUIService:SetMenuIsOpen(false);
+			GetTableData(shared.MenuDrawingData.Instances)(function(i, v)
+				OldData[v] = v.Visible;
+				if v.Visible then
+					pcall(Set, v, 'Visible', false);
+				end
+			end)
+		end
+	end
+
+	local function CheckRay(Instance, Distance, Position, Unit)
+		local Pass = true;
+		local Model = Instance;
+
+		if Distance > 999 then return false; end
+
+		if Instance.ClassName == 'Player' then
+			Model = GetCharacter(Instance);
+		end
+
+		if not Model then
+			Model = Instance.Parent;
+
+			if Model.Parent == workspace then
+				Model = Instance;
+			end
+		end
+
+		if not Model then return false end
+
+		local _Ray = Ray.new(Position, Unit * Distance);
+
+		local List = {LocalPlayer.Character, Camera, Mouse.TargetFilter};
+
+		for i,v in pairs(IgnoreList) do table.insert(List, v); end;
+
+		local Hit = workspace:FindPartOnRayWithIgnoreList(_Ray, List);
+
+		if Hit and not Hit:IsDescendantOf(Model) then
+			Pass = false;
+			if Hit.Transparency >= .3 or not Hit.CanCollide and Hit.ClassName ~= Terrain then -- Detect invisible walls
+				IgnoreList[#IgnoreList + 1] = Hit;
+			end
+		end
+
+		return Pass;
+	end
+
+	local function CheckTeam(Player)
+		if Player.Neutral and LocalPlayer.Neutral then return true; end
+		return Player.TeamColor == LocalPlayer.TeamColor;
+	end
+
+	local CustomTeam = CustomTeams[game.PlaceId];
+
+	if CustomTeam ~= nil then
+		if CustomTeam.Initialize then ypcall(CustomTeam.Initialize) end
+
+		CheckTeam = CustomTeam.CheckTeam;
+	end
+
+	local function CheckPlayer(Player, Character)
+		if not Options.Enabled.Value then return false end
+
+		local Pass = true;
+		local Distance = 0;
+
+		if Player ~= LocalPlayer and Character then
+			if not Options.ShowTeam.Value and CheckTeam(Player) then
+				Pass = false;
+			end
+
+			local Head = Character:FindFirstChild'Head';
+
+			if Pass and Character and Head then
+				Distance = (Camera.CFrame.Position - Head.Position).Magnitude;
+				if Options.VisCheck.Value then
+					Pass = CheckRay(Player, Distance, Camera.CFrame.Position, (Head.Position - Camera.CFrame.Position).unit);
+				end
+				if Distance > Options.MaxDistance.Value then
+					Pass = false;
+				end
+			end
+		else
+			Pass = false;
+		end
+
+		return Pass, Distance;
+	end
+
+	local function CheckDistance(Instance)
+		if not Options.Enabled.Value then return false end
+
+		local Pass = true;
+		local Distance = 0;
+
+		if Instance ~= nil then
+			Distance = (Camera.CFrame.Position - Instance.Position).Magnitude;
+			if Options.VisCheck.Value then
+				Pass = CheckRay(Instance, Distance, Camera.CFrame.Position, (Instance.Position - Camera.CFrame.Position).unit);
+			end
+			if Distance > Options.MaxDistance.Value then
+				Pass = false;
+			end
+		else
+			Pass = false;
+		end
+
+		return Pass, Distance;
+	end
+
+	local function UpdatePlayerData()
+		if (tick() - LastRefresh) > (Options.RefreshRate.Value / 1000) then
+			LastRefresh = tick();
+			if CustomESP and Options.Enabled.Value then
+				local a, b = pcall(CustomESP);
+			end
+			for i, v in pairs(RenderList.Instances) do
+				if v.Instance ~= nil and v.Instance.Parent ~= nil and v.Instance:IsA'BasePart' then
+					local Data = shared.InstanceData[v.Instance:GetDebugId()] or { Instances = {}; DontDelete = true };
+
+					Data.Instance = v.Instance;
+
+					Data.Instances['OutlineTracer'] = Data.Instances['OutlineTracer'] or NewDrawing'Line'{
+						Transparency	= 0.75;
+						Thickness		= 5;
+						Color 			= Color3.new(0.1, 0.1, 0.1);
+					}
+					Data.Instances['Tracer'] = Data.Instances['Tracer'] or NewDrawing'Line'{
+						Transparency	= 1;
+						Thickness		= 2;
+					}
+					Data.Instances['NameTag'] = Data.Instances['NameTag'] or NewDrawing'Text'{
+						Size			= Options.TextSize.Value;
+						Center			= true;
+						Outline			= Options.TextOutline.Value;
+						Visible			= true;
+					};
+					Data.Instances['DistanceTag'] = Data.Instances['DistanceTag'] or NewDrawing'Text'{
+						Size			= Options.TextSize.Value - 1;
+						Center			= true;
+						Outline			= Options.TextOutline.Value;
+						Visible			= true;
+					};
+
+					local NameTag		= Data.Instances['NameTag'];
+					local DistanceTag	= Data.Instances['DistanceTag'];
+					local Tracer		= Data.Instances['Tracer'];
+					local OutlineTracer	= Data.Instances['OutlineTracer'];
+
+					local Pass, Distance = CheckDistance(v.Instance);
+
+					if Pass then
+						local ScreenPosition, Vis = WorldToViewport(v.Instance.Position);
+						local Color = v.Color;
+						local OPos = Camera.CFrame:pointToObjectSpace(v.Instance.Position);
+
+						if ScreenPosition.Z < 0 then
+							local AT = math.atan2(OPos.Y, OPos.X) + math.pi;
+							OPos = CFrame.Angles(0, 0, AT):vectorToWorldSpace((CFrame.Angles(0, math.rad(89.9), 0):vectorToWorldSpace(V3New(0, 0, -1))));
+						end
+
+						local Position = WorldToViewport(Camera.CFrame:pointToWorldSpace(OPos));
+
+						if Options.ShowTracers.Value then
+							Tracer.Transparency = math.clamp(Distance / 200, 0.45, 0.8);
+							Tracer.Visible	= true;
+							Tracer.From		= TracerPosition;
+							Tracer.To		= V2New(Position.X, Position.Y);
+							Tracer.Color	= Color;
+							OutlineTracer.Visible = true;
+							OutlineTracer.Transparency = Tracer.Transparency - 0.1;
+							OutlineTracer.From = Tracer.From;
+							OutlineTracer.To = Tracer.To;
+							OutlineTracer.Color	= Color3.new(0.1, 0.1, 0.1);
+						else
+							Tracer.Visible = false;
+							OutlineTracer.Visible = false;
+						end
+
+						if ScreenPosition.Z > 0 then
+							local ScreenPositionUpper = ScreenPosition;
+
+							if Options.ShowName.Value then
+								LocalPlayer.NameDisplayDistance = 0;
+								NameTag.Visible		= true;
+								NameTag.Text		= v.Text;
+								NameTag.Size		= Options.TextSize.Value;
+								NameTag.Outline		= Options.TextOutline.Value;
+								NameTag.Position	= V2New(ScreenPositionUpper.X, ScreenPositionUpper.Y);
+								NameTag.Color		= Color;
+								if Drawing.Fonts and shared.am_ic3 then -- CURRENTLY SYNAPSE ONLY :MEGAHOLY:
+									NameTag.Font	= Drawing.Fonts.Monospace;
+								end
+							else
+								LocalPlayer.NameDisplayDistance = 100;
+								NameTag.Visible = false;
+							end
+							if Options.ShowDistance.Value or Options.ShowHealth.Value then
+								DistanceTag.Visible		= true;
+								DistanceTag.Size		= Options.TextSize.Value - 1;
+								DistanceTag.Outline		= Options.TextOutline.Value;
+								DistanceTag.Color		= Color3.new(1, 1, 1);
+								if Drawing.Fonts and shared.am_ic3 then -- CURRENTLY SYNAPSE ONLY :MEGAHOLY:
+									NameTag.Font	= Drawing.Fonts.Monospace;
+								end
+
+								local Str = '';
+
+								if Options.ShowDistance.Value then
+									Str = Str .. Format('[%d] ', Distance);
+								end
+
+								DistanceTag.Text = Str;
+								DistanceTag.Position = V2New(ScreenPositionUpper.X, ScreenPositionUpper.Y) + V2New(0, NameTag.TextBounds.Y);
+							else
+								DistanceTag.Visible = false;
+							end
+						else
+							NameTag.Visible			= false;
+							DistanceTag.Visible		= false;
+						end
+					else
+						NameTag.Visible			= false;
+						DistanceTag.Visible		= false;
+						Tracer.Visible			= false;
+						OutlineTracer.Visible	= false;
+					end
+
+					Data.Instances['NameTag'] 		= NameTag;
+					Data.Instances['DistanceTag']	= DistanceTag;
+					Data.Instances['Tracer']		= Tracer;
+					Data.Instances['OutlineTracer']	= OutlineTracer;
+
+					shared.InstanceData[v.Instance:GetDebugId()] = Data;
+				end
+			end
+			for i, v in pairs(Players:GetPlayers()) do
+				local Data = shared.InstanceData[v.Name] or { Instances = {}; };
+
+				Data.Instances['Box'] = Data.Instances['Box'] or LineBox:Create{Thickness = 4};
+				Data.Instances['OutlineTracer'] = Data.Instances['OutlineTracer'] or NewDrawing'Line'{
+					Transparency	= 1;
+					Thickness		= 3;
+					Color			= Color3.new(0.1, 0.1, 0.1);
+				}
+				Data.Instances['Tracer'] = Data.Instances['Tracer'] or NewDrawing'Line'{
+					Transparency	= 1;
+					Thickness		= 1;
+				}
+				Data.Instances['HeadDot'] = Data.Instances['HeadDot'] or NewDrawing'Circle'{
+					Filled			= true;
+					NumSides		= 30;
+				}
+				Data.Instances['NameTag'] = Data.Instances['NameTag'] or NewDrawing'Text'{
+					Size			= Options.TextSize.Value;
+					Center			= true;
+					Outline			= Options.TextOutline.Value;
+					OutlineOpacity	= 1;
+					Visible			= true;
+				};
+				Data.Instances['DistanceHealthTag'] = Data.Instances['DistanceHealthTag'] or NewDrawing'Text'{
+					Size			= Options.TextSize.Value - 1;
+					Center			= true;
+					Outline			= Options.TextOutline.Value;
+					OutlineOpacity	= 1;
+					Visible			= true;
+				};
+
+				local NameTag		= Data.Instances['NameTag'];
+				local DistanceTag	= Data.Instances['DistanceHealthTag'];
+				local Tracer		= Data.Instances['Tracer'];
+				local OutlineTracer	= Data.Instances['OutlineTracer'];
+				local HeadDot		= Data.Instances['HeadDot'];
+				local Box			= Data.Instances['Box'];
+
+				local Character = GetCharacter(v);
+				local Pass, Distance = CheckPlayer(v, Character);
+
+				if Pass and Character then
+					local Humanoid = Character:FindFirstChildOfClass'Humanoid';
+					local Head = Character:FindFirstChild'Head';
+					local HumanoidRootPart = Character:FindFirstChild(CustomRootPartName or 'HumanoidRootPart')
+
+					local Dead = (Humanoid and Humanoid:GetState().Name == 'Dead')
+					if type(GetAliveState) == 'function' then
+						Dead = (not GetAliveState(v, Character))
+					end
+
+					if Character ~= nil and Head and HumanoidRootPart and not Dead then
+						local ScreenPosition, Vis = WorldToViewport(Head.Position);
+						local Color = Rainbow and Color3.fromHSV(tick() * 128 % 255/255, 1, 1) or (CheckTeam(v) and TeamColor or EnemyColor); Color = Options.ShowTeamColor.Value and v.TeamColor.Color or Color;
+						local OPos = Camera.CFrame:pointToObjectSpace(Head.Position);
+
+						if ScreenPosition.Z < 0 then
+							local AT = math.atan2(OPos.Y, OPos.X) + math.pi;
+							OPos = CFrame.Angles(0, 0, AT):vectorToWorldSpace((CFrame.Angles(0, math.rad(89.9), 0):vectorToWorldSpace(V3New(0, 0, -1))));
+						end
+
+						local Position = WorldToViewport(Camera.CFrame:pointToWorldSpace(OPos));
+
+						if Options.ShowTracers.Value then
+							if TracerPosition.X >= Camera.ViewportSize.X or TracerPosition.Y >= Camera.ViewportSize.Y or TracerPosition.X < 0 or TracerPosition.Y < 0 then
+								TracerPosition = V2New(Camera.ViewportSize.X / 2, Camera.ViewportSize.Y - 135);
+							end
+
+							Tracer.Visible	= true;
+							Tracer.Transparency = math.clamp(1 - (Distance / 200), 0.25, 0.75);
+							Tracer.From		= TracerPosition;
+							Tracer.To		= V2New(Position.X, Position.Y);
+							Tracer.Color	= Color;
+							OutlineTracer.From = Tracer.From;
+							OutlineTracer.To = Tracer.To;
+							OutlineTracer.Transparency = Tracer.Transparency - 0.15;
+							OutlineTracer.Visible = true;
+						else
+							Tracer.Visible = false;
+							OutlineTracer.Visible = false;
+						end
+
+						if ScreenPosition.Z > 0 then
+							local ScreenPositionUpper	= WorldToViewport((HumanoidRootPart:GetRenderCFrame() * CFrame.new(0, Head.Size.Y + HumanoidRootPart.Size.Y + (Options.YOffset.Value / 25), 0)).Position);
+							local Scale					= Head.Size.Y / 2;
+
+							if Options.ShowName.Value then
+								NameTag.Visible		= true;
+								NameTag.Text		= v.Name .. (CustomPlayerTag and CustomPlayerTag(v) or '');
+								NameTag.Size		= Options.TextSize.Value;
+								NameTag.Outline		= Options.TextOutline.Value;
+								NameTag.Position	= V2New(ScreenPositionUpper.X, ScreenPositionUpper.Y) - V2New(0, NameTag.TextBounds.Y);
+								NameTag.Color		= Color;
+								NameTag.Color		= Color;
+								NameTag.OutlineColor= Color3.new(0.05, 0.05, 0.05);
+								NameTag.Transparency= 0.85;
+								if Drawing.Fonts and shared.am_ic3 then -- CURRENTLY SYNAPSE ONLY :MEGAHOLY:
+									NameTag.Font	= Drawing.Fonts.Monospace;
+								end
+							else
+								NameTag.Visible = false;
+							end
+							if Options.ShowDistance.Value or Options.ShowHealth.Value then
+								DistanceTag.Visible		= true;
+								DistanceTag.Size		= Options.TextSize.Value - 1;
+								DistanceTag.Outline		= Options.TextOutline.Value;
+								DistanceTag.Color		= Color3.new(1, 1, 1);
+								DistanceTag.Transparency= 0.85;
+								if Drawing.Fonts and shared.am_ic3 then -- CURRENTLY SYNAPSE ONLY :MEGAHOLY:
+									NameTag.Font	= Drawing.Fonts.Monospace;
+								end
+
+								local Str = '';
+
+								if Options.ShowDistance.Value then
+									Str = Str .. Format('[%d] ', Distance);
+								end
+								if Options.ShowHealth.Value then								
+									if typeof(Humanoid) == 'Instance' then
+										Str = Str .. Format('[%d/%d] [%s%%]', Humanoid.Health, Humanoid.MaxHealth, math.floor(Humanoid.Health / Humanoid.MaxHealth * 100));
+									elseif type(GetHealth) == 'function' then
+										local health, maxHealth = GetHealth(v)
+
+										if type(health) == 'number' and type(maxHealth) == 'number' then
+											Str = Str .. Format('[%d/%d] [%s%%]', health, maxHealth, math.floor(health / maxHealth * 100))
+										end
+									end
+								end
+
+								DistanceTag.Text = Str;
+								DistanceTag.OutlineColor = Color3.new(0.05, 0.05, 0.05);
+								DistanceTag.Position = (NameTag.Visible and NameTag.Position + V2New(0, NameTag.TextBounds.Y) or V2New(ScreenPositionUpper.X, ScreenPositionUpper.Y));
+							else
+								DistanceTag.Visible = false;
+							end
+							if Options.ShowDot.Value and Vis then
+								local Top			= WorldToViewport((Head.CFrame * CFrame.new(0, Scale, 0)).Position);
+								local Bottom		= WorldToViewport((Head.CFrame * CFrame.new(0, -Scale, 0)).Position);
+								local Radius		= (Top - Bottom).y;
+
+								HeadDot.Visible		= true;
+								HeadDot.Color		= Color;
+								HeadDot.Position	= V2New(ScreenPosition.X, ScreenPosition.Y);
+								HeadDot.Radius		= Radius;
+							else
+								HeadDot.Visible = false;
+							end
+							if Options.ShowBoxes.Value and Vis and HumanoidRootPart then
+								local Body = {
+									Head;
+									Character:FindFirstChild'Left Leg' or Character:FindFirstChild'LeftLowerLeg';
+									Character:FindFirstChild'Right Leg' or Character:FindFirstChild'RightLowerLeg';
+									Character:FindFirstChild'Left Arm' or Character:FindFirstChild'LeftLowerArm';
+									Character:FindFirstChild'Right Arm' or Character:FindFirstChild'RightLowerArm';
+								}
+								Box:Update(HumanoidRootPart.CFrame, V3New(2, 3, 1) * (Scale * 2), Color, nil, shared.am_ic3 and Body);
+							else
+								Box:SetVisible(false);
+							end
+						else
+							NameTag.Visible			= false;
+							DistanceTag.Visible		= false;
+							HeadDot.Visible			= false;
+
+							Box:SetVisible(false);
+						end
+					else
+						NameTag.Visible			= false;
+						DistanceTag.Visible		= false;
+						HeadDot.Visible			= false;
+						Tracer.Visible			= false;
+						OutlineTracer.Visible 	= false;
+
+						Box:SetVisible(false);
+					end
+				else
+					NameTag.Visible			= false;
+					DistanceTag.Visible		= false;
+					HeadDot.Visible			= false;
+					Tracer.Visible			= false;
+					OutlineTracer.Visible 	= false;
+
+					Box:SetVisible(false);
+				end
+
+				shared.InstanceData[v.Name] = Data;
+			end
+		end
+	end
+
+	local LastInvalidCheck = 0;
+
+	local function Update()
+		if tick() - LastInvalidCheck > 0.3 then
+			LastInvalidCheck = tick();
+
+			if Camera.Parent ~= workspace then
+				Camera = workspace.CurrentCamera;
+				CameraCon();
+				WTVP = Camera.WorldToViewportPoint;
+			end
+
+			for i, v in pairs(shared.InstanceData) do
+				if not Players:FindFirstChild(tostring(i)) then
+					if not shared.InstanceData[i].DontDelete then
+						GetTableData(v.Instances)(function(i, obj)
+							obj.Visible = false;
+							obj:Remove();
+							v.Instances[i] = nil;
+						end)
+						shared.InstanceData[i] = nil;
+					else
+						if shared.InstanceData[i].Instance == nil or shared.InstanceData[i].Instance.Parent == nil then
+							GetTableData(v.Instances)(function(i, obj)
+								obj.Visible = false;
+								obj:Remove();
+								v.Instances[i] = nil;
+							end)
+							shared.InstanceData[i] = nil;
+						end
+					end
+				end
+			end
+		end
+
+		local CX = Menu:GetInstance'CrosshairX';
+		local CY = Menu:GetInstance'CrosshairY';
+
+		if Options.Crosshair.Value then
+			CX.Visible = true;
+			CY.Visible = true;
+
+			CX.To = V2New((Camera.ViewportSize.X / 2) - 8, (Camera.ViewportSize.Y / 2));
+			CX.From = V2New((Camera.ViewportSize.X / 2) + 8, (Camera.ViewportSize.Y / 2));
+			CY.To = V2New((Camera.ViewportSize.X / 2), (Camera.ViewportSize.Y / 2) - 8);
+			CY.From = V2New((Camera.ViewportSize.X / 2), (Camera.ViewportSize.Y / 2) + 8);
+		else
+			CX.Visible = false;
+			CY.Visible = false;
+		end
+
+		if Options.MenuOpen.Value and MenuLoaded then
+			local MLocation = GetMouseLocation();
+			shared.MenuDrawingData.Instances.Main.Color = Color3.fromHSV(tick() * 24 % 255/255, 1, 1);
+			local MainInstance = Menu:GetInstance'Main';
+
+			local Values = {
+				MainInstance.Position.X;
+				MainInstance.Position.Y;
+				MainInstance.Position.X + MainInstance.Size.X;
+				MainInstance.Position.Y + MainInstance.Size.Y;
+			};
+
+			if MainInstance and (MouseHoveringOver(Values) or (SubMenu.Open and MouseHoveringOver(SubMenu.Bounds))) then
+				Debounce.CursorVis = true;
+
+				Menu:UpdateMenuInstance'Cursor1'{
+					Visible	= true;
+					From	= V2New(MLocation.x, MLocation.y);
+					To		= V2New(MLocation.x + 5, MLocation.y + 6);
+				}
+				Menu:UpdateMenuInstance'Cursor2'{
+					Visible	= true;
+					From	= V2New(MLocation.x, MLocation.y);
+					To		= V2New(MLocation.x, MLocation.y + 8);
+				}
+				Menu:UpdateMenuInstance'Cursor3'{
+					Visible	= true;
+					From	= V2New(MLocation.x, MLocation.y + 6);
+					To		= V2New(MLocation.x + 5, MLocation.y + 5);
+				}
+			else
+				if Debounce.CursorVis then
+					Debounce.CursorVis = false;
+
+					Menu:UpdateMenuInstance'Cursor1'{Visible = false};
+					Menu:UpdateMenuInstance'Cursor2'{Visible = false};
+					Menu:UpdateMenuInstance'Cursor3'{Visible = false};
+				end
+			end
+			if MouseHeld then
+				local MousePos = GetMouseLocation();
+
+				if Dragging then
+					DraggingWhat.Slider.Position = V2New(math.clamp(MLocation.X - DraggingWhat.Slider.Size.X / 2, DraggingWhat.Line.Position.X, DraggingWhat.Line.Position.X + DraggingWhat.Line.Size.X - DraggingWhat.Slider.Size.X), DraggingWhat.Slider.Position.Y);
+					local Percent	= (DraggingWhat.Slider.Position.X - DraggingWhat.Line.Position.X) / ((DraggingWhat.Line.Position.X + DraggingWhat.Line.Size.X - DraggingWhat.Line.Position.X) - DraggingWhat.Slider.Size.X);
+					local Value		= CalculateValue(DraggingWhat.Min, DraggingWhat.Max, Percent);
+					DraggingWhat.Option(Value);
+				elseif DraggingUI then
+					Debounce.UIDrag = true;
+					local Main = Menu:GetInstance'Main';
+					Main.Position = MousePos + DragOffset;
+				elseif DragTracerPosition then
+					TracerPosition = MousePos;
+				end
+			else
+				Dragging = false;
+				DragTracerPosition = false;
+				if DraggingUI and Debounce.UIDrag then
+					Debounce.UIDrag = false;
+					DraggingUI = false;
+					CreateMenu(Menu:GetInstance'Main'.Position);
+				end
+			end
+			if not Debounce.Menu then
+				Debounce.Menu = true;
+				ToggleMenu();
+			end
+		elseif Debounce.Menu and not Options.MenuOpen.Value then
+			Debounce.Menu = false;
+			ToggleMenu();
+		end
+	end
+
+	RunService:UnbindFromRenderStep(GetDataName);
+	RunService:UnbindFromRenderStep(UpdateName);
+
+	RunService:BindToRenderStep(GetDataName, 300, UpdatePlayerData);
+	RunService:BindToRenderStep(UpdateName, 199, Update);
+end)
+
+nofog.Name = "nofog"
+nofog.Parent = main
+nofog.BackgroundColor3 = Color3.fromRGB(117, 184, 255)
+nofog.Position = UDim2.new(0.450704217, 0, 0.856783926, 0)
+nofog.Size = UDim2.new(0, 27, 0, 46)
+nofog.Font = Enum.Font.SourceSans
+nofog.Text = "nofog"
+nofog.TextColor3 = Color3.fromRGB(0, 0, 0)
+nofog.TextSize = 14.000
+nofog.MouseButton1Down:connect(function()
+	while true do
+		wait()
+		game.Lighting.FogEnd = 1000000
+		wait()
+	end
+end)
+
+Cryptkeything.Name = "Crypt key thing"
+Cryptkeything.Parent = main
+Cryptkeything.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Cryptkeything.Position = UDim2.new(0.0563380271, 0, 0.726130605, 0)
+Cryptkeything.Size = UDim2.new(0, 251, 0, 16)
+Cryptkeything.Font = Enum.Font.SourceSans
+Cryptkeything.Text = "Crypt Key Giver"
+Cryptkeything.TextColor3 = Color3.fromRGB(0, 0, 0)
+Cryptkeything.TextSize = 14.000
+Cryptkeything.MouseButton1Down:connect(function()
+	local Workspace = game:GetService("Workspace").Amenophis;
+
+	for _, ClickDetector in pairs(Workspace:GetDescendants()) do
+		if (ClickDetector:IsA("ClickDetector")) then
+			fireclickdetector(ClickDetector, 1);
+		end;
+	end;
+end)
